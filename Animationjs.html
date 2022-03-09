@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 6px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<h2> JAVASCRIPT ANIMATIONS </h2>
+
+<p> In this we will see how to create HTML animations with JavaScript. </p>
+<p> To make an animation possible, the animated element must be animated relative to a "parent container".</p>
+
+<p>The container element should be created with style = "position: relative".</p>
+
+<p>The animation element should be created with style = "position: absolute". </p>
+
+<h3> Animation Code Example </h3>
+
+<p>JavaScript animations are done by programming gradual changes in an element's style.
+
+    The changes are called by a timer. When the timer interval is small, the animation looks continuous.</p>
+
+<p>The basic code is:</p>
+
+<xmp>var id = setInterval(frame, 5);
+
+    function frame() {
+    if  {
+    clearInterval(id);
+    } else {
+
+    }
+    }
+</xmp>
+
+<br>
+
+
+
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: #b0d7c5;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #00b867;
+}
+
+&lt/style&gt
+&ltbody&gt
+
+&ltp&gtClick the button below to see the
+   Animation Effect &lt/p&gt
+
+&ltp&gt
+
+&ltbutton onclick="myMove()"&gtClick Me
+&lt/button&gt
+
+&lt/p&gt
+
+&ltdiv id ="myContainer"&gt
+&ltdiv id ="myAnimation"&gt&lt/div&gt
+&lt/div&gt
+
+&ltscript&gt
+
+function myMove() {
+  var elem = document.getElementById
+  ("myAnimation");
+
+  var pos = 0;
+
+  var id = setInterval(frame, 10);
+
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+
+
+<h3>Result For Above Example </h3>
+
+<br>
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+
+#myContainer {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  background: #b0d7c5;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #00b867;
+}
+
+</style>
+    </head>
+    <body>
+    <p>Click the button below to see the Animation Effect </p>
+
+    <p>
+        <button onclick="myMove()">Click Me</button>
+    </p>
+
+    <div id ="myContainer">
+        <div id ="myAnimation"></div>
+    </div>
+
+    <script>
+
+function myMove() {
+  var elem = document.getElementById("myAnimation");
+  var pos = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 200) {
+      clearInterval(id);
+    } else {
+      pos++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+    }
+  }
+}
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

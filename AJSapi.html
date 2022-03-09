@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+        table, th, td{
+
+        border:2px solid steelblue;
+        border-collapse:collapse;
+        padding:5px
+
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULARJS API </h2>
+
+<p>The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:
+</p>
+
+
+
+<ul type ="square">
+
+
+    <li><span style = "color:red">Comparing objects</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">Iterating objects
+
+ </span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">Converting data
+</span>
+
+    </li>
+
+
+
+    <br>
+
+
+
+</ul>
+
+<p>The Global API functions are accessed using the angular object.<p>
+
+<p>Below is a list of some common API functions:</p>
+
+<table style ="width:auto">
+    <tr>
+        <th>API</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+        <td>angular.lowercase()</td>
+        <td>Converts a string to lowercase</td>
+    <tr>
+
+
+    <tr>
+        <td>angular.uppercase()</td>
+        <td>Converts a string to uppercase</td>
+    <tr>
+
+    <tr>
+        <td>angular.isString()</td>
+        <td>Returns true if the reference is a string</td>
+    <tr>
+
+    <tr>
+        <td>angular.isNumber()</td>
+        <td>Returns true if the reference is a number</td>
+    <tr>
+</table>
+
+<BR>
+
+
+
+
+<H3> angular.lowercase() and angular.uppercase()  </H3>
+
+<p>The angular.lowercase() is used to convert a string to lowercase and the angular.uppercase is used to convert a string to uppercase.
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+&ltbody&gt
+
+&ltdiv id = "ID1" ng-app="firstAPP"
+ng-controller ="Ctrl1"&gt
+
+&lth2&gtangular.lowercase()&lt/h2&gt
+&ltp&gt{{ x1 }}&lt/p&gt
+&ltp&gt{{ x2 }}&lt/p&gt
+
+
+&lth2&gtangular.uppercase()&lt/h2&gt
+&ltp&gt{{ x3 }}&lt/p&gt
+&ltp&gt{{ x4 }}&lt/p&gt
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('firstAPP',[]);
+app.controller('Ctrl1', function($scope)
+{
+ $scope.x1 ="TOMMY";
+ $scope.x2 =angular.lowercase($scope.x1);
+
+
+ $scope.x3 ="peter";
+ $scope.x4 =angular.uppercase($scope.x3);
+});
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+
+&lt/script&gt
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id = "ID1" ng-app="firstAPP" ng-controller="Ctrl1">
+
+        <h2>angular.lowercase()</h2>
+        <p>{{ x1 }}</p>
+        <p>{{ x2 }}</p>
+
+
+        <h2>angular.uppercase()</h2>
+        <p>{{ x3 }}</p>
+        <p>{{ x4 }}</p>
+
+    </div>
+
+    <script>
+var app = angular.module('firstAPP', []);
+app.controller('Ctrl1', function($scope) {
+    $scope.x1 = "TOMMY";
+    $scope.x2 = angular.lowercase($scope.x1);
+
+
+     $scope.x3 = "peter";
+    $scope.x4 = angular.uppercase($scope.x3);
+});
+
+angular.bootstrap(document.getElementById("ID1"),
+['firstAPP']);
+
+
+</script>
+
+
+
+    </body>
+    </html>
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h2> angular.isString() and angular.isNumber() </h2>
+
+<p>
+
+    The angular.isString is used to find out if the reference is string or not, if it is a string it return True. The angular.isNumber is used to find out if the reference is number or not, if it is a number it returns True.
+
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID2" ng-app="secondAPP"
+ng-controller ="Ctrl2"&gt
+
+&lth2&gtangular.isString()&lt/h2&gt
+
+&ltp&gt{{ x1 }}&lt/p&gt
+&ltp&gt{{ x2 }}&lt/p&gt
+
+
+&lth2&gtangular.isNumber()&lt/h2&gt
+
+&ltp&gt{{ x3 }}&lt/p&gt
+&ltp&gt{{ x4 }}&lt/p&gt
+
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('secondAPP',[]);
+app.controller('Ctrl2', function($scope)
+{
+ $scope.x1 ="JOHN";
+ $scope.x2 =angular.isString($scope.x1);
+
+ $scope.x3 =24;
+ $scope.x4 =angular.isNumber($scope.x3);
+
+});
+
+angular.bootstrap(document.getElementById
+("ID2"), ['secondAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id ="ID2" ng-app="secondAPP" ng-controller="Ctrl2">
+
+        <h2>angular.isString()</h2>
+
+        <p>{{ x1 }}</p>
+        <p>{{ x2 }}</p>
+
+
+        <h2>angular.isNumber()</h2>
+
+        <p>{{ x3 }}</p>
+        <p>{{ x4 }}</p>
+
+
+    </div>
+
+    <script>
+var app = angular.module('secondAPP', []);
+app.controller('Ctrl2', function($scope) {
+    $scope.x1 = "JOHN";
+    $scope.x2 = angular.isString($scope.x1);
+    
+    $scope.x3 = 24;
+    $scope.x4 = angular.isNumber($scope.x3);
+    
+});
+
+angular.bootstrap(document.getElementById("ID2"), 
+['secondAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

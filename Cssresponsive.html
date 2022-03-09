@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+        hr{
+
+        width:100%;
+        border: 2px solid Mediumturquoise;
+        float:left;
+
+
+        }
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+<h3>RESPONSIVE WEB DESIGN </H3>
+
+<p>Responsive web design provides an optimal experience, easy reading and easy navigation with a minimum of resizing on different devices such as desktops, mobiles and tabs, Responsive web design uses only HTML and CSS , it is not a program or a JavaScript. When you use CSS and HTML to resize, hide, shrink, enlarge, or move the content to make it look good on any screen it is called Responsive Web Design.</p>
+
+<p> Web pages can be viewed using many different devices like desktops, tablets, and phones. Your web page should look good, and be easy to use, regardless of the device
+
+    Web pages should not leave out information to fit smaller devices, but rather adapt its content to fit any device. </p>
+
+
+
+
+
+
+<img src="file:///android_asset/resp.jpg" alt="Basic Html"> </p>
+
+
+
+<hr>
+<br>
+<br>
+
+
+
+<h3> VIEWPORT </h3>
+
+<p>The viewport is the user's visible area of a web page, the viewport varies with the device, and will be smaller on a mobile phone than on a computer screen. Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.</p>
+
+<p>When we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.</p>
+
+
+<h4> Rules For Viewport </h4>
+
+<ul>
+
+    <li>Do Not use large fixed width elements, For example, if an image is displayed at a width wider than the viewport it can cause the viewport to scroll horizontally. Remember to adjust this content to fit within the width of the viewport.</li>
+
+    <li>Do NOT let the content rely on a particular viewport width to render well, since screen dimensions and width in CSS pixels vary widely between devices, content should not rely on a particular viewport width to render well.
+
+    <li>Use CSS media queries to apply different styling for small and large screens, Setting large absolute CSS widths for page elements, will cause the element to be too wide for the viewport on a smaller device. Instead, consider using relative width values, such as width: 100%. Also, be careful of using large absolute positioning values. It may cause the element to fall outside the viewport on small devices.</li>
+
+</ul>
+
+<h4> Example With Viewport </h4>
+
+<div>
+
+<pre>
+<code>
+
+    &lt!DOCTYPE html&gt
+    &lthtml&gt
+    &lthead&gt
+    &ltmeta name="viewport" content=
+    "width=device-width, initial-scale=
+    1.0"&gt
+    &ltstyle&gt
+
+    img {
+    max-width:100%;
+    height:auto;
+    }
+
+
+
+    div {
+    background-color: #F9FFFF;
+    width: 272px;
+    padding: 10px;
+    border: 5px solid steelblue;
+    margin: 1px;
+    }
+
+    &lt/style&gt
+    &lt/head&gt
+    &ltbody&gt
+
+    &lth3&gt Tiger &lt/h3&gt
+
+
+
+    &ltimg src="Img_tiger.jpg"
+    alt="Tiger" style="width:500px;
+    height:450px"&gt
+
+    &ltp&gt The tiger (Panthera tigris)
+    is the largest cat species,
+    reaching a total body length
+    of up to 3.38 m (11.1 ft) over
+    curves and weighing up to 388.7
+    kg (857 lb) in the wild. with
+    most remaining populations
+    occurring in small pockets
+    isolated from each other, of
+    which about 2,000 exist on the
+    Indian subcontinent. &lt/p&gt
+
+
+    &lt/body&gt
+
+    &lt/html&gt
+
+
+
+</pre>
+    </code>
+
+</div>
+
+<p> when viewed in different screen size the web content will be adjusted automatically according to the size. </p>
+
+
+
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/withviewport.jpg" alt="Basic Html">
+
+
+
+<h4> Example Without Viewport </h4>
+
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth3&gt Tiger &lt/h3&gt
+
+
+&ltimg src="Img_tiger.jpg"
+alt="Basic Html" style="width:500px;
+height:450px"&gt
+
+
+&ltp&gt The tiger (Panthera tigris)
+is the largest cat species,
+reaching a total body length
+of up to 3.38 m (11.1 ft) over
+curves and weighing up to 388.7
+kg (857 lb) in the wild. with
+most remaining populations
+occurring in small pockets
+isolated from each other, of
+which about 2,000 exist on the
+Indian subcontinent. &lt/p&gt
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/withoutviewport.jpg" alt="Basic Html">
+
+<hr>
+<br>
+<br>
+
+<h3> GRIDVIEW </h3>
+
+<p>Many web pages are based on a grid-view, which means that the page is divided into columns, using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page.A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+&ltstyle&gt
+
+* {
+    box-sizing: border-box;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 17.16%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 82.33%;}
+.col-11 {width: 91.55%;}
+.col-12 {width: 100%;}
+html {
+font-family:"Lucida Sans",sans-serif;
+}
+
+.header {
+    background-color: steelblue;
+    color: white;
+    padding: 15px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu li {
+
+padding: 8px;
+margin-bottom: 7px;
+background-color :turquoise;
+color: #ffffff;
+box-shadow: 0 1px 3px rgba
+(0,0,0,0.12), 0 1px 2px rgba
+(0,0,0,0.24);
+
+}
+
+.menu li:hover {
+    background-color: #0099cc;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+
+&ltbody&gt
+
+&ltdiv class="header"&gt
+&lth1&gtCats&lt/h1&gt
+&lt/div&gt
+
+
+
+&ltdiv class="row"&gt
+
+&ltdiv class="col-3 menu"&gt
+&ltul&gt
+&ltli&gtTiger&lt/li&gt
+&ltli&gtCheetah&lt/li&gt
+&ltli&gtPuma&lt/li&gt
+&ltli&gtpanther&lt/li&gt
+&lt/ul&gt
+&lt/div&gt
+
+
+
+&ltdiv class="col-9"&gt
+
+&lth1&gtTiger&lt/h1&gt
+
+&ltp&gtThe tiger (Panthera tigris)
+is the largest cat species,
+reaching a total body length
+of up to 3.38 m (11.1 ft) over
+curves and weighing up to 388.7
+kg (857 lb) in the wild. with
+most remaining populations
+occurring in small pockets
+isolated from each other, of
+which about 2,000 exist on the
+Indian subcontinent.&lt/p&gt
+
+&lt/div&gt
+
+&lt/div&gt
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/gridviewpc.png" alt="Basic Html" ></p>
+
+<br>
+
+<h4> This is how the webpage looks in smallscreen devices </h4>
+
+<img src="file:///android_asset/gridview.jpg" alt="Basic Html" ></p>
+
+
+
+
+<hr />
+<br />
+
+
+
+
+
+<h3> MEDIA QUERIES </h3>
+
+<p>Media query is a CSS technique introduced in CSS3.It uses the @media rule to include a block of CSS properties only if a certain condition is true. We can add a breakpoint where certain parts of the design will behave differently on each side of the breakpoint.</p>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+&ltstyle&gt
+
+* {
+    box-sizing: border-box;
+}
+
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+html {
+font-family:"Lucida Sans",sans-serif;
+}
+
+
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu li {
+
+padding: 8px;
+margin-bottom: 7px;
+background-color :#33b5e5;
+color: #ffffff;
+box-shadow: 0 1px 3px rgba
+(0,0,0,0.12), 0 1px 2px
+rgba(0,0,0,0.24);
+
+}
+
+.menu li:hover {
+ background-color: #0099cc;
+}
+
+
+.aside {
+    background-color: #33b5e5;
+padding: 15px;
+color: #ffffff;
+text-align: center;
+font-size: 14px;
+box-shadow: 0 1px 3px rgba
+(0,0,0,0.12), 0 1px 2px
+rgba(0,0,0,0.24);
+}
+
+
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+
+@media only screen and
+(min-width:600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+
+@media only screen and
+(min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltdiv class="header"&gt
+&lth1&gtCats&lt/h1&gt
+&lt/div&gt
+
+&ltdiv class="row"&gt
+&ltdiv class="col-3 col-m-3 menu"&gt
+&ltul&gt
+&ltli&gtTiger&lt/li&gt
+&ltli&gtCheetah&lt/li&gt
+&ltli&gtPanther&lt/li&gt
+&ltli&gtLion&lt/li&gt
+&lt/ul&gt
+&lt/div&gt
+
+&ltdiv class="col-6 col-m-9"&gt
+&lth1&gtTiger&lt/h1&gt
+&ltp&gtThe tiger (Panthera tigris)
+is the largest cat species,
+reaching a total body length
+of up to 3.38 m (11.1 ft) over
+curves and weighing up to 388.7
+kg (857 lb) in the wild. with
+most remaining populations
+occurring in small pockets
+isolated from each other, of
+which about 2,000 exist on the
+Indian subcontinent.&lt/p&gt
+&lt/div&gt
+
+&ltdiv class="col-3 col-m-12"&gt
+&ltdiv class="aside"&gt
+&lth2&gtTiger&lt/h2&gt
+&ltp&gtTiger is the largest cat&lt/p&gt
+&lth2&gtCheetah&lt/h2&gt
+&ltp&gtCheetah is the fastest cat&lt/p&gt
+&lth2&gtLion&lt/h2&gt
+&ltp&gtLion is the King &lt/p&gt
+&lt/div&gt
+&lt/div&gt
+
+&lt/div&gt
+
+&ltdiv class="footer"&gt
+&ltp&gtResize the browser window to see
+how the content respond to the
+resizing.&lt/p&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/mediaquerypc.png" alt="Basic Html" ></p>
+
+
+<br>
+<h4> This is how the webpage looks in smallscreen devices </h4>
+
+<img src="file:///android_asset/mediaquery.gif" alt="Basic Html" ></p>
+
+
+
+<hr>
+<br>
+
+
+
+<h3> RESPONSIVE VIDEOS </h3>
+
+
+<p> In Responsive Webpage the video in the webpage will be Scaled and adjusted according to Size of the Screen </p>
+
+
+
+
+<h4> Using The Width Property </h4>
+
+<p>If the width property is set to 100%, the video player will be responsive and scale up and down, the video player can be scaled up to be larger than its original size.</p>
+
+<div>
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+&ltstyle&gt
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltvideo width="400" controls&gt
+
+&ltsource src="mo.mp4"
+type="video/mp4"&gt
+&ltsource src="mo.ogg"
+type="video/ogg"&gt
+Your browser does not support HTML5
+video.
+
+&lt/video&gt
+
+
+&ltp&gtResize the browser window to see
+how the size of the video player
+will scale.&lt/p&gt
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/responsivepc.png" alt="Basic Html" ></p>
+
+<br>
+<h4> This is how the webpage looks in smallscreen devices </h4>
+
+<img src="file:///android_asset/responsive.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+
+
+
+
+<h4> Using The Max-Width Property </h4>
+
+<p>If the max-width property is set to 100%, the video player will scale down if it has to, but never scale up to be larger than its original size. </p>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+
+&ltstyle&gt
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltvideo width="400" controls&gt
+&ltsource src="mo.mp4"
+type="video/mp4"&gt
+&ltsource src="mo.ogg"
+type="video/ogg"&gt
+Your browser does not support
+HTML5 video.
+&lt/video&gt
+
+
+
+&lth3&gtMax-Width Property&lt/h3&gt
+
+
+&ltp&gtThe video player will scale down
+if it has to,but never scale up to
+be larger than its original size&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+
+
+<h4>Result for above Example :</h4>
+
+<img src="file:///android_asset/maxwidthpc.png" alt="Basic Html" ></p>
+
+<br>
+
+<h4> This is how the webpage looks in smallscreen devices </h4>
+<img src="file:///android_asset/maxwidth.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+<hr>
+<br>
+
+
+
+
+
+
+
+<h3> FRAMEWORKS </h3>
+
+There are many existing CSS Frameworks that offer Responsive Design.Many are free and easy to use.
+
+
+
+
+
+<h4> Bootstarp </h4>
+
+<p> Bootstrap is most popular web design framework based on HTML,CSS and Java script and it helps you to design web pages in responsive way for all devices </p>
+
+<div>
+<pre>
+
+&lthtml&gt
+&lthead&gt
+
+
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+
+
+&ltlink rel="stylesheet" href="http:
+//maxcdn.bootstrapcdn.com/bootstrap
+/3.2.0/css/bootstrap.min.css"&gt
+
+&ltstyle&gt
+
+body{
+color:slateblue;
+}
+
+.jumbotron{
+background-color:turquoise;
+}
+
+
+
+&lt/style&gt
+
+&lt/head&gt
+&ltbody&gt
+
+&ltdiv class="container"&gt
+
+&ltdiv class="jumbotron"&gt
+
+&lth1&gtCats&lt/h1&gt
+
+&lt/div&gt
+
+
+&ltdiv class="row"&gt
+&ltdiv class="col-md-4"&gt
+
+&lth2&gtTiger&lt/h2&gt
+&ltp&gt The tiger (Panthera tigris)
+is the largest cat species,
+reaching a total body length
+of up to 3.38 m (11.1 ft) over
+curves and weighing up to 388.7
+kg (857 lb) in the wild. with
+most remaining populations
+occurring in small pockets
+isolated from each other, of
+which about 2,000 exist on the
+Indian subcontinent. &lt/p&gt
+&lt/div&gt
+
+
+
+&ltdiv class="col-md-4"&gt
+
+&lth2&gtLion&lt/h2&gt
+&ltp&gtThe lion (Panthera leo) is one
+of the five big cats in the genus
+Panthera and a member of the family
+Felidae , it is the second-largest
+living cat after the tiger . lions
+live for 10�14 years in the wild,
+although in captivity they can live
+more than 20 years.&lt/p&gt
+
+&lt/div&gt
+
+
+
+&ltdiv class="col-md-4"&gt
+
+&lth2&gtCheetah&lt/h2&gt
+&ltp&gtThe cheetah (Acinonyx jubatus) is
+a big cat in the subfamily Felinae
+that inhabits most of Africa and
+parts of Iran. It is the only extant
+member of the genus Acinonyx. The
+cheetah can run as fast as 109.4 to
+120.7 km/h (68.0 to 75.0 mph),faster
+than any other land animal. &lt/p&gt
+
+&lt/div&gt
+
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+<h4>Result for above Example :</h4>
+
+    <img src="file:///android_asset/bootstrappc.png" alt="Basic Html" ></p>
+
+
+    <br>
+    <h4> This is how the webpage looks in smallscreen devices </h4>
+
+    <img src="file:///android_asset/bootstrap.jpg" alt="Basic Html" ></p>
+
+
+
+    <hr>
+    <br>
+
+
+
+
+
+
+
+    <H4> Skeleton </H4>
+    <P> Another popular framework is Skeleton, it uses only CSS to make responsive web pages.</P>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+
+&lttitle&gtSkeleton Example&lt/title&gt
+&ltmeta charset="utf-8"&gt
+
+&ltmeta name="viewport" content=
+"width=device-width, initial-scale=
+1.0"&gt
+
+
+&ltlink rel="stylesheet"
+href="skeleton.css"&gt
+
+&ltlink rel="stylesheet"
+href="normalize.css"&gt
+
+&lt/head&gt
+&ltbody&gt
+
+&ltdiv class="container"&gt
+
+&lth1&gtTHE CATS&lt/h1&gt
+
+
+&ltdiv class="row"&gt
+
+&ltdiv class="one-half column"&gtTiger
+&ltp&gtThe tiger (Panthera tigris)
+is the largest cat species,
+reaching a total body length
+of up to 3.38 m (11.1 ft) over
+curves and weighing up to 388.7
+kg (857 lb) in the wild. with
+most remaining populations
+occurring in small pockets
+isolated from each other, of
+which about 2,000 exist on the
+Indian subcontinent. &lt/p&gt
+
+&lt/div&gt
+
+
+&ltdiv class="one-half column"&gtLion
+&ltp&gtThe lion (Panthera leo) is one
+of the five big cats in the genus
+Panthera and a member of the family
+Felidae , it is the second-largest
+living cat after the tiger . lions
+live for 10�14 years in the wild,
+although in captivity they can live
+more than 20 years.&lt/p&gt
+&lt/div&gt
+
+&lt/div&gt
+
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+
+
+
+    <h4>Result for above Example :</h4>
+
+        <img src="file:///android_asset/skeletonpc.png" alt="Basic Html" ></p>
+
+
+        <br>
+        <h4> This is how the webpage looks in smallscreen devices </h4>
+
+        <img src="file:///android_asset/skeleton.jpg" alt="Basic Html" ></p>
+
+
+
+        <hr>
+        <br>
+
+
+
+
+
+
+
+
+        <h3> TRY YOURSELF : </h3>
+        <p>Type the code or copy/paste below and press show result to see the result.</p>
+
+        <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+        <input onclick="update();" type="button" value="show result"></p>
+
+
+
+        <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

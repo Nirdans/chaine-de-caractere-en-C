@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+div {
+    background-color: #F9FFFF;
+    width: 272px;
+    padding: 10px;
+    border: 5px solid steelblue;
+    margin: 1px;
+}
+
+p1 {
+border: 5px solid steelblue;
+padding: 2px;
+
+}
+
+
+hr{
+
+width:100%;
+border:2px solid Mediumturquoise;
+float:left;
+
+
+
+}
+
+ img {
+        width: 90%;
+        height: auto;
+        }
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<h2> BUILDING WEBSITES WITH DRUPAL </h2>
+
+<p>Drupal a free and open-source content-management system and third most popular CMS behind Wordpress & Joomla, it provides a back-end framework for at least 2.2% of all Web sites worldwide ranging from personal blogs to corporate, political, and government sites.
+
+
+<p>As of April 2015 the Drupal community, comprising more than one million members (as of October 2013)and over 30,000 developers (as of February 2014),has contributed more than 33,000 modules that alter and extend the core capabilities, behavior, and appearance of a Drupal site.</p>
+
+<hr>
+<br>
+
+<h3>Getting Started </h3>
+<p>To start building websites with Drupal, Domain registration and Hosting should be done first. </p>
+
+<h4> Installing Drupal </h4>
+
+<ul>
+
+<li> To Download Drupal visit http://drupal.org/project/drupal and click on the verison of drupal you want and download it. </li>
+
+<li> Log in to your hosting account's control panel and in File Manager, Navigate to your HTML directory.</li>
+
+<li> Upload your compressed .tar.gz or .zip file to the Html directory.  Most of the Hosting service providers allows you to upload a compressed file and un-archive ('uncompress' or 'unzip') the file-set on the server. </li>
+
+<li> Rename the folder from its current name: "Drupal-X.X" to the name you want to use to refer to your site, such as "mysite Name" </li>
+ 
+
+
+</ul>
+
+<h4> Creating Configuration File </h4>
+
+<ul>
+<li> In order to set up your new site, it is necessary to be able to modify the settings.php file . By default when you unarchive these files, only the default.settings.php file exists and the permissions are set to Read Only.</li>
+
+<li> In your Cpanel file manager navigate to the /sites/default directory, Select the default.settings.php file (usually done by checking a box next to the file)Copy the file, naming the new copy 'settings.php'.
+
+<li> To Change the permission of the settings.php, In file manager select the file "settings.php" and click on permissions.
+Add the permissions for the file to be written by the web server (i.e. web users). If your system is asking you to use a numeric value to CHMOD the file you will want to use 666, this will set the file to be written by anyone. Save your changes. </li>
+
+
+</ul>
+
+<h4> Creating Drupal Database </h4>
+<p>You must create a new, empty database for Drupal to use. You must also add a user who has full access to this newly created database. </p>
+<ul>
+
+<li>From your control panel, open phpMyAdmin.
+In the Create new database field, type the name you want to use for your new Drupal database and then click Create.</li>
+
+<li>Click the Privileges tab and Click Add a new User.</li>
+
+<li>In the User name field, type the username that you want to add (this will be the username for site to access the database, not your own username).</li>
+
+<li>In the drop-down menu beside the Host field, select Local.
+In the Password and Re-type fields, type a password to use for the new user.</li>
+
+<li>In the "Database for user" section, select "Grant all privileges" on the database you just created.In the "Global privileges" section, leave all of the global privileges checkboxes unselected.
+Click Go.</li>
+
+</ul>
+
+<hr>
+<br>
+
+<h3> Running the Installation </h3>
+<ul>
+
+<li>Using your web browser, navigate to the base URL of your new website, e.g. http://www.example.com. When you go to your new website, you should see the Drupal installation page. The installation wizard will guide you through the process of setting up your Drupal website .</li>
+
+<li> On the Select an installation profile page, select Standard. Click Save and continue.On the Choose language page, select English. Click Save and continue.</li>
+
+<br>
+
+<img src="file:///android_asset/Drupal_install.png" alt=" Drupal" ></p>
+
+<li>On the Database configuration page, select the type of database that you are using. Type the database name, database username and database password (the same ones you used to set up your database).</li>
+
+
+<li>On the Configure site page, In the Site name field, type the name you want to give your site. In the Site email address field, type the email address that automated messages from your Drupal site will be sent from.</li>
+
+<li>In the site maintenance account section, type a username, email address and password to use for the maintenance account.
+In the server settings section, select a country from the list and then select a time zone.</li>
+
+<li>If desired, select Check for updates automatically and Receive email notifications (recommended to keep your site's security up to date).Click Save and continue.</li>
+
+<li> After completing all the above steps you will see installation complete page, click the Visit your new site link. You should see a newly installed Drupal homepage, as shown in the screenshot below. </li>
+<br>
+
+<img src="file:///android_asset/Drupal Welcome page.png" alt=" Drupal" ></p>
+
+    </ul>
+
+
+<hr>
+<br>
+
+
+<h3>Changing Site Information</h3>
+
+<p> After setting up the drupal the first thing you may want to do is change the boring "My Site" title. To change the site name, go to "Configuration" -> "Site Information". In the Site Name field, enter the name of your site. If you have a catchy slogan, you can type it into the Slogan field. This might be your tag line, catch phrase or simply some details that better explain what your site is all about. </p>
+
+<h3> Adding New Theme </h3>
+
+<p>You may want a different theme from the original theme that appears on installation. There are not many choices that come with the stock installation. To find additional themes from the Drupal site, navigate to the Appearance menu and then click Install New Theme. Click "Themes" and you will be taken to the Themes section at Drupal.org. Filter to find themes that work with that version. Quick tip: You can sort by Most Installed, Relevancy, Title and more.
+
+For example, if you wanted a particular Theme, locate the link to the latest Drupal version, and right-click it to copy the URL address. Back at the site, copy the address into the Install From a URL field box. Click Install. Then click Enable Newly Installed to successfully change the theme </p>
+
+<img src="file:///android_asset/drupal_theme.jpg" alt=" Drupal" ></p>
+
+<h3> Creating About me Page </h3>
+
+<p> One of the most viewed web pages on every site is the About me page. Web visitors intuitively want to know what a site is about and who is behind the scenes. In this section we will see how you can set up a simple page; such as About me. Simply navigate to "Content" -> "Add Content" -> "Basic Page". Type "About Us" in the title and add relevant information in the body.</p>
+
+<p>To get the About page to appear in the main menu, under Menu Settings check the box Provide A Menu Link. Save the page and you should be able to see About Us in the main menu. To change the order of the items, navigate to "Structure" -> "Menus" -> "Main Menu". The items can be shifted around by grabbing the little crosses with the mouse and dragging them up or down. </P>
+
+
+
+<h3> Adding Modules </h3>
+<p>One of the Drupal's strengths is a large dedicated and supportive community. They have contributed some excellent modules, often called "contrib modules" to the Drupal system for everyone to use. You can find the modules at: https://www.drupal.org/download </p>
+
+<h4> Installing Modules </h4>
+
+<p>Download the zip or tar file. Extract that to your /sites/all/modules/{modulename} folder directory of the Drupal installation on your webhost. To finish, you should enable the module in the administration section of your site. </p>
+
+<h4> Some of the Usefull Modules </h4>
+
+
+<h4> Admin Menu Module </h4>
+ 
+<p>To add admin menu module, First turn the existing "Toolbar" off. Then activate the Admin Menu module which gives you cool drop-down menus of the entire admin area. This one module will save you a ton of time as it saves you from having to load a ton of pages to get to the single admin function you are looking for.</p>
+
+
+<img src="file:///android_asset/administration-drupal.png" alt=" Drupal" ></p>
+
+<h4>CKEditor Module </h4>
+<p> Drupal 7 does not provide a default WYSIWYG text editor but Drupal 8 has WYSIWG as standard. WYSISYG stands for What You See Is What You Get, which provides a visual HTML textarea editor, similar to popular word processors, making text more visually appealing and easier to format. </p>
+
+<p>CKEditor is a popular solution to get WYSIWYG functionality in drupal 7. It was recently improved to be faster and easier to use. To make CKEDitor work, after you install the Drupal module, you must also download the standalone CKEditor from download section at CKEditor.com. Then unpack those contents into the sites/all/modules/ckeditor/ckeditor directory on your Drupal site.</p> 
+
+
+<img src="file:///android_asset/ckeditor.png" alt=" Drupal" ></p>
+
+<h4>IMCE Module</h4>
+
+<p>IMCE helps you add images to you posts. It is a browser and uploader that worked with CKEDitor text editor. After installing IMCE and enabling it, go to "Configure-> Content Authoring -> CKEditor -> Profiles -> Advanced -> Edit -> File Browser Settings". Then select IMCE from the dropdown menus for the link dialog window, image dialog window and flash dialog window and Save the settings.</p>
+
+
+<img src="file:///android_asset/imce.png" alt=" Drupal" ></p>
+
+
+
+<h4> Pathauto Module </h4>
+
+<p>Drupal's built-in Path module lets you create better URLs. Pathauto relieves the drudgery of doing this on every post, especially if you are working with end users who may neglect this. You can assign custom replacement patterns and user account page paths so the URLs match your SEO and usability standards. However, Pathauto requires the Token module.</p>
+
+<img src="file:///android_asset/pathauto.png" alt=" Drupal" ></p>
+
+
+
+<h4> Token Module </h4>
+
+<p>Tokens are little sections of text that are placed via a placeholder system. With Drupal 7, much of the functionality of the Token module has been written into Drupal core, but some module still requires it. </p>
+
+
+<h4> Quicktab Module </h4>
+
+<p>Quicktabs creates great tabbed views, nodes and blocks quickly and easily without writing custom JavaScript.
+
+After installing and enabling the module, you'll find a Quicktabs selection under the Structure menu.</p>
+
+<img src="file:///android_asset/quicktabs drupal.png" alt=" Drupal" ></p>
+
+<hr>
+<br>
+
+<h3> Drupal 8 Features </h3>
+
+
+<p>Drupal 8 is the latest and more advanced and capable than version 7, For developers and designers, Drupal 8 has adopted much of the Symfony stack. This means that large parts of Symfony2 are in the codebase, and themes now use the Twig templating language. Drupal 8 is architected to support mobile-first initiatives, enabling responsive experiences across screens as well as supporting mobile apps.</p>
+
+<p>For site-builders, Drupal 8 will be significantly more capable than Drupal 7. The new version includes many popular modules that were only available as add-on modules in Drupal 7. The hugely popular Views module is now part of the Drupal 8 core, and so are fields such as Date, E-mail, Link and Telephone Number.</p>
+
+<p>For content-administrators, there's front-end editing, so you can click on almost any part of the site and edit it without leaving the page.</p>
+
+
+<img src="file:///android_asset/drupal-8-editor-image.png" alt=" Drupal" ></p>
+
+
+
+<h3>These tips should provide a nice foundation to get you up and running on your new Drupal site </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

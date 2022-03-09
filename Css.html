@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        div{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+<h2> HTML CSS : </h2>
+
+<p> CSS stands for Cascading Style Sheets , it defines how HTML elements are to be displayed.</p>
+<p>It can be added to HTML elements in 3 ways:<p>
+<p>1.Inline   - using a style attribute in HTML
+    elements</p>
+
+<p>2.Internal - using a &ltstyle&gt element in the
+    HTML &lthead&gt section</p>
+
+<p>3.External - using one or more external CSS
+    files
+</p>
+
+The syntax for CSS Styling is :
+<br />
+<br />
+<P1>
+    element { property:value ; property:value }
+</p1>
+<br />
+<br />
+<hr />
+<br />
+
+
+<h2>INLINE STYLING : </h2>
+Inline styling is useful for applying a unique style to a single HTML element .
+
+<h4> Example for Inline Styling : </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&lth1 style="color:steelblue"&gt
+
+This is inline styling example&lt/h1&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example :</h4>
+<img src="file:///android_asset/inline.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+<h2>INTERNAL STYLING : </h2>
+    <p>An internal style sheet can be used to define a common style for all HTML elements on a page. </p>
+
+    <p>Internal styling is defined in the
+        &lthead&gt section of an HTML page, using
+        a &ltstyle&gt tag</p>
+
+
+    <h4> Example for Internal styling :</h4>
+
+    <div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+body {background-color:
+
+MediumTurquoise  }
+
+h1   {
+color:steelblue;
+font-family:verdana;
+font-size:300%;
+}
+
+p    {
+
+color:DarkOrchid; 
+font-family:verdana;
+font-size:200%;
+
+  }
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+  &lth1&gtThis is a heading&lt/h1&gt
+
+  &ltp&gtThis is a paragraph.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+
+    </div>
+
+    <h4>Result for the above Example :</h4>
+
+    <img src="file:///android_asset/internal.jpg" alt="Basic Html" ></p>
+
+
+
+    <hr />
+    <br />
+
+
+
+    <h2>EXTERNAL STYLING : </h2>
+
+    <p>In External styling the same styles can be used across multiple pages of the site .</p>
+
+    <p>External styles are defined in the
+        &lthead&gt section of an HTML page, in the
+        &ltlink&gt tag .</p>
+
+    <h4> Example for External Styling : </h4>
+
+    <div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&ltlink rel="External" 
+href="style1.css"&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&lth1&gtThis is a heading&lt/h1&gt
+&ltp&gtThis is a paragraph.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+    </div>
+
+    <h4>Result for the above example : </h4>
+
+
+    <img src="file:///android_asset/externalcss.jpg" alt="Basic Html" ></p>
+
+
+    <hr />
+    <br />
+
+
+    <h2> CSS BOX : </h2>
+
+    <p>This creates a box a around an HTML element , CSS border property defines a visible border around an  element and padding property defines a padding space inside the border , margin property defines a margin space outside the border .</p>
+
+    <h4> Example for CSS Box : </h4>
+
+
+    <div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+
+p {
+    border:5px solid steelblue;
+    padding:10px;
+    margin:30px;
+}
+
+div {
+    width: 320px;
+    padding: 10px;
+    border: 5px solid Turquoise;
+    margin: 30px;
+}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp&gtCSS BOX EXAMPLE&lt/p&gt
+
+&ltdiv&gt
+
+&ltp&gt This a Box &lt/p&gt
+
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+    </div>
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/cssbox.jpg" alt="Basic Html" ></p>
+
+
+
+    <hr>
+    <br>
+
+
+
+
+    <h3> NAVIGATION BAR  </h3>
+
+    <p>A navigation bar is a section of a graphical user interface intended to aid visitors in accessing information. Navigation bars are implemented in file browsers, web browsers and as a design element of some web sites</p>
+
+    <h4> Vertival Navigation Bar </h4>
+
+    <p> In the vertical navigation bar all the content will be in vertical format. </p>
+
+
+    <h4>Example For Vertical Navigation Bar </h4>
+
+    <div>
+<pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: steelblue;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: turquoise;
+    color: white;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtVertical Navigation Bar&lt/h2&gt
+
+&ltp&gtIn this example, Active class is 
+in a Steelblue background color and 
+a white text.&lt/p&gt
+
+&ltul&gt
+
+&ltli&gt&lta class="active" href="#home"&gt
+Home&lt/a&gt&lt/li&gt
+&ltli&gt&lta href="#Content"&gtContent&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#contact"&gtContact&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#about"&gtAbout&lt/a&gt
+&lt/li&gt
+
+&lt/ul&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/verticalnav.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+
+    <h4> Fixed Vertical Navigation Bar </h4>
+
+    <p> In fixed Vertical Nave Bar, the nav bar will be fixed in the same position even if the content of the page is scrolled down.</p>
+
+
+    <h4>Example for Fixed Vertical Nav Bar </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 26%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: steelblue;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: turquoise;
+    color: white;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltul&gt
+&ltli&gt&lta class="active" href="#home"&gt
+Home&lt/a&gt&lt/li&gt
+&ltli&gt&lta href="#news"&gtNews&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#contact"&gtContact&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#about"&gtAbout&lt/a&gt
+&lt/li&gt
+&lt/ul&gt
+
+&ltdiv style="margin-left:26%;
+padding:2px 16px;height:1000px;"&gt
+
+&lth2&gtFixed Side Nav Bar&lt/h2&gt
+
+&lth3&gtTry to scroll this area, and 
+see how the sidenav sticks 
+to the page&lt/h3&gt
+
+&ltp&gtNotice that this div element 
+has a left margin of 26%. This 
+is because the side navigation 
+is set to 26% width. If you 
+remove the margin, the sidenav 
+will overlay/sit on top of 
+this div.&lt/p&gt
+
+  
+&ltp&gtAlso notice that we have set 
+overflow:auto to sidenav. This 
+will add a scrollbar when the 
+sidenav is too long (for 
+example if it has over 50 links
+inside of it).&lt/p&gt
+
+  &ltp&gtText 1&lt/p&gt
+  &ltp&gtText 2&lt/p&gt
+  &ltp&gtText 3&lt/p&gt
+  &ltp&gtText 4&lt/p&gt
+  &ltp&gtText 5&lt/p&gt
+  &ltp&gtText 6&lt/p&gt
+  &ltp&gtText 7&lt/p&gt
+  &ltp&gtText 8&lt/p&gt
+  &ltp&gtText 9&lt/p&gt
+
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/fixedverticalnav.gif" alt="Basic Html"></p>
+
+
+
+
+
+
+    <h4> Horizontal Navigation Bar </h4>
+
+    <p>In the horizontal navigation bar all the content will be in horizontal format.</p>
+
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: turquoise;
+}
+
+.active {
+    background-color: steelblue;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+&lth3&gt Horizontal Navigation Bar &lt/h3&gt
+
+&ltp&gtIn this example, Active class is 
+in a Steelblue background color and 
+a white text.&lt/p&gt
+
+&ltul&gt
+
+&ltli&gt&lta class="active" href="#home"&gt
+Home&lt/a&gt&lt/li&gt
+&ltli&gt&lta href="#news"&gtContent&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#contact"&gtContact&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#about"&gtAbout&lt/a&gt
+&lt/li&gt
+
+&lt/ul&gt
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/horizontalnav.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+    <h4> Fixed Horizontal Nav Bar </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: turquoise;
+}
+
+.active {
+    background-color: steelblue;
+}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltul&gt
+
+&ltli&gt&lta class="active" href="#home"&gt
+Home&lt/a&gt&lt/li&gt
+&ltli&gt&lta href="#news"&gtNews&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#contact"&gtContact&lt/a&gt
+&lt/li&gt
+&ltli&gt&lta href="#about"&gtAbout&lt/a&gt
+&lt/li&gt
+
+&lt/ul&gt
+
+&ltdiv style="padding:20px;margin-top:
+30px;background-color:lightgrey;
+height:1500px;"&gt
+
+&lth1&gtFixed Top Navigation Bar&lt/h1&gt
+
+&lth2&gtScroll this page to see the 
+effect&lt/h2&gt
+
+&lth2&gt Nav bar will stay at 
+the top of the page while 
+scrolling&lt/h2&gt
+
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&ltp&gtSome text &lt/p&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/fixedhorizontalnav.gif" alt="Basic Html"></p>
+
+
+
+    <hr>
+    <br>
+
+
+
+
+    <h3> DROPDOWN </h3>
+
+    <p> A drop-down menu is a graphical control element, similar to a list box, that allows the user to choose one value from a list. When a drop-down list is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one. </p>
+
+    <h4> Example For Dropdown </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px 
+    rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown1:hover .dropdown1-content {
+    display: block;
+}
+
+
+
+
+
+.dropbtn {
+    background-color: steelblue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px 
+    rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover 
+{background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: turquoise;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtDropdown Menu&lt/h2&gt
+&ltp&gtMove the mouse over the button to 
+open the dropdown menu.&lt/p&gt
+
+&ltdiv class="dropdown"&gt
+
+&ltbutton class="dropbtn"&gtDropdown
+&lt/button&gt
+
+&ltdiv class="dropdown-content"&gt
+
+&lta href="#"&gtLink 1&lt/a&gt
+&lta href="#"&gtLink 2&lt/a&gt
+&lta href="#"&gtLink 3&lt/a&gt
+
+&lt/div&gt
+&lt/div&gt
+
+  
+
+
+
+
+
+&lth2&gtHoverable Dropdown&lt/h2&gt
+&ltp&gtMove the mouse over the text 
+below to open the dropdown 
+content.&lt/p&gt
+
+&ltdiv class="dropdown1"&gt
+  &ltspan&gtMouse over me&lt/span&gt
+  &ltdiv class="dropdown1-content"&gt
+    &ltp&gtHoverable Dropdown&lt/p&gt
+  &lt/div&gt
+  &lt/div&gt
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+    </div>
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/dropdown.gif" alt="Basic Html" ></p>
+
+
+    <hr>
+    <br>
+
+
+
+    <h3>IMAGE GALLERY </h3>
+
+    <h4> Example for Image Gallery </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+
+div.img {
+    margin: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 120px;
+    height : 200px;
+} 
+
+div.img:hover {
+    border: 3px solid steelblue;
+}
+
+div.img img {
+    width: 100%;
+    height: 100px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltdiv class="img"&gt
+
+&lta target="_blank" href=
+
+"img_tiger.jpg"&gt
+&ltimg src="img_tiger.jpg" alt="tiger" 
+width="300" height="200"&gt
+
+&lt/a&gt
+
+&ltdiv class="desc"&gtThis is a Tiger
+
+&lt/div&gt
+&lt/div&gt
+
+&ltdiv class="img"&gt
+
+&lta target="_blank" href=
+"img_olm.jpg"&gt
+&ltimg src="img_olm.jpg" alt="olm" 
+width="300" height="200"&gt
+&lt/a&gt
+
+&ltdiv class="desc"&gtThis is a Olm
+
+&lt/div&gt
+&lt/div&gt
+
+&ltdiv class="img"&gt
+
+&lta target="_blank" href=
+"img_pygmy.jpg"&gt
+&ltimg src="img_pygmy.jpg" alt="pygmy" 
+width="300" height="200"&gt
+&lt/a&gt
+
+&ltdiv class="desc"&gtThis is a Pygmy 
+Marmoset
+
+&lt/div&gt
+&lt/div&gt
+
+&ltdiv class="img"&gt
+
+&lta target="_blank" href=
+"img_tarsier.jpg"&gt
+&ltimg src="img_tarsier.jpg" alt=
+"tarsier" width="300" height="200"&gt
+&lt/a&gt
+
+&ltdiv class="desc"&gtThis is Tarsier
+
+&lt/div&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/imagegallery.png" alt="Basic Html" ></p>
+
+
+    <hr>
+    <br>
+
+
+
+    <h3> FORMS </h3>
+
+    <p> A form on a web page allows a user to enter data that is sent to a server for processing.</p>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt 
+
+&lt!-- This is for Padded field --&gt
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+&lt!-- This is for Bordered Field --&gt
+
+input[type=text1] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 4px solid steelblue;
+border-radius: 4px;
+}
+
+
+&lt!-- This is for image Field --&gt
+
+
+input[type=text2] {
+width: 100%;
+box-sizing: border-box;
+border: 2px solid #ccc;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+background-image: url
+('sicon.png');
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+}
+
+
+&lt!-- This is for Animated Field --&gt
+
+
+input[type=text3] {
+    
+width: 130px;
+box-sizing: border-box;
+border: 3px solid steelblue;
+border-radius: 4px;
+font-size: 16px;
+background-color: white;
+background-image: url('sicon.png');
+background-position: 10px 10px; 
+background-repeat: no-repeat;
+padding: 12px 20px 12px 40px;
+-webkit-transition: width 0.4s 
+ease-in-out;
+transition: width 0.4s ease-in-out;
+}
+
+input[type=text3]:focus {
+    width: 60%;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&lth3&gtPadded Text fields:&lt/h3&gt
+
+&ltform&gt
+
+&ltlabel for="fname"&gtFirst Name
+&lt/label&gt
+&ltinput type="text" id="fname" 
+name="fname"&gt
+&ltlabel for="fname"&gtLast Name&lt/label&gt
+&ltinput type="text" id="lname" 
+name="lname"&gt
+
+&lt/form&gt
+
+
+
+
+&lth3&gt Bordered Text Fields&lt/h3&gt
+
+
+
+&ltform&gt 
+
+&ltlabel for="fname"&gtFirst Name&lt/label&gt
+&ltinput type="text1" id="fname" 
+name="fname"&gt
+&ltlabel for="lname"&gtLast Name&lt/label&gt
+&ltinput type="text1" id="lname" 
+name="lname"&gt
+
+&lt/form&gt
+
+
+
+&lth3&gtText Fields with icon/image &lt/h3&gt
+
+&ltform&gt
+
+&ltinput type="text2" name="search" 
+placeholder="Search.."&gt
+
+&lt/form&gt
+
+
+
+
+&lth3&gt Animated Text Field &lt/h3&gt
+
+
+&ltform&gt
+
+  &ltinput type="text3" name="search" 
+placeholder="Search.."&gt
+
+&lt/form&gt
+
+
+
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <div>
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+
+            <style>
+
+
+                input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                }
+
+
+
+                input[type=text1] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+                border: 4px solid steelblue;
+                border-radius: 4px;
+                }
+
+
+
+
+
+                input[type=text2] {
+                width: 100%;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url("file:///android_asset/images (13).jpg");
+                background-size:40px;
+                background-position: 5px 10px;
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                }
+
+
+
+
+
+                input[type=text3] {
+
+                width: 130px;
+                box-sizing: border-box;
+                border: 3px solid steelblue;
+                border-radius: 4px;
+                font-size: 16px;
+                background-color: white;
+                background-image: url("file:///android_asset/images (13).jpg");
+                background-position: 5px 10px;
+                background-size:40px;
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                -webkit-transition: width 0.4s
+                ease-in-out;
+                transition: width 0.4s ease-in-out;
+                }
+
+                input[type=text3]:focus {
+                width: 90%;
+                }
+
+            </style>
+
+        </head>
+
+        <body>
+
+        <h3>Padded Text fields:</h3>
+
+        <form>
+
+            <label for="fname">First Name
+            </label>
+            <input type="text" id="fname"
+                   name="fname">
+            <label for="fname">Last Name</label>
+            <input type="text" id="lname"
+                   name="lname">
+
+        </form>
+
+
+
+
+        <h3> Bordered Text Fields</h3>
+
+
+
+        <form>
+
+            <label for="fname">First Name</label>
+            <input type="text1" id="fname"
+                   name="fname">
+            <label for="lname">Last Name</label>
+            <input type="text1" id="lname"
+                   name="lname">
+
+        </form>
+
+
+
+        <h3>Text Fields with icon/image </h3>
+
+        <form>
+
+            <input type="text2" name="search"
+                   placeholder="Search..">
+
+        </form>
+
+
+
+
+        <h3> Animated Text Field </h3>
+
+
+        <form>
+
+            <input type="text3" name="search"
+                   placeholder="Search..">
+
+        </form>
+
+
+
+
+
+
+        </body>
+        </html>
+
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+    <h3>STYLING TEXT AREA & SELECT MENU</H3>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+
+&ltstyle&gt 
+
+
+select {
+    width: 60%;
+    padding: 16px 20px;
+    border: 3px solid steelblue;
+    background-color: turquoise;
+}
+
+
+
+textarea {
+    width: 60%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 3px solid steelblue;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+&ltbody&gt
+
+&lth3&gtStyled Select Menu&lt/h3&gt
+
+&ltform&gt
+
+&ltselect id="country" name="country"&gt
+&ltoption value="ind"&gtIndia&lt/option&gt
+&ltoption value="ind"&gtChina&lt/option&gt
+&ltoption value="ind"&gtItaly&lt/option&gt
+&lt/select&gt
+
+&lt/form&gt
+
+
+
+&lth3&gt Styling Text Area &lt/h3&gt
+
+&ltform&gt
+
+&lttextarea&gt
+
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+
+
+&lt/textarea&gt
+&lt/form&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <div>
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+
+            <style>
+
+
+                select {
+                width: 60%;
+                padding: 16px 20px;
+                border: 3px solid steelblue;
+                background-color: turquoise;
+                }
+
+
+
+                #textarea1 {
+                width: 60%;
+                height: 150px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 3px solid steelblue;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+                font-size: 16px;
+                resize: none;
+                }
+
+            </style>
+
+        </head>
+        <body>
+
+        <h3>Styled Select Menu</h3>
+
+        <form>
+
+            <select>
+                <option value="ind">India</option>
+                <option value="ind">China</option>
+                <option value="ind">Italy</option>
+            </select>
+
+        </form>
+
+
+
+        <h3> Styling Text Area </h3>
+
+        <form>
+<textarea id = "textarea1">
+
+
+
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+some text ..
+
+</textarea>
+
+
+
+        </form>
+
+        </body>
+        </html>
+
+
+
+
+
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+    <h3>ANIMATION&TRANSITION</H3>
+
+    <h4> Animation </h4>
+
+    An animation lets an element gradually change from one style to another, we can change as many CSS properties and many times as we want.
+
+    <ul>
+
+        <li>
+            To use CSS3 animation, we must first specify some keyframes for the animation.Keyframes hold what styles the element will have at certain times. </li>
+
+        <li>When we specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times. </li>
+
+        <li>To get an animation to work, we must bind the animation to an element. </li>
+
+    </ul>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+ 
+div {
+width: 200px;
+height: 150px;
+background-color: steelblue;
+position: relative;
+-webkit-animation-name: example; 
+-webkit-animation-duration: 4s; 
+-webkit-animation-iteration-count:3; 
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: 3;
+}
+
+
+@-webkit-keyframes example {
+
+0%   {background-color:steelblue; 
+left:0px; top:0px;}
+25%  {background-color:yellow; 
+left:200px; top:0px;}
+50%  {background-color:blue; 
+left:200px; top:200px;}
+75%  {background-color:green; 
+left:0px; top:200px;}
+100% {background-color:orange; 
+left:0px; top:0px;}
+
+}
+
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltp&gt&lth3&gtANIMATION&lt/h3&gt &lt/p&gt
+
+&ltdiv&gt&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+
+    <h4> Result for the above Example </h4>
+
+    <img src="file:///android_asset/animation.gif" alt="Basic Html" ></p>
+
+
+
+
+
+
+
+
+
+    <h4> Transition  </h4>
+
+    <p>Transitions allows you to change property values smoothly from one value to another, over a given duration. To create a transition effect, you must specify two things, the CSS property you want to add an effect to and the duration of the effect.If the duration part is not specified, the transition will have no effect, because the default value is 0. </p>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt 
+
+#a {
+
+    width: 100px;
+    height: 100px;
+    background: steelblue;
+    -webkit-transition: width 2s; 
+    transition: width 2s;
+
+}
+
+#a:hover {
+    width: 400px;
+}
+
+
+
+
+
+#b {
+
+width: 100px;
+height: 100px;
+background: turquoise;
+-webkit-transition: width 2s, 
+height 2s, -webkit-transform 2s; 
+transition: width 2s, height 2s, 
+transform 2s;
+
+}
+
+#b:hover {
+
+width: 300px;
+height: 300px;
+-webkit-transform: rotate(180deg); 
+transform: rotate(180deg);
+
+}
+
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth3&gt Transition  &lt/h3&gt
+
+&ltdiv id ="a"&gt
+&lt/div&gt
+
+&ltp&gtHover over the div element above, 
+to see the transition effect.&lt/p&gt
+
+&ltdiv id ="b"&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+    </div>
+
+
+
+
+
+    <h4> Result For Above Example </h4>
+
+
+
+
+
+    <div>
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+
+
+
+
+                #a {
+
+                width: 100px;
+                height: 100px;
+                background: steelblue;
+                -webkit-transition: width 2s;
+                transition: width 2s;
+
+                }
+
+                #a:hover {
+                width: 230px;
+                }
+
+
+
+
+
+                #b {
+
+                width: 100px;
+                height: 100px;
+                background: turquoise;
+                -webkit-transition: width 2s,
+                height 2s, -webkit-transform 2s;
+                transition: width 2s, height 2s,
+                transform 2s;
+
+                }
+
+                #b:hover {
+
+                width: 200px;
+                height: 120px;
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+
+                }
+
+
+            </style>
+        </head>
+
+        <body>
+
+
+
+        <h3> Transition  </h3>
+
+        <div id ="a">
+        </div>
+
+        <p>Hover over the div element above,
+            to see the transition effect.</p>
+
+        <div id ="b">
+        </div>
+
+
+
+
+        </body>
+        </html>
+
+    </div>
+
+
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> TRY YOURSELF : </h3>
+    <p>Type the code or copy/paste below and press show result to see the result.</p>
+
+    <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+    <input onclick="update();" type="button" value="show result"></p>
+
+
+
+    <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

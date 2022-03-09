@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        text-align: left;
+        }
+        table{
+        width:55%;
+
+        }
+
+
+        hr{
+
+        width:100%;
+        border: 2px solid Mediumturquoise;
+        float:left;
+
+
+
+
+        }
+
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        } 
+        
+        
+        
+        
+        
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        text-align: left;
+        background-color: #F5F5F5;
+
+        }
+        img {
+
+        border: 5px solid steelblue;
+
+        }
+
+
+
+
+
+    </style>
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+
+</head>
+<body>
+
+<h2> HTML : </h2>
+<p> HTML stands for Hyper Text Markup Language it was created by Berners-Lee in late 1991 , which is the most widely used language on Web to develop web pages. </p>
+
+Web browsers can read HTML files and compose them into visible or audible web pages. Browsers do not display the HTML tags and scripts, but use them to interpret the content of the page. HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language . </p>
+
+
+<hr />
+<br />
+
+<h2>HTML VERSIONS</h2>
+
+<table>
+    <style>
+        th{
+
+        text-align:center;
+
+        }
+    </style>
+    <tr>
+
+        <th>VERSION</th>
+        <th>YEAR</th>
+
+    </tr>
+
+
+
+    <tr>
+        <td>Html</td>
+        <td>1991</td>
+
+    </tr>
+    <tr>
+        <td>Html 2.0</td>
+        <td>1995</td>
+
+    </tr>
+    <tr>
+        <td>Html 3.2</td>
+        <td>1997</td>
+
+    </tr>
+
+    <tr>
+        <td>Html 4.01</td>
+        <td>1999</td>
+
+    </tr>
+
+    <tr>
+        <td>XHtml</td>
+        <td>2000</td>
+
+    </tr>
+
+    <tr>
+        <td>Html 5</td>
+        <td>2012</td>
+
+    </tr>
+
+</table>
+
+
+<br />
+<hr />
+<br />
+
+
+<h2> GETTING STARTED :</h2>
+<p>HTML files are just simple text files, so to start writing in HTML, you need a simple text editor ,for learning HTML a simple text editor like Notepad (PC) or TextEdit (Mac) will be easy . HTML can be edited by using a professional HTML editor like Adobe Dreamweaver , Microsoft Expression Web,CoffeeCup HTML Editor .</p>
+
+<h4>To create a simple Webpage with notepad :</h4>
+
+<ul>
+    <li>Open Notepad (PC) or TextEdit (Mac) </li>
+
+</ul>
+
+<h4>Write some HTML into Text Editor :</h4>
+
+<p>Following is an example of a simple HTML document with Heading and Paragraph : </p>
+
+<p><i> The following code can be copy/pasted in the "Try yourself" Section. </i> </p>
+
+<div>
+
+<pre>
+
+ &lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltbody&gt
+
+  &lth1&gtThis is Heading&lt/h1&gt
+
+  &ltp&gt This is paragraph&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt 
+
+
+
+</pre>
+</div>
+
+</br>
+
+
+
+<img src="file:///android_asset/notepad.jpg" alt="Mountain View" style="width:304px;height:228px"></p>
+
+<h4> Save the HTML page : </h4>
+
+<ul>
+    <li>The finished page should be saved in <b>.</b>Html extension . </li>
+    <li>UTF-8 is the preferred encoding for HTML files .</li>
+
+</ul>
+
+<h4>To view the HTML page : </h4>
+Open the saved HTML file in your browser. The page will look like this:</p>
+
+<div>
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>This is Heading</h1>
+
+  <p> This is paragraph</p>
+
+</body>
+
+</html> 
+
+
+
+</div>
+
+
+
+<br>
+<hr />
+<br />
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result.</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

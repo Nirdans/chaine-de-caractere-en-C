@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 20px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+
+<h2> ANIMATED BUTTONS </h2>
+
+<p> Animated button are button created with CSS which will have effects when clicked or hovered, many different effects can be creted, we will see some of the examples. </p>
+
+<h3> Pressed Effect Button </h3>
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00b867;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3d8e7b}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtAnimated Buttons - Pressed Effect &lt/h2&gt
+
+&ltbutton class="button"&gtClick Here&lt/button&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+<div id="div1">
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #00b867;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3d8e7b}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Buttons - Pressed Effect </h2>
+
+<p> Click the button below to see the effect </p>
+
+<button class="button">Click Here</button>
+
+</body>
+</html>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+<h3> Hover Effect Button </h3>
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+.button {
+  border-radius: 4px;
+  background-color: #00b867;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtAnimated Button&lt/h2&gt
+
+&ltbutton class="button"&gt&ltspan&gtHover Me &lt/span&gt&lt/button&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+<div id="div1">
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button1 {
+  border-radius: 4px;
+  background-color: #00b867;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Button</h2>
+
+<button class="button1"><span>Hover Me </span></button>
+
+</body>
+</html>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3> Ripple Effect Button </h3>
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+.button {
+    position: relative;
+    background-color: #00b867;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtAnimated Button - Ripple Effect&lt/h2&gt
+
+&ltbutton class="button"&gtClick Here&lt/button&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+<br>
+
+<h3>Result For Above Example</h3>
+
+
+<div id="div1">
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button2 {
+    position: relative;
+    background-color: #00b867;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button2:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button2:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Button - Ripple Effect</h2>
+
+<button class="button2">Click Here</button>
+
+</body>
+</html>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> TRY YOURSELF : </h3>
+    <p>Type the code or copy/paste below and press show result to see the result</p>
+
+    <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+    <input onclick="update();" type="button" value="show result"></p>
+
+
+
+    <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

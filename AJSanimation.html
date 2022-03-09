@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 6px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS ANIMATION </h2>
+
+<p>An animation is when the transformation of an HTML element gives you an illusion of motion. AngularJS provides animated transitions, with help from CSS.
+</p>
+<p>
+    To make your applications ready for animations, the AngularJS Animate library must be included.
+</p>
+
+<div id ="div1">
+    <i>
+        &ltscript src = "https://ajax.googleapis.com/ajax/libs/angular
+        js/1.6.9/angular-animate.js">
+        &lt/script&gt
+    </i>
+</div>
+
+<p> Then the ngAnimate module should be refered to the application or if your application has a name, add ngAnimate as a dependency in your application module:</p>
+
+<div id ="div1">
+    <i>
+        &ltbody ng-app="ngAnimate"&gt </i>
+</div>
+
+<h4>What Does ngAnimate Do?</h4>
+
+<p>
+    The ngAnimate module adds and removes classes.
+
+    The ngAnimate module does not animate your HTML elements, but when ngAnimate notice certain events, like hide or show of an HTML element, the element gets some pre-defined classes which can be used to make animations.
+    <br>
+    <br>
+    The directives in AngularJS which add/remove classes are:
+</p>
+
+<ul type ="square">
+
+
+    <li><span style = "color:red">ng-show</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-hide
+ </span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-class
+</span>
+
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-view
+</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-include
+</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-if
+ </span>
+    </li>
+
+    <br>
+
+    <li>
+
+<span style = "color:red">ng-switch
+ </span>
+
+    </li>
+
+
+</ul>
+<p>The <span style= "color:red">  ng-show </span> and <span style= "color:red"> ng-hide </span> directives adds or removes a ng-hide class value.
+
+    The other directives adds a <span style= "color:red">ng-enter</span> class value when they enter the DOM, and a <span style= "color:red"> ng-leave </span>attribute when they are removed from the DOM.</p>
+
+<p>The ng-repeat directive also adds a <span style= "color:red"> ng-move </span> class value when the HTML element changes position.
+
+    In addition, during the animation, the HTML element will have a set of class values, which will be removed when the animation has finished. Example: the <span style= "color:red"> ng-hide </span> directive will add these class values.</p>
+<ul>
+
+    <li>
+<span style = "color:red">ng-animate
+ </span>
+
+    </li>
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-hide-animate
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-hide-add
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-hide-remove
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-hide-add-active
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-hide-remove-active
+
+</span>
+
+    </li>
+
+
+
+</ul>
+
+
+<br>
+
+
+<H3> CSS TRANSITIONS </H3>
+
+<p>CSS transitions allows you to change CSS property values smoothly, from one value to another, over a given duration.</p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+
+.one{
+  transition: all linear 0.5s;
+  background-color: turquoise;
+  height: 100px;
+}
+
+.ng-hide {
+  height: 0;
+}
+
+&lt/style&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.
+js"&gt&lt/script&gt
+
+&ltscript src="https://ajax.googleapis.com/
+ajax/libs/angularjs/1.6.9/angular-
+animate.js"&gt&lt/script&gt
+
+&ltbody ng-app="firstAPP"&gt
+
+&lth1&gtHide the DIV: &ltinput type="checkbox"
+ng-model="myCheck"&gt&lt/h1&gt
+
+&ltdiv class ="one" id ="ID1"
+ng-hide="myCheck"&gt
+&lt/div&gt
+
+&ltscript&gt
+var app=angular.module('firstAPP',
+['ngAnimate']);
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+
+.one{
+  transition: all linear 0.5s;
+  background-color: turquoise;
+  height: 100px;
+}
+
+.ng-hide {
+  height: 0;
+}
+
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+    <body ng-app="firstAPP">
+
+    <h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+
+    <div class ="one" id ="ID1" ng-hide="myCheck"> </div>
+
+    <br>
+
+    <i>When the DIV element gets the .ng-hide class, the transition will take 0.5 seconds, and the height will smoothly change from 100px to 0.</i>
+
+    <script>
+var app = angular.module('firstAPP', ['ngAnimate']);
+
+angular.bootstrap(document.getElementById("ID1"),
+['firstAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> CSS ANIMATIONS </h3>
+
+<p>
+
+    CSS Animations allows you to change CSS property values smoothly, from one value to another, over a given duration.
+
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+@keyframes myChange {
+  from {
+      height: 100px;
+  } to {
+      height: 0;
+  }
+}
+
+div{
+  height: 100px;
+  background-color: lightblue;
+}
+
+div.ng-hide {
+  animation: 0.5s myChange;
+}
+&lt/style&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.
+js"&gt&lt/script&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular-
+animate.js"&gt&lt/script&gt
+
+&ltbody ng-app="ngAnimate"&gt
+
+Hide the DIV: &ltinput type="checkbox"
+ng-model="myCheck"&gt
+
+&ltdiv  ng-hide="myCheck"&gt
+
+&lt/div&gt
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+@keyframes myChange {
+  from {
+      height: 100px;
+  } to {
+      height: 0;
+  }
+}
+
+div{
+  height: 100px;
+  background-color: turquoise;
+}
+
+div.ng-hide {
+  animation: 0.5s myChange;
+}
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+
+    <body ng-app="ngAnimate">
+
+    <b>Hide the DIV: <input type="checkbox" ng-model="myCheck"> </b>
+
+    <br>
+
+    <div id ="two" ng-hide="myCheck">
+
+    </div>
+    <br>
+
+    <i>When the DIV element gets the .ng-hide class, the myChange animation will run, which will smoothly change the height from 100px to 0.</i>
+
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

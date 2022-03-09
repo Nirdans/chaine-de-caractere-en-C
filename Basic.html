@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+
+
+
+
+    </style>
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+
+<body>
+
+<h2> HTML BASICS : </h2>
+<p>A simple HTML Document :</p>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+  &lttitle&gtTitle of the page&lt/title&gt
+&lt/head&gt
+
+&ltbody&gt
+
+  &lth1&gtThis is Heading&lt/h1&gt
+
+  &ltp&gtThis is paragraph&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt 
+
+
+
+</pre>
+</div>
+
+<h4>Explanation for the above HTML document : </h4>
+
+
+<p>
+    1.The DOCTYPE declaration defines the
+    document type to be HTML.</p>
+
+<p>2.The text between &lthtml&gt and &lt/html&gt
+describes an HTML document.</p>
+
+<p>3.The text between &lthead&gt and &lt/head&gt
+    provides info about the document.</p>
+
+<p>4.The text between &lttitle&gt and &lt/title&gt
+    provides a title for the document.</p>
+
+<p>5.The text between &ltbody&gt and &lt/body&gt
+    describes the visible page content.</p>
+
+<p>6.The text between &lth1&gt and &lt/h1&gt
+    describes a heading.</p>
+
+<p>7.The text between &ltp&gt and &lt/p&gt
+    describes a paragraph.</p>
+
+
+<hr />
+<br />
+
+
+<h2> HEADING IN HTML :</h2>
+<p>
+    Every document will have a heading.
+    HTML has different sizes for  headings.
+    which use the following elements
+    &lth1&gt, &lth2&gt, &lth3&gt, &lth4&gt, &lth5&gt, and &lth6&gt.
+    While displaying any heading, browser
+    adds one line before and one line after
+    that heading.  </p>
+
+
+<h4> Example for Heading  : </h4>
+
+<div>
+
+<pre>
+
+ &lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtHeading Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&lth1&gtExample for heading h1&lt/h1&gt
+&lth2&gtExample for heading h2&lt/h2&gt
+&lth3&gtExample for heading h3&lt/h3&gt
+&lth4&gtExample for heading h4&lt/h4&gt
+&lth5&gtExample for heading h5&lt/h5&gt
+&lth6&gtExample for heading h6&lt/h6&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+<h4>Result for the above Example :</h4>
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Heading Example</title>
+
+</head>
+
+<body>
+<h1>Example for heading h1</h1>
+<h2>Example for heading h2</h2>
+<h3>Example for heading h3</h3>
+<h4>Example for heading h4</h4>
+<h5>Example for heading h5</h5>
+<h6>Example for heading h6</h6>
+</body>
+
+</html>
+
+</div>
+
+<br>
+<hr />
+<br />
+
+<h2>PARAGRAPH IN HTML:</h2>
+
+
+<p1>
+    In HTML you can structure your text
+    into different paragraphs by using the
+    tag &ltp&gt.Each paragraph of text should go
+    in between an opening &ltp&gt and a closing
+    &lt/p&gt tag .
+</p1>
+
+<h4> Example for Paragraph : </h4>
+
+
+<div>
+
+<pre>
+
+ &lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtParagraph Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThis is First Paragraph.&lt/p&gt
+&ltp&gtThis is Second Paragraph.&lt/p&gt
+&ltp&gtThis is Third Paragraph.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+&lt/html&gt 
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above example : </h4>
+
+<div>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Paragraph Example</title>
+
+</head>
+
+<body>
+<p>This is First Paragraph.</p>
+<p>This is Second Paragraph.</p>
+<p>This is Third Paragraph.</p>
+</body>
+
+</html>
+
+</html>
+
+</div>
+
+
+
+<br>
+<hr />
+<br />
+
+<h2>LINE BREAK IN HTML : </h2>
+
+<p>If you use the &ltbr&gt tag , anything
+    following it starts from the next
+    line . This tag is an example of an
+    empty element, there is no need for
+    opening and closing tags, as there
+    is nothing to go in between them. </p>
+
+<h4> Example for Line break :</h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtExample for Line Break 
+&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThis&ltbr&gt
+is an example for&ltbr&gt
+Line Break&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above example : </h4>
+
+
+<div>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Example for Line Break 
+</title>
+
+</head>
+
+<body>
+<p>This<br>
+is an example for<br>
+Line Break</p>
+</body>
+
+</html>
+
+
+
+</div>
+
+
+
+<br>
+<hr />
+<br />
+
+
+<h2> CENTERING CONTENT : </h2>
+<p>To center any content in HTML You can
+    use &ltcenter&gt tag this will to put any
+    content inside the tag in the center of
+    the page or any table cell. </p>
+
+<h4> Example for Centering content :</h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtCentering content&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThis is not in the center .&lt/p&gt
+&ltcenter&gt
+&ltp&gtThis is in the center.&lt/p&gt
+&lt/center&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above example : </h4>
+
+<div>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Centering content</title>
+
+</head>
+
+<body>
+<p>This is not in the center .</p>
+<center>
+<p>This is in the center.</p>
+</center>
+
+</body>
+</html>
+
+
+</div>
+
+
+<br>
+<hr />
+<br />
+
+<h2>PRESERVE FORMATTING :</h2>
+
+<p>If want your text to be exact format
+    of how it is written in the HTML document
+    you can use the preformatted tag &ltpre&gt.
+    Any text between the opening &ltpre&gt tag
+    and the closing &lt/pre&gt tag will preserve
+    the formatting of the source document.</p>
+
+<h4> Example for Preserve formatting :</h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtPreserve Formatting&lt/title&gt
+&lt/head&gt
+
+
+&ltbody&gt
+&ltpre&gt
+
+This 
+    is 
+      an 
+         Example for preserve
+&lt/pre&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above example : </h4>
+
+<div>
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Preserve Formatting</title>
+</head>
+
+
+<body>
+<pre>
+
+This 
+    is 
+      an 
+         Example for preserve
+</pre>
+</body>
+
+</html>
+
+
+
+</div>
+
+
+
+<br>
+<hr />
+<br />
+
+
+<h2>HORIZONTAL LINE : </h2>
+<p>To create a horizontal line between a
+    section of document the  &lthr&gt  tag can
+    be used it creates a line from the
+    current position in the document to the
+    right margin and breaks the line
+    accordingly .</p>
+
+<h4> Example for horizontal line :</h4>
+
+<div>
+
+<pre>
+
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtHorizontal Line &lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThis is above the line&lt/p&gt
+&lthr /&gt
+&ltp&gtThis is below the line&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above example : </h4>
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Horizontal Line </title>
+
+</head>
+
+<body>
+<p>This is above the line</p>
+<hr />
+<p>This is below the line</p>
+</body>
+
+</html>
+
+
+
+
+
+</div>
+
+<br>
+<hr />
+<br />
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result.</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+

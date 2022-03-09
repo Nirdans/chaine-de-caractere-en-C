@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 7px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2>CLICKABLE DROPDOWN</h2>
+
+
+<p>  A drop-down is a graphical control element, similar to a list box, that allows the user to choose one value from a list. When a drop-down list is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one. In Clickable Dropdown the dropdown gets activated by clicking the menu. </p>
+
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.dropbtn {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #7effa5;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px
+    rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover
+{background-color: #f1f1f1}
+
+.show {display:block;}
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtClickable Dropdown Example&lt/h2&gt
+
+&ltp&gtClick on the button to open
+   the dropdown menu.&lt/p&gt
+
+&ltdiv class="dropdown"&gt
+&ltbutton onclick="myFunction()"
+ class="dropbtn"&gtDropdown&lt/button&gt
+
+  &ltdiv id="myDropdown"
+  class="dropdown-content"&gt
+    &lta href="#home"&gtHome&lt/a&gt
+    &lta href="#about"&gtAbout&lt/a&gt
+    &lta href="#contact"&gtContact&lt/a&gt
+  &lt/div&gt
+
+&lt/div&gt
+
+
+&ltscript&gt
+
+function myFunction() {
+document.getElementById("myDropdown")
+    .classList.toggle("show");
+}
+
+window.onclick = function(event) {
+if(!event.target.matches('.dropbtn')){
+
+var dropdowns = document
+.getElementsByClassName
+("dropdown-content");
+
+var i;
+for(i=0; i &lt dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+
+if (openDropdown.classList.contains
+('show')) {
+
+openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<br>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+
+.dropbtn {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #7effa5;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+</style>
+    </head>
+
+    <body>
+
+    <h2>Clickable Dropdown Example</h2>
+
+    <p>Click on the button to open
+        the dropdown menu.</p>
+
+    <div class="dropdown">
+        <button onclick="myFunction()"
+                class="dropbtn">Dropdown</button>
+
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+
+function myFunction() {
+    document.getElementById("myDropdown")
+    .classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+  var dropdowns = document
+  .getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> Aligned Clickable Dropdown </h3>
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.dropbtn {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #7effa5;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px
+    rgba(0,0,0,0.2);
+
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover
+{background-color: #f1f1f1}
+
+.show {display:block;}
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtAligned Dropdown Content
+Example&lt/h2&gt
+
+&ltp&gtUse &ltstrong&gtfloat: right&lt/strong&gt
+on the dropdown class to float the
+dropdown menu to the right,and
+&ltstrong&gtright:0&lt/strong&gton the
+dropdown-content,if you want the
+dropdown content to go from
+right to left.&lt/p&gt
+
+&ltdiv class="dropdown"&gt
+&ltbutton onclick="myFunction()"
+class="dropbtn"&gtDropdown&lt/button&gt
+
+  &ltdiv id="myDropdown"
+  class="dropdown-content"&gt
+
+    &lta href="#home"&gtHome&lt/a&gt
+    &lta href="#about"&gtAbout&lt/a&gt
+    &lta href="#contact"&gtContact&lt/a&gt
+
+  &lt/div&gt
+
+&lt/div&gt
+
+
+
+&ltscript&gt
+
+function myFunction() {
+document.getElementById("myDropdown")
+.classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+if(!event.target.matches('.dropbtn')){
+
+var dropdowns = document
+.getElementsByClassName
+("dropdown-content");
+
+var i;
+for(i=0; i &lt dropdowns.length; i++){
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains
+('show')) {
+
+openDropdown.classList.remove('show');
+
+      }
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+
+.dropbtn3 {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn3:hover, .dropbtn3:focus {
+    background-color: #7effa5;
+}
+
+.dropdown3 {
+    float: right;
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+}
+
+.dropdown-content3 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown3 a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+</style>
+    </head>
+
+    <body>
+
+    <h2>Aligned Dropdown Content Example</h2>
+
+
+    <div class="dropdown3">
+        <button onclick="myFunction3()"
+                class="dropbtn3">Dropdown</button>
+
+        <div id="myDropdown3" class="dropdown-content3">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+    <br>
+
+    <br>
+    <br>
+    <br>
+
+    <p>Use <strong>float: right</strong> on the dropdown class to float the dropdown menu to the right, and <strong>right:0</strong> on the dropdown-content if you want the dropdown content to go from right to left.</p>
+
+    <script>
+
+function myFunction3() {
+    document.getElementById("myDropdown3")
+    .classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn3')) {
+
+  var dropdowns = document
+  .getElementsByClassName("dropdown-content3");
+
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<h3> Clickable Dropdown Menu in Navbar </h3>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #48d1cc;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px
+    rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover
+{background-color: #f1f1f1}
+
+.show {display:block;}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltul&gt
+
+&ltli&gt&lta href="#home"&gtHome&lt/a&gt&lt/li&gt
+&ltli&gt&lta href="#news"&gtAbout Us&lt/a&gt&lt/li&gt
+
+&ltli class="dropdown"&gt
+&lta href="javascript:void(0)"
+class="dropbtn"
+onclick="myFunction()"&gtDropdown&lt/a&gt
+
+    &ltdiv class="dropdown-content"
+    id="myDropdown"&gt
+
+      &lta href="#"&gtLink 1&lt/a&gt
+      &lta href="#"&gtLink 2&lt/a&gt
+      &lta href="#"&gtLink 3&lt/a&gt
+
+    &lt/div&gt
+  &lt/li&gt
+&lt/ul&gt
+
+&lth3&gtDropdown Menu inside a
+Navigation Bar&lt/h3&gt
+
+&ltp&gtClick on the "Dropdown" link to
+   see the dropdown menu.&lt/p&gt
+
+&ltscript&gt
+
+function myFunction() {
+document.getElementById("myDropdown")
+.classList.toggle("show");
+}
+
+
+window.onclick = function(e) {
+ if (!e.target.matches('.dropbtn')) {
+
+var dropdowns = document
+.getElementsByClassName
+("dropdown-content");
+
+for (var d = 0; d &lt dropdowns
+.length; d++) {
+
+var openDropdown = dropdowns[d];
+if(openDropdown.classList.contains
+('show')){
+
+openDropdown.classList.remove('show');
+
+      }
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn7 {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn7 {
+    background-color: #48d1cc;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content7 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content7 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content7 a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+    </head>
+    <body>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">About Us</a></li>
+
+        <li class="dropdown7">
+            <a href="javascript:void(0)" class="dropbtn7"onclick="myFunction7()">Dropdown</a>
+
+            <div class="dropdown-content7" id="myDropdown7">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
+
+    <h3>Dropdown Menu inside a Navigation Bar</h3>
+    <p>Click on the "Dropdown" link to
+        see the dropdown menu.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+
+function myFunction7() {
+    document.getElementById("myDropdown7")
+    .classList.toggle("show");
+}
+
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn7')) {
+
+   var dropdowns = document
+   .getElementsByClassName("dropdown-content7");
+
+    for (var d = 0; d < dropdowns.length; d++) {
+    var openDropdown = dropdowns[d];
+    if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+
+      }
+    }
+  }
+}
+
+</script>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+<h3>Search (Filter) Dropdown </h3>
+
+<p> In Search filter dropdown, the dropdown list will have search filter in it </p>
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.dropbtn {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #7effa5;
+}
+
+#myInput {
+  border-box: box-sizing;
+  background-image:url('search.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px
+    rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover
+{background-color: #ddd}
+
+.show {display:block;}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtSearch/Filter Dropdown Example&lt/h2&gt
+&ltp&gtClick on the button to open the
+dropdown menu,and use the input field
+to search for a specific
+dropdown link.&lt/p&gt
+
+&ltdiv class="dropdown"&gt
+
+&ltbutton onclick="myFunction()"
+class="dropbtn"&gtDropdown&lt/button&gt
+
+&ltdiv id="myDropdown"
+class="dropdown-content"&gt
+
+&ltinput type="text"
+placeholder="Search.."
+id="myInput"onkeyup="filterFunction()"&gt
+    &lta href="#about"&gtAbout&lt/a&gt
+    &lta href="#base"&gtBase&lt/a&gt
+    &lta href="#blog"&gtBlog&lt/a&gt
+    &lta href="#contact"&gtContact&lt/a&gt
+    &lta href="#custom"&gtCustom&lt/a&gt
+    &lta href="#support"&gtSupport&lt/a&gt
+    &lta href="#tools"&gtTools&lt/a&gt
+  &lt/div&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+function myFunction() {
+document.getElementById("myDropdown")
+.classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+
+  input = document.getElementById
+  ("myInput");
+
+  filter = input.value.toUpperCase();
+
+  div = document.getElementById
+  ("myDropdown");
+
+  a = div.getElementsByTagName("a");
+
+  for (i = 0; i &lt a.length; i++) {
+
+  if (a[i].innerHTML.toUpperCase()
+  .indexOf(filter) &gt -1) {
+
+           a[i].style.display = "";
+        } else {
+          a[i].style.display="none";
+        }
+    }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+.dropbtn9 {
+    background-color: #48d1cc;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn9:hover, .dropbtn9:focus {
+    background-color: #7effa5;
+}
+
+#myInput9 {
+    border-box: box-sizing;
+    background-image: url("file:///android_asset/images (13).jpg");
+    background-position: 5px 10px;
+    background-size:40px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+}
+
+.dropdown9 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content9 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content9 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown9 a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+</style>
+    </head>
+
+    <body>
+
+    <h2>Search/Filter Dropdown</h2>
+    <p>Click on the button to open the dropdown menu, and use the input field to search for a specific dropdown link.</p>
+
+    <div class="dropdown9">
+        <button onclick="myFunction9()" class="dropbtn9">Dropdown</button>
+        <div id="myDropdown9" class="dropdown-content9">
+            <input type="text" placeholder="Search.." id="myInput9" onkeyup="filterFunction()">
+            <a href="#about">About</a>
+            <a href="#base">Base</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+            <a href="#custom">Custom</a>
+            <a href="#support">Support</a>
+            <a href="#tools">Tools</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <script>
+
+
+function myFunction9() {
+    document.getElementById("myDropdown9").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput9");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown9");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

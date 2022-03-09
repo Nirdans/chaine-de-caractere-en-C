@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+		div {
+		background-color: #F9FFFF;
+		position:relative;
+		width: 90%;
+		height: auto;
+		padding: 10px;
+		border: 5px solid steelblue;
+		margin: 1px;
+		}
+
+		hr{
+
+		width:100%;
+		border: 2px solid MediumTurquoise ;
+		float:left;
+
+
+		}
+
+
+		textarea {
+
+		width: 90%;
+		min-height: 400px;
+
+
+		}
+
+
+		iframe {
+
+		width:90%;
+		min-height:400px;
+		}
+
+
+
+		img {
+		width: 90%;
+		height: auto;
+		}
+
+		pre {
+		overflow: auto;
+
+		font-size: 4vw;
+
+		}
+
+
+
+
+	</style>
+
+	<script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+<h2> HTML FORMATTING :</h2>
+In HTML the text can be formatted in many ways with the ability to make text bold, italicized, or underlined , these are few of the option available to indicate how text can appear in HTML .
+
+<h2> BOLD FORMATTING : </h2>
+<p>Bold formatting property changes
+	the element to bold format,anything
+	that appears within &ltb&gt........&lt/b&gt
+	element,is displayed in bold .</p>
+
+
+<h4> Example for Bold formatting :</h4>
+
+
+<div>
+
+<pre>
+
+<!DOCTYPE html>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtBold Formatting&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThe following word uses a 
+
+&ltb&gtbold&lt/b&gt typeface.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4>Result for the above Example</h4>
+
+<img src="file:///android_asset/bold.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+
+<h2> ITALIC FORMATTING :</h2>
+<p>Italic formatting property changes the
+	element to bold format anything that
+	appears within &lti&gt...&lt/i&gt element is
+	displayed in italicized</p>
+
+<h4>Example for Italic Formatting : </h4>
+
+<div>
+
+<pre>
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtItalic Text Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltp&gtThe following word uses a 
+
+&lti&gtitalicized&lt/i&gt typeface.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4> Result for the Above Example : </h4>
+
+<img src="file:///android_asset/italics.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+
+<h2> UNDERLINED & STRIKE : </h2>
+<p>Underlined and Strike format property
+	changes the element to underlined and
+	strikethrough,anything that appears
+	within &ltu&gt........&lt/u&gt element is
+	displayed with underline and Anything
+	that appears within &ltstrike&gt..&lt/strike&gt
+	element is displayed with strikethrough.
+
+</p>
+
+<h4>Example for Underlined and strike :</h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtUnderlined and Strike
+
+Text Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtThe following word uses a
+&ltu&gtunderlined&lt/u&gt typeface.&lt/p&gt
+
+&ltp&gtThe following word uses a 
+&ltstrike&gtstrikethrough&lt/strike&gt 
+typeface.&lt/p&gt
+
+
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/underlinedstrike.jpg" alt="Basic Html"></p>
+
+
+<hr />
+<br />
+
+
+<h2> MARKED AND DELETED : </h2>
+
+<p>Marked and Deleted format property
+	changes the element to Marked and
+	deleted , anything  that  appears
+	within &ltmark&gt.....&lt/mark&gt element is
+	displayed as marked text and Anything
+	that appears within &ltdel&gt.....&lt/del&gt
+	element is displayed as deleted text.
+
+</p>
+
+<h4> Example for Marked and Deleted : </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gt Marked & Deleted &lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gt This is &ltmark&gtMarked&lt/mark&gt&lt/p&gt
+
+&ltp&gt This is &ltdel&gtDeleted&lt/del&gt &lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/markeddeleted.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+
+<h2> LARGE AND SMALL TEXT: </h2>
+
+<p>Large and Small format  property
+	changes the element to Larger and
+	small text . The content of the
+	&ltbig&gt...&lt/big&gt element is displayed
+	one font size larger than the rest
+	of the text surrounding it . The
+	content of the &ltsmall&gt...&lt/small&gt
+	element is displayed one font size
+	smaller than the rest of the text
+	surrounding it .
+
+</p>
+
+
+<h4> The Example for Large and Small Text : </h4>
+
+<div>
+
+<pre>
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtLarger Text Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtThe following word is in 
+&ltbig&gtLARGE&lt/big&gt typeface.&lt/p&gt
+
+&ltp&gtThe following word is in 
+&ltsmall&gtSMALL&lt/small&gt typeface.&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/largesmall.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+<h2> GROUPING CONTENT : </h2>
+
+<p>The &ltdiv&gt and &ltspan&gt elements
+	allow you to group together several
+	elements  to  create  sections  or
+	subsections of a page.The &ltdiv&gt tag
+	defines a division or a section in
+	an HTML document.The &ltspan&gt element
+	can be used to group inline elements
+	only . So , if you have a part of a
+	sentence or paragraph which you want
+	to group together, you could use the
+	&ltspan&gt element .</p>
+
+<h4> Example for Grouping content : </h4>
+
+
+<div>
+<pre>
+
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&ltdiv style="color:steelblue"&gt
+
+&lth3&gtThis is a heading in a 
+div element&lt/h3&gt
+
+&ltp&gtThis is some text in a 
+div element.&lt/p&gt
+
+&lt/div&gt
+
+&ltp&gtThis is the example of 
+&ltspan style="color:steelblue"&gt
+span tag&lt/span&gt 
+
+&lt/body&gt
+&lt/html&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/grouping.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+<h2>SUPER & SUBSCRIPT :</h2>
+
+<p>Superscript and Subscript format
+	property changes the element to
+	Superscript and Subscript . The
+	content of the &ltsup&gt ....... &lt/sup&gt
+	element is displayed in superscript
+	format . The  content  of  the
+	&ltsub&gt...&lt/sub&gt element is displayed
+	in subscript format . </p>
+
+<h4> Example of Super & Subscript : </h4>
+
+
+
+<div>
+<pre>
+
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtSuper & Subscript Example
+&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtThe following word uses a 
+&ltsup&gtsuperscript&lt/sup&gt typeface&lt/p&gt
+
+&ltp&gtThe following word uses a 
+&ltsub&gtsubscript&lt/sub&gt typeface&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4>Result for the above Example : </h4>
+<img src="file:///android_asset/supersub.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result.</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+</body>
+</html>

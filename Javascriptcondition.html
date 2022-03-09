@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        text-align: left;
+        }
+        table{
+        width:55%;
+
+        }
+
+
+
+        p.one {
+        border-style: solid  ;
+        border-width: 5px;
+        width:272px;
+        padding:10px;
+        border-color:MediumTurquoise;
+        }
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<h3> JAVASCRIPT CONDITIONS </h3>
+<p>Conditional statements are used to perform different actions based on different conditions , you need to use conditional statements that allow your program to make correct decisions and perform right actions.</p>
+
+In JavaScript we have the following conditional statements:
+<ul>
+    <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+    <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+    <li>Use else if to specify a new condition to test, if the first condition is false</li>
+    <li>Use switch to specify many alternative blocks of code to be executed</li>
+</ul>
+
+<h4> if Statement </h4>
+<p>if statement is used to specify a JavaScript code to be executed if a condition is true , here a JavaScript expression is evaluated , If the resulting value is true then the given statements are executed. If the expression is false, then no statement would be not executed.</p>
+
+<h4> if Statement Syntax </h4>
+<p class="one">if (condition) { <br />
+    code to be executed if the condition is true
+    } </p>
+
+
+<h4> else Statement </h4>
+<p>The else statement is used to specify a Javascript code to be executed if the condition is false.</p>
+
+<h4> else Statement Syntax </h4>
+
+<p class="one">if (condition) { <br />
+    code to be executed if the condition is true
+    } else {  <br />
+    code to be executed if the condition is false
+    }</p>
+
+
+<h4> else if Statement </h4>
+
+<p>The else if statement is used to specify a new condition , if the first condition is false , the Else If statement is an extension to the If Statement that allows you to create as many conditional statements as you want .</p>
+
+<h4> else if Syntax </h4>
+
+<p class="one"> if (condition1) { <br />
+    code to be executed if condition1 is true
+    } else if (condition2) { <br />
+    code to be executed if the condition1 is false and condition2 is true
+    }<br /> else { <br />
+    code to be executed if the condition1 is false and condition2 is false
+    }
+
+</p>
+
+<h4> Exampe for javaScript Conditions </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+
+&lth3&gtThis is the example of if 
+Statement &lt/h3&gt
+
+&ltp&gtClick the button to know your 
+driving eligibility&lt/p&gt
+
+&ltbutton onclick="myFunction()"&gt
+Try it&lt/button&gt
+
+&ltp id="demo"&gt&lt/p&gt
+
+&ltscript&gt
+
+function myFunction() {
+
+var message;
+var age = 23 ;
+
+if (age &gt 19) {
+message="you are eligible to drive";
+}
+
+document.getElementById("demo")
+.innerHTML = message;
+
+}
+
+&lt/script&gt
+
+
+
+&lth3&gtThis is the example of else 
+Statement &lt/h3&gt
+
+&ltp&gtClick the button to know your 
+driving eligibility&lt/p&gt
+
+&ltbutton onclick="myFunction1()"&gt
+Try it&lt/button&gt
+
+&ltp id="demo1"&gt&lt/p&gt
+
+&ltscript&gt
+
+function myFunction1() {
+
+var message1;
+var age = 1;
+
+if (age &gt 19) {
+message1="you are eligible to drive";
+
+} else {
+message1= "not eligible to drive";
+
+}
+     
+
+document.getElementById("demo1")
+.innerHTML = message1;
+}
+
+&lt/script&gt
+
+
+
+&lth3&gtThis is the example of else if 
+Statement &lt/h3&gt
+
+&ltp&gtClick the button to know your 
+driving eligibility&lt/p&gt
+
+&ltbutton onclick="myFunction2()"&gt
+Try it&lt/button&gt
+
+&ltp id="demo2"&gt&lt/p&gt
+
+&ltscript&gt
+
+function myFunction2() {
+
+var message2;
+
+var age = 19;
+
+if (age &lt 19) {
+message2 = "not eligible to drive";
+
+} else if (age &gt 19) {
+message2="you are eliglibe to drive";
+
+} else {
+message2="you have just turned 19!";
+}
+
+document.getElementById("demo2")
+.innerHTML = message2;
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example :</h4>
+
+<div>
+
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+
+    <h3>This is the example of if
+        Statement </h3>
+
+    <p>Click the button to know your
+        driving eligibility</p>
+
+    <button onclick="myFunction()">
+        Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+function myFunction() {
+
+var message;
+var age = 23 ;
+
+if (age > 19) {
+message="you are eligible to drive";
+}
+
+document.getElementById("demo")
+.innerHTML = message;
+
+}
+
+</script>
+
+    <br>
+
+
+    <h3>This is the example of else
+        Statement </h3>
+
+    <p>Click the button to know your
+        driving eligibility</p>
+
+    <button onclick="myFunction1()">
+        Try it</button>
+
+    <p id="demo1"></p>
+
+    <script>
+
+function myFunction1() {
+
+var message1;
+var age = 1;
+
+if (age > 19) {
+message1="you are eligible to drive";
+
+} else {
+message1= "not eligible to drive";
+
+}
+     
+
+document.getElementById("demo1")
+.innerHTML = message1;
+}
+
+</script>
+
+    <br>
+
+
+
+    <h3>This is the example of else if
+        Statement </h3>
+
+    <p>Click the button to know your
+        driving eligibility</p>
+
+    <button onclick="myFunction2()">
+        Try it</button>
+
+    <p id="demo2"></p>
+
+    <script>
+
+function myFunction2() {
+
+var message2;
+
+var age = 19;
+
+if (age < 19) {
+message2 = "not eligible to drive";
+
+} else if (age > 19) {
+message2="you are eliglibe to drive";
+
+} else {
+message2="you have just turned 19!";
+}
+
+document.getElementById("demo2")
+.innerHTML = message2;
+}
+
+</script>
+
+    </body>
+    </html>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<h3> JAVASCRIPT SWITCH </h3>
+<p>The switch statement is used to give an expression to evaluate several different statements to execute based on the value of the expression. The interpreter checks each case against the value of the expression until a match is found. If nothing matches, a default condition will be used.</p>
+
+<h4> JAVASCRIPT SWITCH SYNTAX </h4>
+    <p class="one"> switch(expression) { <br />
+        case n:
+        Code Statment  <br />
+        break; <br />
+        case n:
+        Code Statment  <br />
+        break; <br />
+        default:
+        Default Code Statment <br />
+        }</p>
+
+    <ul>
+        <li>The switch expression is evaluated once.</li>
+        <li>The value of the expression is compared with the values of each case.</li>
+        <li>If there is a match, the associated block of code is executed.</li>
+        <li>The break statements indicate the end of a particular case , this will stop the execution of more code and case testing.</li>
+        <li>The default keyword specifies the code to run if there is no case match . </li>
+    </ul>
+
+    <h4> Example For JavaScript Switch </h4>
+    <div>
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+   &ltbody&gt
+&lth2&gtExample For JavaScript Switch 
+&lt/h2&gt
+
+
+&lth3&gtEnter your grade to know 
+your marks&lt/h3&gt
+
+   
+&ltscript&gt
+        
+var grade='U';
+
+document.write("GradeMarks Range :");
+
+switch (grade)
+
+{
+               
+case 'S': document.write
+(" 91 to 100 Marks");
+break;
+            
+case 'A': document.write
+(" 81 to 90 Marks");
+break;
+            
+case 'B': document.write
+(" 71 to 80 Marks");
+break;
+            
+case 'C': document.write
+(" 61 to 70 Marks");
+break;
+            
+case 'U': document.write(" Failed");
+break;
+            
+default:  document.write
+("Unknown Grade&ltbr /&gt")
+
+}
+            
+          
+&lt/script&gt
+      
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+
+    <h4> Result for the above Example :</h4>
+    <img src="file:///android_asset/javascriptswitch.jpg" alt="Basic Html" ></p>
+
+
+    <hr>
+    <br>
+
+
+
+
+    <h3> JAVASCRIPT LOOP</h3>
+    <p>While writing a HTML program, you may encounter a situation where you need to perform an action over and over again. In such situations, you would need to write loop statements to reduce the number of lines.</p>
+
+    <h4>Different Kinds of Loops</h4>
+    <p>JavaScript supports different kinds of loops they are :</p>
+    <ul>
+        <li>for - loops through a block of code a number of times.</li>
+        <li>for/in - loops through the properties of an object.</li>
+        <li>while - loops through a block of code while a specified condition is true.</li>
+        <li>do/while - also loops through a block of code while a specified condition is true.</li>
+
+    </ul>
+
+    <h4> Syntax For JavaScript loop </h4>
+
+    <p class = "one"> For Loop :  <br> for (statement 1; statement 2; statement 3) {<br>
+        code to be executed<br>
+        } <br>
+        <br>
+        <br>
+        While Loop : <br>
+        while (condition) <br> { <br>
+        code to be executed <br>
+        }</p>
+
+    <h4> Example for For Loop </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth3&gt  Example for For Loop &lt/h3&gt
+
+&ltp&gtClick the button to loop through 
+a block of code five times.&lt/p&gt
+
+&ltbutton onclick="Function()"&gt
+Try it&lt/button&gt
+
+&ltp id="Sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+function Function() {
+var text = "";
+var i;
+
+for (i = 1; i &lt 6; i++) {
+text += "The number is " +i+ "&ltbr&gt";
+}
+
+document.getElementById("Sample")
+.innerHTML = text;
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+
+
+    <h4> Result for the above Example :</h4>
+
+
+    <div>
+
+
+        <!DOCTYPE html>
+        <html>
+        <body>
+
+        <h3>  Example for For Loop </h3>
+
+        <p>Click the button to loop through
+            a block of code five times.</p>
+
+        <button onclick="Function11()">
+            Try it</button>
+
+        <p id="Sample"></p>
+
+        <script>
+
+function Function11() {
+var text = "";
+var i;
+
+for (i = 1; i < 6; i++) {
+text += "The number is " +i+ "<br>";
+}
+
+document.getElementById("Sample")
+.innerHTML = text;
+}
+
+</script>
+
+        </body>
+        </html>
+
+    </div>
+
+
+
+
+
+
+    <h4> JavaScript For/In Loop </h4>
+    <p>The for/in loop is used to loop through an object's properties.In each iteration, one property from object is assigned to variablename and this loop continues till all the properties of the object are exhausted.</p>
+
+    <h4> Example for For/In Loop </h4>
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth3&gtExample for For/In Loop &lt/h3&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+var txt = "";
+var person = {name:"John",
+gender:"Male", age:28}; 
+var x;
+
+for (x in person) {
+
+    txt += person[x] + " ";
+}
+
+document.getElementById("sample")
+.innerHTML = txt;
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+
+    <h4> Result for the above Example :</h4>
+    <img src="file:///android_asset/forinloop.jpg" alt="Basic Html" ></p>
+
+
+
+    <h4> While Loop </h4>
+
+    <p>The purpose of a while loop is to execute a statement or code block repeatedly as long as an expression is true, once the expression becomes false, the loop terminates. </p>
+
+    <h4> Example For While Loop </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth3&gt Example For While Loop &lt/h3&gt
+
+
+&ltp&gtClick the button to loop through 
+a block of code as long as i is 
+less than 12.&lt/p&gt
+
+&ltbutton onclick="Function()"&gt
+Try it&lt/button&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+function Function() {
+var text = "";
+var i = 1;
+
+while (i &lt 12) {
+text += "&ltbr&gtThe number is " + i;
+i++;
+    }
+
+document.getElementById("sample")
+.innerHTML = text;
+
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+    </div>
+
+
+
+
+
+    <h4> Result for the above Example :</h4>
+
+    <div>
+
+
+
+        <!DOCTYPE html>
+        <html>
+        <body>
+
+        <h3> Example For While Loop </h3>
+
+
+        <p>Click the button to loop through
+            a block of code as long as i is
+            less than 12.</p>
+
+        <button onclick="Function12()">
+            Try it</button>
+
+        <p id="sample12"></p>
+
+        <script>
+
+function Function12() {
+var text = "";
+var i = 1;
+
+while (i < 12) {
+text += "<br>The number is " + i;
+i++;
+    }
+
+document.getElementById("sample12")
+.innerHTML = text;
+
+}
+
+</script>
+
+        </body>
+        </html>
+
+    </div>
+
+
+
+
+
+
+    <h4> Do/While Loops </h4>
+
+    <p>The do/while loop is similar to the while loop except that the condition check happens at the end of the loop. This means that the loop will always be executed at least once, even if the condition is false. Then it will repeat the loop as long as the condition is true.</p>
+
+    <h4> Example For Do/While Loop </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth3&gtExample For Do/While Loop &lt/h3&gt
+
+&ltp&gtClick the button to loop through 
+a block of code as long as i is 
+less than 12.&lt/p&gt
+
+&ltbutton onclick="Function()"&gt
+Try it&lt/button&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+function Function() {
+var text = ""
+var i = 1;
+
+do {
+text += "&ltbr&gtThe number is " + i;
+i++;
+}
+
+while (i &lt 12)  
+document.getElementById("sample")
+.innerHTML = text;
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+
+
+
+    <h4> Result for the above Example :</h4>
+
+
+
+    <div>
+
+
+
+        <!DOCTYPE html>
+        <html>
+        <body>
+
+        <h3>Example For Do/While Loop </h3>
+
+        <p>Click the button to loop through
+            a block of code as long as i is
+            less than 12.</p>
+
+        <button onclick="Function13()">
+            Try it</button>
+
+        <p id="sample13"></p>
+
+        <script>
+
+function Function13() {
+var text = ""
+var i = 1;
+
+do {
+text += "<br>The number is " + i;
+i++;
+}
+
+while (i < 12)  
+document.getElementById("sample13")
+.innerHTML = text;
+}
+
+</script>
+
+        </body>
+        </html>
+
+    </div>
+
+
+
+
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> TRY YOURSELF : </h3>
+    <p>Type the code or copy/paste below and press show result to see the result.</p>
+
+    <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+    <input onclick="update();" type="button" value="show result"></p>
+
+
+
+    <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+

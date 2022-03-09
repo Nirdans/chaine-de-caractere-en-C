@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+
+
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th, td {
+        padding: 5px;
+        text-align: left;
+        }
+        table{
+        width:55%;
+
+        }
+
+
+
+        div1 {
+        display:inline-block;
+        background-color: #F9FFFF;
+        width: 272px;
+        padding: 5px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+    </style>
+
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+
+</head>
+
+
+<body>
+
+
+<h2>HTML JAVASCRIPTS :</h2>
+
+<p>A script is a small piece of program that can add interactivity to the website. For example, a script could generate a pop-up alert box message, or provide a dropdown menu. This script could be written using Javascript or VBScript , various small functions, called event handlers can be written using any of the scripting language and then you can trigger those functions using HTML attributes.
+
+<p>The &ltscript&gt tag is used to define a
+    clientside script, such as a JavaScript. </p>
+
+
+<hr />
+<br />
+
+
+<h3>EXTERNAL & INTERNAL SCRIPTS :</H3>
+
+<h4>External Javascripts :</h4>
+
+<p>If the functionality to be defined is used in various HTML documents then it's better to keep that functionality in a separate Javascript file and then include that file in your HTML documents. A Javascript file will have extension as .js and it will be included in HTML files using script tag.</p>
+
+<h4>Example for External Javascript : </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtExternal Script&lt/title&gt
+
+&ltscript src="/html/External.js" 
+type="text/javascript"/&gt
+
+&lt/script&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&lth2&gtExample for External Script&lt/h2&gt
+
+&ltinput type="button" 
+onclick="External();
+" value="Click here"  /&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+</div>
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/external.jpg" alt="Basic Html" ></p>
+
+
+<img src="file:///android_asset/external1.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+<h4> Internal Javascripts :</h4>
+
+<P> The script code can be written directly into the HTML document.  script code is placed in header of the document using script tag .</p>
+
+<h4>Example for Internal JavaScript :</h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtInternal Script&lt/title&gt
+
+&ltscript type="text/javascript"&gt
+function internal(){
+alert("Internal Script");
+}
+&lt/script&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtExample for Internal script&lt/h2&gt
+
+&ltinput type="button" 
+onclick="internal();
+"value="Click here" /&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/jinternal.jpg" alt="Basic Html" ></p>
+
+
+<img src="file:///android_asset/internal1.jpg" alt="Basic Html" ></p>
+
+<hr />
+<br />
+
+
+<h2> EVENT HANDLER : </h2>
+
+<p>Event handlers are simple defined functions which can be called against any mouse or keyboard event. </p>
+
+<h4>
+    Example for Event handler </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtEvent Handlers &lt/title&gt
+
+&ltscript type="text/javascript"&gt
+function EventHandler(){
+ alert("Event Handler Example");
+}
+&lt/script&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp onmouseover="EventHandler();"&gt
+Bring your mouse here to see 
+the alert message&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+
+</div>
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/event.jpg" alt="Basic Html" ></p>
+
+
+<img src="file:///android_asset/event1.jpg" alt="Basic Html" ></p>
+
+
+<hr>
+<br>
+
+
+<h3>THE NOSCRIPT TAG : </h3>
+
+<p>The Noscript tag provide alternative info to the users whose browsers don't support scripts and for those users who have disabled script option their browsers. This can be done using the Noscript tag </p>
+
+<h4> Example for Noscript tag :</h4>
+
+
+<div>
+<pre>
+
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&ltp id="demo"&gt&lt/p&gt
+
+&ltscript&gt
+document.getElementById("demo")
+.innerHTML = "NOSCRIPT TAG!";
+&lt/script&gt
+
+&ltnoscript&gt Sorry, your browser 
+does not support JavaScript!
+&lt/noscript&gt
+
+&ltp&gtA browser without support for
+JavaScript will show the text 
+written inside the noscript
+element.&lt/p&gt
+ 
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/noscript.jpg" alt="Basic Html" ></p>
+
+<hr>
+<br>
+
+
+
+
+
+<h3> JAVASCRIPT VARIABLES </H3>
+
+<P>JavaScript variables are containers for storing data values. Variable should be assigned some values The ( = ) equal sign is called assignment operator . In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator, you assign the value of what is on the right side of the = sign to whatever is on the left side of the = sign, you cannot perform operations with empty variables.</p>
+
+<ul>
+
+    <li>JavaScript variables can hold numbers like 200 , and text values like "Tiger".</li>
+
+    <li>In programming, text values are called text strings.</li>
+
+
+    <li>Strings are written inside double or single quotes. Numbers are written without quotes.</li>
+
+    <li>If you put quotes around a number, it will be treated as a text string.</li>
+
+</ul>
+
+<h3> JAVASCRIPT IDENTIFIERS </h3>
+<p>All JavaScript variables must be identified with unique names.<p>
+
+    These unique names are called identifiers.
+
+    Identifiers can be short names (like x and y), or more descriptive names (age, sum, totalVolume).
+
+    The general rules for constructing names for variables (unique identifiers) are:
+<ul>
+    <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+    <li>Names must begin with a letter.</li>
+    <li>Names can also begin with $ and @.</li>
+    <li>Names are case sensitive (L and l are different variables)
+        Reserved words (like JavaScript keywords) cannot be used as names.</li>
+
+</ul>
+
+
+<h3> JAVASCRIPT OPERATORS </H3>
+
+<table>
+    <style>
+        th{
+
+        text-align:center;
+
+        }
+    </style>
+    <tr>
+
+        <th>OPERATOR</th>
+        <th>DISCRIPTION</th>
+
+    </tr>
+
+
+
+    <tr>
+        <td>+</td>
+        <td>Addition</td>
+
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+
+    </tr>
+
+    <tr>
+        <td>/</td>
+        <td>Division</td>
+
+    </tr>
+
+    <tr>
+        <td>%</td>
+        <td>Modulus</td>
+
+    </tr>
+
+    <tr>
+        <td>++</td>
+        <td>Increment</td>
+
+    </tr>
+
+    <tr>
+        <td> -- </td>
+        <td> Decrement  </td>
+
+    </tr>
+
+    <tr>
+        <td> == </td>
+        <td> equal to  </td>
+
+    </tr>
+
+
+    <tr>
+        <td> ===  </td>
+        <td> equal value and equal type  </td>
+
+    </tr>
+
+
+    <tr>
+        <td> != </td>
+        <td> not equal   </td>
+
+    </tr>
+
+
+    <tr>
+        <td> !== </td>
+        <td> not equal value </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td> > </td>
+        <td> greater than </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td> < </td>
+        <td> less than  </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td> >=  </td>
+        <td> greater than or equal to </td>
+
+    </tr>
+
+
+
+
+    <tr>
+        <td> <=   </td>
+        <td> less than or equal to </td>
+
+    </tr>
+
+
+
+    <tr>
+        <td> ?  </td>
+        <td> ternary operator </td>
+
+    </tr>
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+<h4>Example for Javascript Variables </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&lth1&gtJavaScript Variables&lt/h1&gt
+
+
+&ltp&gtIn this example, L, M, N, O are 
+variables&lt/p&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+var L = 4;
+var M = 6;
+var N = L + M;
+var O = L * M;
+document.getElementById("sample")
+.innerHTML = O;
+
+&lt/script&gt
+
+
+&ltp&gtYou can declare many variables in 
+one statement, Start the statement 
+with var and separate the variables 
+by comma.&lt/p&gt 
+
+
+&ltp id="sample 1"&gt&lt/p&gt
+
+&ltscript&gt
+
+var Animal = "tiger", weight = 200 ;
+document.getElementById("sample 1")
+.innerHTML = Animal + " weight is " 
++ weight + " kg ";
+
+&lt/script&gt
+
+&lt/body&gt
+
+&lt/html&gt 
+
+</pre>
+
+
+</div>
+
+
+
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/javascriptvariable.jpg" alt="Basic Html"></p>
+
+
+
+<hr>
+<br>
+
+
+
+
+
+
+<h3> JAVASCRIPT FUNCTION </h3>
+
+<p>A JavaScript function is a block of code designed to perform a particular task ,a JavaScript function is executed when "something" invokes it (calls it). </P>
+
+<p>When JavaScript reaches a return statement, the function will stop executing, if the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.</p>
+
+<h4> Javascript Function Syntax </h4>
+
+
+<p class="one">function name(parameter1, parameter2){ <br /> code to be executed } </p>
+
+<ul>
+    <li>A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().</li>
+
+    <li>Function names can contain letters, digits, underscores, and dollar signs .</li>
+
+    <li>The parentheses may include parameter names separated by commas: (parameter1,  parameter2, parameter3 ...)</li>
+
+    <li>The code to be executed, by the function, is placed inside curly brackets {}</li>
+</ul>
+
+
+
+
+<h4> Example For JavaScript Function </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&ltp&gtThis example calls a function 
+which performs a calculation, 
+and returns the result:&lt/p&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+
+function myFunction(L, M) {
+    return L * M;
+}
+document.getElementById("sample")
+.innerHTML = myFunction(6, 3);
+
+&lt/script&gt
+
+
+&ltp&gtThis example calls a function to 
+convert from Seconds to Minutes:&lt/p&gt
+&ltp id="sample1"&gt&lt/p&gt
+
+&ltscript&gt
+
+function tominutes(f) {
+    return f/60+" minutes ";
+}
+document.getElementById("sample1")
+.innerHTML = tominutes(120);
+
+&lt/script&gt
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/javascriptfunction.jpg" alt="Basic Html"></p>
+
+
+
+
+<hr>
+<br>
+
+
+
+
+
+
+<h3> Boolean </h3>
+<p>The Boolean object represents two values, either "true" or "false", intended to represent the truth values of logic, very often in programming, you will need a data type that can only have one of two values, like
+
+    YES / NO ,
+    ON / OFF ,
+    TRUE / FALSE.
+</p>
+
+<h4>Everything with a "Real" value is True </h4>
+
+<h4>Everything without a "Real" value is False </h4>
+<ul>
+    <li> The Boolean value of 0 (zero) is false</li>
+    <li> The Boolean value of -0 (minus zero) is false  </li>
+    <li> The Boolean value of "" (empty string) is false </li>
+    <li> The Boolean value of undefined is false </li>
+    <li> The Boolean value of null is false </li>
+    <li> The Boolean value of NaN is false </li>
+</ul>
+
+<h4> Example for Boolean </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&ltp&gtDisplay the value of Boolean 
+(8 &gt 3):&lt/p&gt
+
+&ltbutton onclick="myBoolean()"&gtTry it
+&lt/button&gt
+
+&ltp id="sample"&gt&lt/p&gt
+
+&ltscript&gt
+function myBoolean() {
+document.getElementById("sample")
+.innerHTML = Boolean(8 &gt 3);
+}
+&lt/script&gt
+
+
+
+&ltp&gtDisplay the Boolean value of 0&lt/p&gt
+
+
+&ltbutton onclick="myboolean()"&gtTry it
+&lt/button&gt
+
+
+&ltp id="sample1"&gt&lt/p&gt
+
+&ltscript&gt
+function myboolean() {
+    var x = 0;
+    
+document.getElementById("sample1")
+.innerHTML = Boolean(x);
+}
+&lt/script&gt
+
+
+
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+
+
+<h4> Result for above Example :</h4>
+
+
+<div>
+
+
+    <!DOCTYPE html>
+    <html>
+    <body>
+
+    <p>Display the value of Boolean
+        (8 > 3):</p>
+
+    <button onclick="myBoolean()">Try it
+    </button>
+
+    <p id="sample"></p>
+
+    <script>
+function myBoolean() {
+document.getElementById("sample")
+.innerHTML = Boolean(8 > 3);
+}
+</script>
+
+    <br>
+    <br>
+
+    <p>Display the Boolean value of 0</p>
+
+
+    <button onclick="myboolean()">Try it
+    </button>
+
+
+    <p id="sample1"></p>
+
+    <script>
+function myboolean() {
+    var x = 0;
+    
+document.getElementById("sample1")
+.innerHTML = Boolean(x);
+}
+</script>
+
+
+
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result.</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+</body>
+</html>

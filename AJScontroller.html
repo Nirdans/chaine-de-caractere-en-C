@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS CONTROLLER </h2>
+
+<p>AngularJS controllers control the data of AngularJS applications and they are regular JavaScript Objects.</p>
+
+<p>AngularJS applications are controlled by controllers and the ng-controller directive defines the application controller.
+</p>
+
+<h4>Explantion:</h4>
+
+<ul type ="square">
+
+
+    <li>The AngularJS application is defined by  ng-app = " ". The application runs inside the &ltdiv&gt.</li>
+
+    <br>
+
+    <li>The ng-controller = " " attribute is an AngularJS directive. It defines a controller.
+    </li>
+
+    <br>
+
+    <li>AngularJS will invoke the controller with a $scope object.
+    </li>
+
+    <br>
+
+    <li>In AngularJS, $scope is the application object (the owner of application variables and functions).</li>
+
+    <br>
+
+    <li>The controller creates two properties (variables) in the scope .</li>
+
+    <br>
+
+    <li>The ng-model directives bind the input fields to the controller properties.</li>
+
+</ul>
+
+<BR>
+
+
+
+
+<H3> ANGULAR JS CONTROLLER EXAMPLE </H3>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID1" ng-app="firstAPP"
+ng-controller="myCtrl1"&gt
+
+First Name: &ltinput type="text"
+ng-model="firstName"&gt
+&ltbr&gt
+
+Last Name: &ltinput type="text"
+ng-model="lastName"&gt
+&ltbr&gt
+
+Full Name: {{firstName + " " + lastName}}
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('firstAPP',[]);
+app.controller('myCtrl1',function($scope)
+{
+    $scope.firstName = "Tom"
+    $scope.lastName = "Jerry";
+});
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div ng-app="firstAPP" ng-controller="myCtrl1">
+
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{firstName + " " + lastName}}
+
+    </div>
+
+    <script>
+var app = angular.module('firstAPP', []);
+app.controller('myCtrl1', function($scope) {
+    $scope.firstName = "Tom"
+    $scope.lastName = "Jerry";
+});
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> CONTROLLER METHODS </h3>
+
+<p>
+
+    The example above example demonstrated a controller object with two properties: (lastName and firstName). A controller can also have methods (variables as functions).
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID2" ng-app="secondAPP"
+ng-controller="Ctrl2"&gt
+
+First Name: &ltinput type="text"
+ng-model="firstName"&gt
+&ltbr&gt
+
+Last Name: &ltinput type="text"
+ng-model="lastName"&gt
+&ltbr&gt
+
+Full Name: {{fullName()}}
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('secondAPP',[]);
+app.controller('Ctrl2', function($scope)
+{
+ $scope.firstName = "Elon";
+ $scope.lastName = "Musk";
+ $scope.fullName = function() {
+  return $scope.firstName + " " + $scope.
+        lastName;
+    };
+});
+
+angular.bootstrap(document.getElementById
+("ID2"),
+['secondAPP']);
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id = "ID2" ng-app="secondAPP" ng-controller="Ctrl2">
+
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{fullName()}}
+
+    </div>
+
+    <script>
+var app = angular.module('secondAPP', []);
+app.controller('Ctrl2', function($scope) {
+    $scope.firstName = "Elon";
+    $scope.lastName = "Musk";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
+});
+
+angular.bootstrap(document.getElementById("ID2"), ['secondAPP']);
+</script>
+
+    </body>
+    </html>
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> CONTROLLER TO CHANGE MODEL DATA </h3>
+
+<div id ="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com/
+ajax/libs/angularjs/1.6.9/angular.min.js"&gt
+&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID3" ng-app="thirdAPP"
+ng-controller="Ctrl3"&gt
+
+  &lth1 ng-click="changeName()"&gt
+  {{firstname}}&lt/h1&gt
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('thirdAPP',[]);
+app.controller('Ctrl3', function($scope) {
+ $scope.firstname = "Steve";
+ $scope.changeName = function() {
+  $scope.firstname = "Peter";
+    }
+});
+
+angular.bootstrap(document.getElementById
+("ID3"), ['thirdAPP']);
+
+&lt/script&gt
+
+&ltp&gtClick on the header to run the
+"changeName"function.&lt/p&gt
+
+&ltp&gtThis example demonstrates how to use
+the controller to change model data.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+
+
+<h3> Result For Above Example </h3>
+
+<div id ="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id ="ID3" ng-app="thirdAPP" ng-controller="Ctrl3">
+
+        <h1 ng-click="changeName()">{{firstname}}</h1>
+
+    </div>
+
+    <script>
+var app = angular.module('thirdAPP', []);
+app.controller('Ctrl3', function($scope) {
+    $scope.firstname = "Steve";
+    $scope.changeName = function() {
+        $scope.firstname = "Peter";
+    }
+});
+
+angular.bootstrap(document.getElementById("ID3"), ['thirdAPP']);
+</script>
+
+    <p>Click on the header to run the "changeName" function.</p>
+
+    <p>This example demonstrates how to use the controller to change model data.</p>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

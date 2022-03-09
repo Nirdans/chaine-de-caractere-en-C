@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS FILTERS </h2>
+
+<p>Filters format the value of an expression for display to the user. They can be used in view templates, controllers or services. AngularJS comes with a collection of built-in filters.</p>
+
+
+
+<h4>AngularJS provides filters to transform data:</h4>
+
+<ul type ="square">
+
+
+    <li><span style = "color:red">currency</span> Format a number to a currency format.</li>
+
+    <br>
+
+    <li><span style = "color:red">date </span> Format a date to a specified format.
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">filter </span> Select a subset of items from an array.
+
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">json</span> Format an object to a JSON string.
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">limitTo</span> Limits an array/string, into a specified number of elements/characters.
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">lowercase </span> Format a string to lower case.
+    </li>
+
+    <br>
+
+    <li>
+
+        <span style = "color:red">number </span> Format a number to a string.
+
+    </li>
+
+    <br>
+
+    <li>
+        <span style = "color:red">orderBy </span> Orders an array by an expression.
+
+    </li>
+
+    <br>
+
+    <li>
+        <span style = "color:red">uppercase </span> Format a string to upper case.
+
+    </li>
+
+
+
+</ul>
+
+<BR>
+
+
+
+
+<H3> ADDING FILTERS TO EXPRESSIONS </H3>
+
+<p>Filters can be added to expressions by using the pipe character |, followed by a filter.
+
+
+
+</p>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID1" ng-app="firstAPP"
+ng-controller="Ctrl1"&gt
+
+&ltp&gtThe uppercase filter format strings
+to upper case.&lt/p&gt
+
+&ltp&gtThe name is {{ lastName | uppercase }}
+&lt/p&gt
+
+
+&ltp&gtThe lowercase filter format strings to
+lower case.&lt/p&gt
+
+&ltp&gtThe name is {{ lastName | lowercase }}
+
+&lt/p&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+angular.module('firstAPP',[]).controller
+('Ctrl1', function($scope) {
+
+    $scope.firstName = "Tom",
+    $scope.lastName = "Jerry"
+});
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID1" ng-app="firstAPP" ng-controller="Ctrl1">
+
+        <p>The <span style= "color:red">uppercase</span> filter format strings to upper case.</p>
+
+        <p>The name is {{ lastName | uppercase }}</p>
+
+
+        <p>The <span style= "color:red">lowercase </span> filter format strings to lower case.</p>
+
+        <p>The name is {{ lastName | lowercase }}</p>
+
+    </div>
+
+    <script>
+
+angular.module('firstAPP', []).controller('Ctrl1', function($scope) {
+    $scope.firstName = "Tom",
+    $scope.lastName = "Jerry"
+});
+
+angular.bootstrap(document.getElementById("ID1"),
+['firstAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> THE filter FILTER </h3>
+
+<p>
+
+    The filter Filter selects a subset of an array and can only be used on arrays, and it returns an array containing only the matching items.
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID2" ng-app="secondAPP"
+ng-controller="Ctrl2"&gt
+
+&ltul&gt
+ &ltli ng-repeat="x in names | filter:'e'"&gt
+    {{ x }}
+  &lt/li&gt
+&lt/ul&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+angular.module('secondAPP',[]).
+controller('Ctrl2',function($scope) {
+    $scope.names = [
+        'Tiger',
+        'Cheetah',
+        'BlueWhale',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+    ];
+});
+
+angular.bootstrap(document.getElementById
+("ID2"), ['secondAPP']);
+
+&lt/script&gt
+
+&ltp&gtThis example displays only the names
+containing the letter "e".&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id = "ID2" ng-app="secondAPP" ng-controller="Ctrl2">
+
+        <ul>
+            <li ng-repeat="x in names | filter : 'e'">
+                {{ x }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+
+angular.module('secondAPP', []).controller('Ctrl2', function($scope) {
+    $scope.names = [
+        'Tiger',
+        'Cheetah',
+        'BlueWhale',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+    ];
+});
+
+angular.bootstrap(document.getElementById("ID2"),
+['secondAPP']);
+
+</script>
+
+    <p>This example displays only the names containing the letter "e".</p>
+
+    </body>
+    </html>
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+<h3> FILTER BASED ON USER INPUT
+</h3>
+
+<p>
+
+    By setting the ng-model directive on an input field, we can use the value of the input field as an expression in a filter.
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID3" ng-app="thirdAPP"
+ng-controller="Ctrl3"&gt
+
+&ltp&gtType a letter in the input field:
+&lt/p&gt
+
+&ltp&gt&ltinput type="text" ng-model="test"&gt
+&lt/p&gt
+
+&ltul&gt
+
+&ltli ng-repeat="x in names | filter:test"&gt
+    {{ x }}
+  &lt/li&gt
+&lt/ul&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+angular.module('thirdAPP',[]).controller
+('Ctrl3', function($scope) {
+    $scope.names = [
+        'Lion',
+        'Cheetah',
+        'Shark',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+    ];
+});
+
+angular.bootstrap(document.getElementById
+("ID3"), ['thirdAPP']);
+
+&lt/script&gt
+
+&ltp&gtThe list will only consists of names
+matching the filter.&lt/p&gt
+
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID3" ng-app="thirdAPP" ng-controller="Ctrl3">
+
+        <p>Type a letter in the input field:</p>
+
+        <p><input type="text" ng-model="test"></p>
+
+        <ul>
+            <li ng-repeat="x in names | filter:test">
+                {{ x }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+
+angular.module('thirdAPP', []).controller('Ctrl3', function($scope) {
+    $scope.names = [
+        'Lion',
+        'Cheetah',
+        'Shark',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+    ];
+});
+
+angular.bootstrap(document.getElementById("ID3"),
+['thirdAPP']);
+
+</script>
+
+    <p>The list will only consists of names matching the filter.</p>
+
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> CUSTOM FILTERS
+</h3>
+
+<p>
+
+    You can make your own filters by registering a new filter factory function with your module.
+
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID4" ng-app="fourthAPP"
+ng-controller="Ctrl4"&gt
+
+&ltul&gt
+&ltli ng-repeat="x in names"&gt
+    {{x | myFilter}}
+&lt/li&gt
+&lt/ul&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('fourthAPP',[]);
+app.filter('myFilter', function() {
+    return function(x) {
+       var i, c, txt = "";
+       for (i = 0; i &lt x.length; i++) {
+            c = x[i];
+            if (i % 2 == 0) {
+                c = c.toUpperCase();
+            }
+            txt += c;
+        }
+        return txt;
+    };
+});
+
+app.controller('Ctrl4', function($scope)
+{
+    $scope.names = [
+        'Lion',
+        'Cheetah',
+        'Shark',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+        ];
+});
+
+angular.bootstrap(document.getElementById
+("ID4"), ['fourthAPP']);
+
+&lt/script&gt
+
+&ltp&gtMake your own filters.&lt/p&gt
+
+&ltp&gt This filter, called "myFilter", will
+uppercase every other character.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID4" ng-app="fourthAPP" ng-controller="Ctrl4">
+
+        <ul>
+            <li ng-repeat="x in names">
+                {{x | myFilter}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+
+var app = angular.module('fourthAPP', []);
+app.filter('myFilter', function() {
+    return function(x) {
+        var i, c, txt = "";
+        for (i = 0; i < x.length; i++) {
+            c = x[i];
+            if (i % 2 == 0) {
+                c = c.toUpperCase();
+            }
+            txt += c;
+        }
+        return txt;
+    };
+});
+
+app.controller('Ctrl4', function($scope) {
+    $scope.names = [
+        'Lion',
+        'Cheetah',
+        'Shark',
+        'Dugong',
+        'Orca',
+        'Elephant',
+        'Bison',
+        'Bear',
+        'Deer'
+        ];
+});
+
+angular.bootstrap(document.getElementById("ID4"), 
+['fourthAPP']);
+
+</script>
+
+    <p>Make your own filters.</p>
+
+    <p>This filter, called "myFilter", will uppercase every other character.</p>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

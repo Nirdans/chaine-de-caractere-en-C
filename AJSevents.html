@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS EVENTS </h2>
+
+<p>AngularJS has its own HTML events directives, the event directives allows us to run AngularJS functions at certain user events. An AngularJS event will not overwrite an HTML event, both events will be executed.
+</p>
+
+
+
+<h4>You can add AngularJS event listeners to your HTML elements by using one or more of these directives:</h4>
+
+<ul type ="square">
+
+
+    <li><span style = "color:red">ng-blur</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-change
+ </span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-click
+</span>
+
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-copy
+</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-cut
+</span>
+    </li>
+
+    <br>
+
+    <li><span style = "color:red">ng-dblclick
+ </span>
+    </li>
+
+    <br>
+
+    <li>
+
+<span style = "color:red">ng-focus
+ </span>
+
+    </li>
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-keydown
+ </span>
+
+    </li>
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-keypress
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-keyup
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mousedown
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mouseenter
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mouseleave
+
+</span>
+
+    </li>
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mousemove
+
+</span>
+
+    </li>
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mouseover
+
+</span>
+
+    </li>
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-mouseup
+
+</span>
+
+    </li>
+
+
+
+    <br>
+
+    <li>
+<span style = "color:red">ng-paste
+
+</span>
+
+    </li>
+
+
+</ul>
+
+<BR>
+
+
+
+
+<H3> MOUSE EVENTS </H3>
+
+<p>Mouse events occur when the cursor moves over an element
+
+    or when a mouse button is clicked on an element. Mouse events can be added on any HTML element.
+
+
+<ul type ="square">
+
+
+</ul>
+
+
+<li>ng-mouseover</li>
+<br>
+<li>ng-mouseenter</li>
+<br>
+<li>ng-mousemove</li>
+<br>
+<li>ng-mouseleave</li>
+<br>
+<li>ng-mousedown</li>
+<br>
+<li>ng-mouseup</li>
+<br>
+<li>ng-click</li>
+
+</p>
+
+<h3> Mouse Event Example</h3>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID1" ng-app="firstAPP"
+ng-controller="Ctrl1"&gt
+
+&ltb&gtIncrease the count variable when the
+mouse moves over the H1 element:&lt/b&gt
+
+&lth1 ng-mousemove="count = count + 1"
+&gtMouse Over Me!
+&lt/h1&gt
+
+&lth2&gt{{ count }}&lt/h2&gt
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('firstAPP', []);
+app.controller('Ctrl1', function($scope) {
+    $scope.count = 0;
+});
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID1" ng-app="firstAPP" ng-controller="Ctrl1">
+
+        <b>Increase the count variable when the mouse moves over the H1 element:</b>
+
+        <h1 ng-mousemove="count = count + 1">Mouse Over Me!</h1>
+
+        <h2>{{ count }}</h2>
+
+    </div>
+
+    <script>
+var app = angular.module('firstAPP', []);
+app.controller('Ctrl1', function($scope) {
+    $scope.count = 0;
+});
+
+angular.bootstrap(document.getElementById("ID1"),
+['firstAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> THE ng-click DIRECTIVE </h3>
+
+<p>
+
+    The <span style = "color:red"> ng-click </span>directive defines AngularJS code that will be executed when the element is being clicked.
+
+
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID2" ng-app="secondAPP"
+ng-controller ="Ctrl2"&gt
+
+&ltbutton ng-click="count = count + 1"&gt
+Click Me!
+&lt/button&gt
+
+&ltp&gt{{ count }}&lt/p&gt
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('secondAPP',[]);
+app.controller('Ctrl2', function($scope)
+{
+    $scope.count = 0;
+});
+
+angular.bootstrap(document.getElementById
+("ID2"), ['secondAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id = "ID2" ng-app="secondAPP" ng-controller="Ctrl2">
+
+        <button ng-click="count = count + 1">Click Me!</button>
+
+        <p>{{ count }}</p>
+
+    </div>
+
+    <script>
+var app = angular.module('secondAPP', []);
+app.controller('Ctrl2', function($scope) {
+    $scope.count = 0;
+});
+
+angular.bootstrap(document.getElementById("ID2"),
+['secondAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+<h3> TOGGLE
+</h3>
+
+<p>
+
+    Toggle is used to show a section of HTML code when a button is clicked and hide when the button is clicked again, like a dropdown menu,this will make the button behave like a toggle switch.
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt &lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID3" ng-app="thirdAPP"
+ng-controller="Ctrl3"&gt
+
+&ltbutton ng-click="myFunc()"&gtClick Me!
+&lt/button&gt
+
+&ltdiv ng-show="show"&gt
+    &lth1&gtAnimals:&lt/h1&gt
+    &ltdiv&gtTiger&lt/div&gt
+    &ltdiv&gtLion&lt/div&gt
+    &ltdiv&gtCheetah&lt/div&gt
+&lt/div&gt
+
+&lt/div&gt
+
+&ltscript&gt
+var app = angular.module('thirdAPP',[]);
+app.controller('Ctrl3', function($scope)
+{
+    $scope.show = false;
+    $scope.myFunc = function() {
+        $scope.show = !$scope.show;
+    }
+});
+
+
+angular.bootstrap(document.getElementById
+("ID3"), ['thirdAPP']);
+
+&lt/script&gt
+
+&ltp&gtClick the button to show/hide the
+menu.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+
+    <body>
+
+    <div id = "ID3" ng-app="thirdAPP" ng-controller="Ctrl3">
+
+        <button ng-click="myFunc()">Click Me!</button>
+
+        <div ng-show="show">
+            <h1>Animals:</h1>
+            <div>Tiger</div>
+            <div>Lion</div>
+            <div>Cheetah</div>
+        </div>
+
+    </div>
+
+    <script>
+var app = angular.module('thirdAPP', []);
+app.controller('Ctrl3', function($scope) {
+    $scope.show = false;
+    $scope.myFunc = function() {
+        $scope.show = !$scope.show;
+    }
+});
+
+
+angular.bootstrap(document.getElementById("ID3"),
+['thirdAPP']);
+
+</script>
+
+    <p>Click the button to show/hide the menu.</p>
+
+    </body>
+    </html>
+
+
+
+
+</div>
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> $event OBJECT
+</h3>
+
+<p>
+
+    You can pass the <span style = "color : red">$event </span> object as an argument when calling the function.
+
+    The <span style = "color : red"> $event </span> object contains the browser's event object:
+
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID4" ng-app="fourthAPP"
+ng-controller="Ctrl4"&gt
+
+&lth1 ng-mousemove="myFunc($event)"&gt
+Mouse Over Me!
+
+&lt/h1&gt
+
+&ltp&gtCoordinates: {{x + ', ' + y}}&lt/p&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('fourthAPP',[]);
+app.controller('Ctrl4', function($scope)
+{
+    $scope.myFunc = function(myE) {
+        $scope.x = myE.clientX;
+        $scope.y = myE.clientY;
+    }
+});
+
+angular.bootstrap(document.getElementById
+("ID4"), ['fourthAPP']);
+
+&lt/script&gt
+
+&ltp&gtMouse over the heading to display the
+value of clientX and clientY from the
+event object.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID4" ng-app="fourthAPP" ng-controller="Ctrl4">
+
+        <h1 ng-mousemove="myFunc($event)">Mouse Over Me!</h1>
+
+        <p>Coordinates: {{x + ', ' + y}}</p>
+
+    </div>
+
+    <script>
+var app = angular.module('fourthAPP', []);
+app.controller('Ctrl4', function($scope) {
+    $scope.myFunc = function(myE) {
+        $scope.x = myE.clientX;
+        $scope.y = myE.clientY;
+    }
+});
+
+angular.bootstrap(document.getElementById("ID4"), 
+['fourthAPP']);
+
+</script>
+
+    <p>Mouse over the heading to display the value of clientX and clientY from the event object.</p>
+
+    </body>
+    </html>
+
+
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

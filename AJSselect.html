@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS SELECT BOXES </h2>
+
+<p>AngularJS lets you create dropdown lists based on items in an array or an object.</p>
+
+
+
+<br>
+
+<H3> CREATING SELECT BOX USING ng-option  </H3>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt &lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id = "ID1" ng-app="firstAPP"
+ng-controller="Ctrl1"&gt
+
+&ltselect ng-model="selectedName"
+ng-options="x for x in names"&gt
+
+&lt/select&gt
+
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('firstAPP',[]);
+app.controller('Ctrl1', function($scope)
+{
+   $scope.names = ["Tiger", "Lion",
+   "Puma"];
+});
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+&lt/script&gt
+
+&ltp&gtThis example shows how to fill a
+dropdown list using the ng-options
+directive.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> </script>
+
+    <body>
+
+    <div id = "ID1" ng-app="firstAPP" ng-controller="Ctrl1">
+
+        <select ng-model="selectedName" ng-options="x for x in names">
+        </select>
+
+    </div>
+
+    <script>
+
+var app = angular.module('firstAPP', []);
+app.controller('Ctrl1', function($scope) {
+    $scope.names = ["Tiger", "Lion", "Puma"];
+});
+
+angular.bootstrap(document.getElementById("ID1"),
+['firstAPP']);
+
+</script>
+
+    <p>This example shows how to fill a dropdown list using the ng-options directive.</p>
+
+    </body>
+    </html>
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+<h3> CREATING SELECT BOX USING ng-repeat </h3>
+
+<p>
+
+    You can also use the ng-repeat directive to make the same dropdown list, the ng-repeat directive repeats a block of HTML code for each item in an array, it can be used to create options in a dropdown list, but the ng-options directive was made especially for filling a dropdown list with options</p>
+
+
+
+<p> The advantage of using ng-option is, Dropdowns made with ng-options allows the selected value to be an object, while dropdowns made from ng-repeat has to be a string.
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID2" ng-app="secondAPP"
+ng-controller ="Ctrl2"&gt
+
+&ltselect&gt
+
+&ltoption ng-repeat="x in names"&gt{{x}}
+&lt/option&gt
+
+&lt/select&gt
+
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('secondAPP', []);
+app.controller('Ctrl2', function($scope) {
+  $scope.names = ["Tiger", "Lion",
+  "Puma"];
+});
+
+angular.bootstrap(document.getElementById
+("ID2"), ['secondAPP']);
+
+&lt/script&gt
+
+&ltp&gtThis example shows how to fill a
+dropdown list using the ng-repeat
+directive.
+&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID2" ng-app="secondAPP" ng-controller="Ctrl2">
+
+        <select>
+
+            <option ng-repeat="x in names">{{x}}</option>
+
+        </select>
+
+
+    </div>
+
+    <script>
+
+var app = angular.module('secondAPP', []);
+app.controller('Ctrl2', function($scope) {
+    $scope.names = ["Tiger", "Lion", "Puma"];
+});
+
+angular.bootstrap(document.getElementById("ID2"),
+['secondAPP']);
+
+</script>
+
+    <p>This example shows how to fill a dropdown list using the ng-repeat directive.</p>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+<h3> DATA SOURCE AS AN OBJECT
+</h3>
+
+<p>
+
+    In the below example, selected value will always be the value in a key-value pair, the value in a key-value pair can also be an object.
+
+    The options in the dropdown list does not have to be the key in a key-value pair, it can also be the value, or a property of the value object.
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID3" ng-app="thirdAPP"
+ng-controller="Ctrl3"&gt
+
+&ltb&gtSelect a car:&lt/b&gt
+
+&ltselect ng-model="selectedCar"
+ng-options="y.brand
+for (x, y) in cars"&gt
+
+&lt/select&gt
+
+&lth1&gtYou selected:{{selectedCar.brand}}
+&lt/h1&gt
+&lth2&gtModel: {{selectedCar.model}}&lt/h2&gt
+&lth3&gtColor: {{selectedCar.color}}&lt/h3&gt
+
+&ltp&gtThe visible text inside the dropdown
+list can also be a property of the value
+object.&lt/p&gt
+
+
+&lthr&gt
+
+
+&ltb&gtSelect a car:&lt/b&gt
+
+&ltselect ng-model="selectedCar1"
+ng-options="x for
+(x, y) in cars"&gt
+&lt/select&gt
+
+&lth1&gtYou selected: {{selectedCar1.brand}}
+&lt/h1&gt
+&lth2&gtModel: {{selectedCar1.model}}&lt/h2&gt
+&lth3&gtColor: {{selectedCar1.color}}&lt/h3&gt
+
+&ltp&gtNote that the selected value
+represents an object.&lt/p&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('thirdAPP', []);
+app.controller('Ctrl3', function($scope) {
+  $scope.cars = {
+
+  car01 : {brand : "Tesla", model :"Model S",
+  color : "red"},
+
+  car02 : {brand : "Ford", model :"GT",
+  color : "blue"},
+
+  car03 : {brand : "Volvo", model :"S90",
+  color : "black"}
+    }
+});
+
+
+angular.bootstrap(document.getElementById
+("ID3"), ['thirdAPP']);
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+
+    <div id ="ID3" ng-app="thirdAPP" ng-controller="Ctrl3">
+
+        <b>Select a car:</b>
+
+        <select ng-model="selectedCar" ng-options="y.brand for (x, y) in cars">
+        </select>
+
+        <h1>You selected: {{selectedCar.brand}}</h1>
+        <h2>Model: {{selectedCar.model}}</h2>
+        <h3>Color: {{selectedCar.color}}</h3>
+
+        <p>The visible text inside the dropdown list can also be a property of the value object.</p>
+
+
+        <hr>
+        <br>
+        <br>
+        <b>Select a car:</b>
+
+        <select ng-model="selectedCar1" ng-options="x for (x, y) in cars">
+        </select>
+
+        <h1>You selected: {{selectedCar1.brand}}</h1>
+        <h2>Model: {{selectedCar1.model}}</h2>
+        <h3>Color: {{selectedCar1.color}}</h3>
+
+        <p>Note that the selected value represents an object.</p>
+
+    </div>
+
+    <script>
+
+var app = angular.module('thirdAPP', []);
+app.controller('Ctrl3', function($scope) {
+    $scope.cars = {
+        car01 : {brand : "Tesla", model : "Model S", color : "red"},
+        car02 : {brand : "Ford", model : "GT", color : "blue"},
+        car03 : {brand : "Volvo", model : "S90", color : "black"}
+    }
+});
+
+
+angular.bootstrap(document.getElementById("ID3"), 
+['thirdAPP']);
+
+</script>
+
+    </body>
+    </html>
+
+
+
+
+
+</div>
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 7px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> CONTACT CHIP </h2>
+
+
+<p>Contact Chips are used to represent the name and image of the particular person or contact in the webpage. </p>
+
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&ltdiv class="chip"&gt
+  &ltimg src="img_chip.png" alt="Person"
+  width="96" height="96"&gt
+  Peter
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+</style>
+    </head>
+    <body>
+
+    <br>
+
+    <div class="chip">
+        <img src= "file:///android_asset/profile_chips.png" alt="Person" width="96" height="96">
+        Peter
+    </div>
+
+    <br>
+    <br>
+
+    </body>
+    </html>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> Closable Contact Chips </h3>
+<p> In the Closable Contact Chips the chips can be closed by a clicking the close symbol, in the example below the HTML entity "&amptimes;" is used to create the letter "x".  </p>
+
+
+<div id="div1">
+
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gt Closable Contact Chips &lt/h2&gt
+
+
+&ltp&gtClick on the "x" symbol to delete
+the contact.&lt/p&gt
+
+&ltdiv class="chip"&gt
+  &ltimg src="img_chip.png" alt="Person" 
+  width="96" height="96"&gt
+  peter
+  &ltspan class="closebtn"
+  onclick="this.parentElement.style
+  .display='none'"&gt &amptimes; &lt/span&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.closebtn {
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+</style>
+    </head>
+    <body>
+
+    <h2> Closable Contact Chips </h2>
+
+
+    <p>Click on the "x" symbol to delete the contact.</p>
+
+    <div class="chip">
+        <img src= "file:///android_asset/profile_chips.png" alt="Person" width="96" height="96">
+        peter
+        <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+    </div>
+
+    </body>
+    </html>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

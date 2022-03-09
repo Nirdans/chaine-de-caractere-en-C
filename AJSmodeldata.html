@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:92%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 91%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:91%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> ANGULAR JS MODEL & DATA BINDING </h2>
+
+<p>The ngModel directive binds an input ,select, textarea (or custom form control) to a property on the scope using NgModelController, which is created and exposed by this directive.</p>
+
+<p>ngModel is responsible for:</p>
+
+<ul type ="square">
+
+
+    <li>Binding the view into the model, which other directives such as input, textarea or select require.</li>
+
+    <br>
+
+    <li>Providing validation behavior (i.e. required, number, email, url).
+    </li>
+
+    <br>
+
+    <li>Keeping the state of the control (valid/invalid, dirty/pristine, touched/untouched, validation errors).
+    </li>
+
+    <br>
+
+    <li>Setting related css classes on the element (ng-valid, ng-invalid, ng-dirty, ng-pristine, ng-touched, ng-untouched, ng-empty, ng-not-empty) including animations.</li>
+
+    <br>
+
+    <li>Registering the control with its parent form.</li>
+
+</ul>
+
+<BR>
+
+
+
+
+<H3> ngModel EXAMPLE </H3>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.
+js"&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID1" ng-app="firstApp"
+ng-controller="myCtrl1"&gt
+
+Name: &ltinput ng-model="name"&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('firstApp',[]);
+app.controller('myCtrl1', function
+($scope) {
+    $scope.name = "Dangerous Dave ";
+});
+
+angular.bootstrap(document.getElementById
+("ID1"), ['firstAPP']);
+
+&lt/script&gt
+
+&ltp&gtUse the ng-model directive to bind
+the value of the input field to a
+property made in the controller.
+&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+
+</div>
+
+
+
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div2">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id ="ID1" ng-app="firstAPP" ng-controller="myCtrl1">
+        Name: <input ng-model="name">
+    </div>
+
+    <script>
+var app = angular.module('firstAPP', []);
+app.controller('myCtrl1', function($scope) {
+    $scope.name = "Dangerous Dave ";
+});
+
+angular.bootstrap(document.getElementById("ID1"), ['firstAPP']);
+</script>
+
+    <p>Use the ng-model directive to bind the value of the input field to a property made in the controller.</p>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+</div>
+
+
+<br>
+
+
+<h3> TWO-WAY BINDING </h3>
+
+<p>
+
+    One of the core feature of AngularJS which makes it popular is two way data binding. In two way data binding, any changes to the model are immediately reflected in the View and any changes in the View updates the model.</p>
+<p>The binding goes both ways. If the user changes the value inside the input field, the AngularJS property will also change its value.
+
+</p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltscript src="https://ajax.googleapis.com
+/ajax/libs/angularjs/1.6.9/angular.min.js"
+&gt&lt/script&gt
+
+&ltbody&gt
+
+&ltdiv id ="ID2" ng-app="secondAPP"
+ng-controller="myCtrl2"&gt
+
+Name: &ltinput ng-model="name"&gt
+&lth1&gtYou entered: {{name}}&lt/h1&gt
+&lt/div&gt
+
+&ltscript&gt
+
+var app = angular.module('secondAPP',[]);
+app.controller('myCtrl2', function($scope)
+{
+    $scope.name = "Tom Jerry";
+});
+
+angular.bootstrap(document.getElementById
+("ID2"), ['secondAPP']);
+
+&lt/script&gt
+
+&ltp&gtChange the name inside the input
+field,and you will see the name in the
+header changes accordingly.
+&lt/p&gt
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div2">
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+
+    <div id ="ID2" ng-app="secondAPP" ng-controller="myCtrl2">
+        Name: <input ng-model="name">
+        <h1>You entered: {{name}}</h1>
+    </div>
+
+    <script>
+var app = angular.module('secondAPP', []);
+app.controller('myCtrl2', function($scope) {
+    $scope.name = "Tom Jerry";
+});
+
+angular.bootstrap(document.getElementById("ID2"), ['secondAPP']);
+</script>
+
+    <p>Change the name inside the input field, and you will see the name in the header changes accordingly.</p>
+
+    </body>
+    </html>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
