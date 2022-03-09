@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+
+      p1 {
+      border: 5px solid steelblue;
+      padding: 2px;
+
+      }
+      div {
+      background-color: #F9FFFF;
+      position:relative;
+      width: 90%;
+      height: auto;
+      padding: 10px;
+      border: 5px solid steelblue;
+      margin: 1px;
+      }
+
+      hr{
+
+      width:100%;
+      border: 2px solid MediumTurquoise ;
+      float:left;
+
+
+      }
+
+
+      textarea {
+
+      width: 90%;
+      min-height: 400px;
+
+
+      }
+
+
+      iframe {
+
+      width:90%;
+      min-height:400px;
+      }
+
+
+
+      img {
+      width: 90%;
+      height: auto;
+      }
+
+      pre {
+      overflow: auto;
+
+      font-size: 4vw;
+
+      }
+
+
+
+   </style>
+
+   <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+</head>
+
+
+<body>
+
+<h2> HTML LIST : </h2>
+
+<p>HTML offers three types of lists they are : </p>
+
+<p>1.Unordered list: This can be created
+   using &ltul&gt tag,this will list items
+   using plain bullets.</p>
+
+<p>2.Ordered list: This can be created
+   usingn&ltol&gt tag,this will use different
+   schemes of numbers to list items.</p>
+
+<p>3.Definition list: This can be created
+   using &ltdl&gt tag,this arranges your items
+   in the same way as they are arranged.</p>
+
+<hr />
+<br />
+
+
+<h2> UNORDERED LIST : </h2>
+<p>An unordered list is a collection of
+   items that have no special order or
+   sequence.This list is created by using
+   HTML&ltul&gt tag and each list starts with
+   &ltli&gt tag , each item in the list is
+   marked with a bullet .</p>
+
+<h4>Example for Unordered List : </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtUnordered List&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltul&gt
+&ltli&gtTiger&lt/li&gt
+&ltli&gtcheetah&lt/li&gt
+&ltli&gtjaguar&lt/li&gt
+&ltli&gtLion&lt/li&gt
+&lt/ul&gt
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/unordered.jpg" alt="Basic Html"></p>
+
+
+
+<hr />
+<br />
+
+
+
+
+
+
+
+<h3> UNORDERED TYPE ATTRIBUTE : </h3>
+<p>You can use type attribute for &ltul&gt
+   tag to specify the type of bullet you
+   like,by default it is a disc the options
+   are circle , square , none .</p>
+
+<p>1. &ltul type="square"></p>
+<p>2. &ltul type="disc"></p>
+<p>3. &ltul type="circle"></p>
+<p>4. &ltul type="none"></p>
+
+
+
+
+<h4>Example for Type Attribute :</h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&lttitle&gtTYPE ATTRIBUTE&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth4&gtSquare attribute example &lt/h4&gt 
+
+   &ltul type="square"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   
+   &lt/ul&gt
+
+&lth4&gtDisc attribute example &lt/h4&gt 
+
+&ltul type="disc"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   
+   &lt/ul&gt
+
+&lth4&gtcircle attribute example &lt/h4&gt 
+
+&ltul type="circle"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   
+   &lt/ul&gt
+
+&lth4&gtnone attribute example &lt/h4&gt 
+
+&ltul type="none"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   
+   &lt/ul&gt
+
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h4>Result for above Example :</h4>
+
+   <img src="file:///android_asset/unorderedtype.jpg" alt="Basic Html" ></p>
+
+
+   <hr />
+   <br />
+
+
+   <h2>ORDERED LIST :</h2>
+
+   <p>An Ordered list is a list of items
+      in a numbered list.This list is created
+      by using &ltol&gt tag. The numbering starts
+      at one and is incremented by one for
+      each successive ordered list element
+      tagged with &ltli&gt.</p>
+
+
+   <h4>Example for Ordered List : </h4>
+
+   <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtOrdered List&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+&ltol&gt
+
+&ltli&gtTiger&lt/li&gt
+&ltli&gtcheetah&lt/li&gt
+&ltli&gtjaguar&lt/li&gt
+&ltli&gtLion&lt/li&gt
+
+&lt/ol&gt
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+   </div>
+
+
+
+   <h4>Result for above Example :</h4>
+
+      <img src="file:///android_asset/ordered.jpg" alt="Basic Html" ></p>
+
+
+      <hr />
+      <br />
+
+
+
+      <h3> ORDERED TYPE ATTRIBUTE :</h3>
+
+      <p>Type attribute can be used for &ltol&gt
+         tag to specify the type of numbering
+         by default it is a number .</p>
+
+
+      <p>1. &ltol type="1"&gt - Default Numerals.</p>
+      <p>2. &ltol type="I"&gt - Upper-Case Numerals.</p>
+      <p>3. &ltol type="i"&gt - Lower-Case Numerals.</p>
+      <p>4. &ltol type="a"&gt - Lower-Case Letters.</p>
+      <p>5. &ltol type="A"&gt - Upper-Case Letters.</p>
+
+
+
+
+
+      <h4>Example for Ordered type Attribute :</h4>
+
+
+      <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&lttitle&gtHTML Ordered List&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth4&gt Default Numerals &lt/h4&gt
+
+   &ltol type="1"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   &lt/ol&gt
+
+&lth4&gtUpper-Case Numerals&lt/h4&gt
+
+&ltol type="I"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   &lt/ol&gt
+
+&lth4&gt Lower-Case Numerals &lt/h4&gt
+
+&ltol type="i"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   &lt/ol&gt
+
+&lth4&gtLower-Case Letters &lt/h4&gt
+
+&ltol type="a"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   &lt/ol&gt
+
+&lth4&gtUpper-Case Letters &lt/h4&gt
+
+&ltol type="A"&gt
+   &ltli&gtTiger&lt/li&gt
+   &ltli&gtLion&lt/li&gt
+   &lt/ol&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+      </div>
+
+
+      <h4>Result for above Example :</h4>
+
+         <img src="file:///android_asset/orderedtype.jpg" alt="Basic Html" ></p>
+
+
+
+         <hr />
+         <br />
+
+         <h2> DISCRIPTION LIST :</h2>
+
+         <p>A description list, is a list of items,
+            with a description of each item.</p>
+
+         <p>1. The &ltdl&gt tag defines a list.</p>
+
+         <p>2. The &ltdt&gt tag defines the Item name.</p>
+
+         <p>3. The &ltdd&gt tag defines the description.</p>
+
+
+
+         <h4> Example for Description List :</h4>
+
+         <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth2&gt Description List&lt/h2&gt
+
+&ltdl&gt
+&ltdt&gtTiger&lt/dt&gt
+&ltdd&gtTiger is Endangered&lt/dd&gt
+&ltdt&gtLion&lt/dt&gt
+&ltdd&gtLion is the king of jungle&lt/dd&gt
+&lt/dl&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+         </div>
+
+
+         <h4>Result for above Example :</h4>
+
+            <img src="file:///android_asset/description.jpg" alt="Basic Html" ></p>
+
+
+            <hr />
+            <br />
+
+
+
+            <h2>HORIZONTAL LIST :</h2>
+
+            <p>HTML lists can be styled in many different types ,
+               horizontal list is one of the type .</p>
+
+            <h4>Example for Horizontal list :</h4>
+
+            <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&ltstyle&gt
+
+ul#list li {
+    display:inline;
+}
+
+&lt/style&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtHorizontal List&lt/h2&gt
+
+&ltul id="list"&gt
+&ltli&gtTiger&lt/li&gt 
+&ltli&gtcheetah&lt/li&gt 
+&ltli&gtjaguar&lt/li&gt 
+&ltli&gtLion&lt/li&gt
+&lt/ul&gt  
+
+&lt/body&gt
+
+&lt/html&gt
+
+</pre>
+            </div>
+
+
+
+            <h4>Result for above Example :</h4>
+
+               <img src="file:///android_asset/listhorizontal.jpg" alt="Basic Html"></p>
+
+
+               <hr />
+               <br />
+
+
+               <h3> TRY YOURSELF : </h3>
+               <p>Type the code or copy/paste below and press show result to see the result.</p>
+
+               <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+               <input onclick="update();" type="button" value="show result"></p>
+
+
+
+               <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

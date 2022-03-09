@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 6px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> FULLSCREEN OVERLAY NAVIGATION </h2>
+
+
+<p>In the fullscreen overlay navigation, when the menu is clicked the navigation menu will overlay in fullscreen mode </p>
+
+
+<h3> Slide Right Overlay Navigation </h3>
+
+<p> In the example below "&amptimes" is used to display the close "x" symbol and "&amp#9776;" is used to display the menu bar icon "&#9776;"    </p>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+body {
+    margin: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.9);
+   overflow-x: hidden;
+   transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+<small style='color:red'>/* When the height of the screen is less than
+450 pixels, this will change the font-size of
+the links and position the close button again,
+so they don't overlap */ </small>
+
+@media screen and (max-height:450px){
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+&lt/style&gt
+&ltbody&gt
+
+&ltdiv id="myNav" class="overlay"&gt
+  &lta href="javascript:void(0)" class=
+  "closebtn"
+
+  onclick="closeNav()"&gt&amptimes;&lt/a&gt
+  &ltdiv class="overlay-content"&gt
+    &lta href="#"&gtAbout&lt/a&gt
+    &lta href="#"&gtServices&lt/a&gt
+    &lta href="#"&gtCareers&lt/a&gt
+    &lta href="#"&gtContact&lt/a&gt
+  &lt/div&gt
+&lt/div&gt
+
+&lth2&gtSlide Right Fullscreen Overlay Nav
+Example&lt/h2&gt
+
+&ltp&gtClick on element below to open the
+fullscreen overlay navigation menu.&lt/p&gt
+
+&ltp&gtIn this example,the navigation menu
+will slide in, from left to right:&lt/p&gt
+
+&ltspan style="font-size:30px;cursor:
+pointer"
+
+onclick="openNav()"&gt&amp#9776;
+Open&lt/span&gt
+
+&ltscript&gt
+function openNav() {
+ document.getElementById("myNav")
+ .style.width = "100%";
+}
+
+function closeNav() {
+ document.getElementById("myNav")
+ .style.width = "0%";
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+body {
+    margin: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+   height: 100%;
+   width: 0;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.9);
+   overflow-x: hidden;
+   transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+</style>
+    <body>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <h2>Slide Right Fullscreen Overlay Nav Example</h2>
+
+    <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+
+    <p>In this example, the navigation menu will slide in, from left to right.</p>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+
+    <script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+    <br>
+    <br>
+    <br>
+
+    </body>
+    </html>
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> Slide Down Overlay Navigation </h3>
+
+<p> The example below slides in the overlay navigation menu from Top to Bottom, note that the CSS is slightly different from the one above (default height is now 0, width is 100% and overflow-y is hidden). </p>
+
+
+<div id="div1">
+
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+body {
+    margin: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+   height: 0%;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.9);
+   overflow-y: hidden;
+   transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px){
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+&lt/style&gt
+&ltbody&gt
+
+&ltdiv id="myNav" class="overlay"&gt
+  &lta href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()"&gt&times;&lt/a&gt
+  &ltdiv class="overlay-content"&gt
+    &lta href="#"&gtAbout&lt/a&gt
+    &lta href="#"&gtServices&lt/a&gt
+    &lta href="#"&gtCareers&lt/a&gt
+    &lta href="#"&gtContact&lt/a&gt
+  &lt/div&gt
+&lt/div&gt
+
+&lth2&gt Slide Down Fullscreen Overlay Nav
+Example&lt/h2&gt
+
+&ltp&gtClick on the element below to open
+the fullscreen overlay navigation menu.
+&lt/p&gt
+
+&ltp&gtIn this example, the navigation
+menu will slide downwards from the top.
+&lt/p&gt
+
+&ltspan style="font-size:30px;cursor:
+pointer"
+
+onclick="openNav()"&gt&amp#9776; open&lt/span&gt
+
+&ltscript&gt
+function openNav() {
+ document.getElementById("myNav")
+ .style.height="100%";
+}
+
+function closeNav() {
+ document.getElementById("myNav")
+ .style.height = "0%";
+}
+&lt/script&gt
+     
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+body {
+    margin: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay1 {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content1 {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay1 a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay1 a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay1 .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+</style>
+    <body>
+
+    <div id="myNav1" class="overlay1">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+        <div class="overlay-content1">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <h2> Slide Down Fullscreen Overlay Nav Example</h2>
+    <p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+
+    <p>In this example, the navigation menu will slide downwards from the top:</p>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav1()">&#9776; open</span>
+
+    <script>
+function openNav1() {
+    document.getElementById("myNav1").style.height = "100%";
+}
+
+function closeNav1() {
+    document.getElementById("myNav1").style.height = "0%";
+}
+</script>
+
+    <br>
+    <br>
+    <br>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

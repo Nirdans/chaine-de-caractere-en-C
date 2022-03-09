@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 7px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+  <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+
+
+<h2> SEARCH FILTER TABLE </h2>
+
+<p> Search filter Table is used to search a particular entry in the Table, just by typing a particular alphabet it will show the matching entries. </p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+
+#myInput {
+  background-image:
+  url('/img/search.png');
+
+  background-position: 5px 10px;
+  background-size:40px;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#myTable tr.header, #myTable tr:hover{
+  background-color: #f1f1f1;
+}
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtNATIONAL ANIMALS&lt/h2&gt
+
+&ltinput type="text" id="myInput"
+onkeyup="myFunction()" placeholder=
+"Search by Country...."
+
+title="Type in a name"&gt
+
+&lttable id="myTable"&gt
+&lttr class="header"&gt
+&ltth style="width:60%;"&gtCountry&lt/th&gt
+&ltth style="width:40%;"&gtNational Animals&lt/th&gt
+&lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtIndia&lt/td&gt
+    &lttd&gtBengal Tiger&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtNepal&lt/td&gt
+    &lttd&gtCow&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtPeru&lt/td&gt
+    &lttd&gtVicuña&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtPhilippines&lt/td&gt
+    &lttd&gtCarabao&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gt Romania&lt/td&gt
+    &lttd&gtLynx&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtRwanda&lt/td&gt
+    &lttd&gtLeopard&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtSpain&lt/td&gt
+    &lttd&gtBull&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtThailand&lt/td&gt
+    &lttd&gtElephant&lt/td&gt
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtTurkey&lt/td&gt
+    &lttd&gtGreywolf&lt/td&gt
+  &lt/tr&gt
+
+&lt/table&gt
+
+&ltscript&gt
+
+function myFunction() {
+var input, filter, table, tr, td, i;
+input=document.getElementById("myInput");
+
+filter=input.value.toUpperCase();
+
+table=document.getElementById("myTable");
+
+tr=table.getElementsByTagName("tr");
+
+for (i = 0; i &lt tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[0];
+
+ if (td) {
+   if (td.innerHTML.toUpperCase()
+   .indexOf(filter) &gt -1) {
+
+     tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+
+      }
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+
+
+<h3>Result For Above Example </h3>
+
+<br>
+
+
+<div id="div1">
+
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+
+#myInput {
+  background-image: url("file:///android_asset/images (13).jpg");
+  background-position: 5px 10px;
+  background-size:40px;
+  background-repeat: no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+</style>
+  </head>
+  <body>
+
+  <h2>NATIONAL ANIMALS</h2>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Country...." title="Type in a name">
+
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Country</th>
+      <th style="width:40%;">National Animals</th>
+    </tr>
+
+    <tr>
+      <td>India</td>
+      <td>Bengal Tiger</td>
+    </tr>
+
+    <tr>
+      <td>Nepal</td>
+      <td>Cow</td>
+    </tr>
+
+    <tr>
+      <td>Peru</td>
+      <td>Vicuña</td>
+    </tr>
+
+    <tr>
+      <td>Philippines</td>
+      <td>Carabao</td>
+    </tr>
+
+    <tr>
+      <td> Romania</td>
+      <td>Lynx</td>
+    </tr>
+
+    <tr>
+      <td>Rwanda</td>
+      <td>Leopard</td>
+    </tr>
+
+    <tr>
+      <td>Spain</td>
+      <td>Bull</td>
+    </tr>
+
+    <tr>
+      <td>Thailand</td>
+      <td>Elephant</td>
+    </tr>
+
+    <tr>
+      <td>Turkey</td>
+      <td>Greywolf</td>
+    </tr>
+
+  </table>
+
+  <script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+
+  </body>
+  </html>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

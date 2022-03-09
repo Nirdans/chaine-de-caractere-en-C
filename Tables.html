@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+    </style>
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+
+</head>
+
+
+<body>
+
+
+
+<h2> HTML TABLES : </h2>
+
+<p>The HTML tables allows to arrange data like text, images, links, other tables, etc. into rows and columns of cells.</p>
+
+<p>1. Tables are defined with the
+    &lttable&gt tag.</p>
+<p>2. Tables are divided into table
+    rows with the &lttr&gt tag.</p>
+<p>3. Table rows are divided into
+    table data with the &lttd&gt tag.</p>
+<p>4. A table row can also be divided
+    into table headings with the &ltth&gt. </p>
+
+<h4>Example for HTML Tables : </h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lttable style="width:50%"&gt
+  &lttr&gt
+    &ltth&gtCountry&lt/th&gt
+    &ltth&gtcapital&lt/th&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtIndia&lt/td&gt
+    &lttd&gtNew delhi&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtGermany&lt/td&gt
+    &lttd&gtBerlin&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtNew zealand&lt/td&gt
+    &lttd&gtWellington&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+
+<h4>Result for the above Example : </h4>
+
+<img src="file:///android_asset/table.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+
+
+
+
+
+
+<h3>Table with Cell padding :</h3>
+
+<P>Cell padding specifies the space between the cell content and its borders, If not specified a padding, the table cells will be displayed without padding. </p>
+
+<h4>Example for Cell Padding :</h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+
+&lttable style="width:50%"&gt
+  &lttr&gt
+    &ltth&gtCountry&lt/th&gt
+    &ltth&gtcapital&lt/th&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtIndia&lt/td&gt
+    &lttd&gtNew delhi&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtGermany&lt/td&gt
+    &lttd&gtBerlin&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtNew zealand&lt/td&gt
+    &lttd&gtWellington&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+&ltp&gtThe cell padding is set 
+to 15px.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example : </h4>
+
+<img src="file:///android_asset/cellpading.jpg" alt="Basic Html" ></p>
+
+
+
+<hr />
+<br />
+
+
+
+
+
+<h3>TABLE WITH BORDER SPACING :</h3>
+
+<p> Border spacing specifies the space between the cells.</p>
+
+
+<h4> Example for Border Spacing : </h4>
+
+
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+table {
+    border-spacing: 15px;
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lttable style="width:50%"&gt
+  &lttr&gt
+    &ltth&gtCountry&lt/th&gt
+    &ltth&gtcapital&lt/th&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtIndia&lt/td&gt
+    &lttd&gtNew delhi&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtGermany&lt/td&gt
+    &lttd&gtBerlin&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtNew zealand&lt/td&gt
+    &lttd&gtWellington&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+
+
+&ltp&gt border-spacing is set
+to 15px.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+</div>
+
+
+<h4>Result for the above Example : </h4>
+
+
+
+<img src="file:///android_asset/borderspace.jpg" alt="Basic Html" ></p>
+
+
+
+
+<hr />
+<br />
+
+
+
+
+
+
+
+<h3> CELL THAT SPAN MANY COLUMNS :</h3>
+<p>To make a cell span more than one column, colspan attribute should be used .</p>
+
+<h4> Example for Cell that span many columns :</h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtCell that spans two columns:&lt/h2&gt
+&lttable style="width:100%"&gt
+  &lttr&gt
+    &ltth&gtName&lt/th&gt
+    &ltth colspan="2"&gtTelephone&lt/th&gt
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtxyz&lt/td&gt
+    &lttd&gt044 67 154&lt/td&gt
+    &lttd&gt91 72 455&lt/td&gt
+  &lt/tr&gt
+&lt/table&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+
+
+<h4> Result for the above Example :</h4>
+
+
+<img src="file:///android_asset/spancolumn.jpg" alt="Basic Html"></p>
+
+
+
+<hr />
+<br />
+
+
+
+
+<h3> CELL THAT SPAN MANY ROWS:</h3>
+<p>To make a cell span more than one row, use the rowspan attribute.</p>
+
+
+<h4> Example for cell that span many rows : </h4>
+
+<div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtCell that spans two rows:&lt/h2&gt
+
+&lttable style="width:100%"&gt
+  &lttr&gt
+    &ltth&gtName:&lt/th&gt
+    &lttd&gtxyz&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt
+    &ltth rowspan="2"&gtTelephone:&lt/th&gt
+    &lttd&gt044 17 674&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gt91 12 6785&lt/td&gt
+  &lt/tr&gt
+&lt/table&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+</h4> Result for the above Example : <h4/>
+
+    <img src="file:///android_asset/spanrow.jpg" alt="Basic Html" ></p>
+
+
+
+
+
+    <hr />
+    <br />
+
+
+
+
+
+
+
+    <h3>TABLE WITH CAPTION : </h3>
+
+    <p>To add a caption to a table, use the &ltcaption&gt tag. </p>
+
+
+    <h4>Example for Table with caption : </h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lttable style="width:50%"&gt
+
+ &ltcaption&gt CAPITALS &lt/caption&gt
+
+  &lttr&gt
+    &ltth&gtCountry&lt/th&gt
+    &ltth&gtcapital&lt/th&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtIndia&lt/td&gt
+    &lttd&gtNew delhi&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtGermany&lt/td&gt
+    &lttd&gtBerlin&lt/td&gt  
+    
+  &lt/tr&gt
+
+  &lttr&gt
+    &lttd&gtNew zealand&lt/td&gt
+    &lttd&gtWellington&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+
+  
+  
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+    <h4>Result for the above Example : </h4>
+
+    <img src="file:///android_asset/caption.jpg" alt="Basic Html" ></p>
+
+
+
+
+    <hr />
+    <br />
+
+
+
+
+
+
+    <h3>DIFFERENT STYLES FOR DIFFERENT TABLES :</h3>
+
+    <p>To define a different style for a different table, add an id attribute to the table .</p>
+
+    <h4>Example for Different Styles :</h4>
+
+    <div>
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&lthead&gt
+&ltstyle&gt
+table {
+    width:50%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #6B9BC3;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#6DDAD6 ;
+}
+table#t01 th {
+    background-color: #6DDAD6 ;
+    color: black;
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+
+&lttable id="t01"&gt
+  &lttr&gt
+    &ltth&gtFirst Name&lt/th&gt
+    &ltth&gtLast Name&lt/th&gt  
+    
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtjack&lt/td&gt
+    &lttd&gtjck&lt/td&gt  
+   
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtEve&lt/td&gt
+    &lttd&gtAdam&lt/td&gt  
+    
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtJohn&lt/td&gt
+    &lttd&gtwee&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+    </div>
+
+    <h4> Result for the above Example :</h4>
+    <img src="file:///android_asset/diffstyle.jpg" alt="Basic Html" ></p>
+
+
+
+
+    <hr />
+    <br />
+
+
+
+
+    <h3> TABLE COLOR </h3>
+
+    <p>To define  color for the borders, and the text and background color of <th> elements </p>
+
+    <h4>Example for Table color :</h4>
+
+    <div>
+<pre>
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+table, td, th {
+    border: 1px solid steelblue;
+}
+
+th {
+    background-color: #6DDAD6;
+    color: black;
+}
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lttable&gt
+  &lttr&gt
+    &ltth&gtFirst Name&lt/th&gt
+    &ltth&gtLast Name&lt/th&gt  
+    
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtjack&lt/td&gt
+    &lttd&gtjck&lt/td&gt  
+   
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtEve&lt/td&gt
+    &lttd&gtAdam&lt/td&gt  
+    
+  &lt/tr&gt
+  &lttr&gt
+    &lttd&gtJohn&lt/td&gt
+    &lttd&gtwee&lt/td&gt  
+    
+  &lt/tr&gt
+&lt/table&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+</pre>
+    </div>
+
+    <h4>Result for the above Example :</h4>
+
+    <img src="file:///android_asset/tablecolor.jpg" alt="Basic Html" ></p>
+
+
+
+    <hr />
+    <br />
+
+
+    <h3> TRY YOURSELF : </h3>
+    <p>Type the code or copy/paste below and press show result to see the result.</p>
+
+    <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+    <input onclick="update();" type="button" value="show result"></p>
+
+
+
+    <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+</body>
+</html>

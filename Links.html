@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+        table, th, td {
+        border: 2px solid steelblue;
+
+        border-spacing:0px;
+        }
+
+
+        div {
+        background-color: #F9FFFF;
+        position:relative;
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 4vw;
+
+        }
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+
+</head>
+
+
+<body>
+
+<h2> HTML LINKS : </h2>
+
+<p> A webpage can contain various links that take you directly to other pages and even specific parts of a given page , these links are known as hyperlinks . Hyperlinks allow visitors to navigate between Web sites by clicking on words, phrases, and images . </p>
+
+<h4> HTML link Syntax : </h4>
+
+<p1>&lta href="url"&gtlink text&lt/a&gt </p1>
+
+
+<h4> Example for HTML links : </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtHyperlink Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtClick following link&lt/p&gt
+
+&lta href="http://www.html12app.com" 
+target="_self"&gtHTML LEARN&lt/a&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+
+
+
+<h4> Result for the above Example </h4>
+
+<img src="file:///android_asset/example.jpg" alt="Basic Html" ></p>
+
+<hr />
+<br />
+
+
+<h2> BASE PATH LINKS : </h2>
+<p>If you link HTML documents related to the same website, it is not required to give a complete URL for every link. You can get rid of it if you use <base> tag in your HTML document header. This tag is used to give a base path for all the links.</p>
+
+<h4> Example for Base path links : </h4>
+
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtBase Link Example&lt/title&gt
+
+&ltbase href="http://www.html12.com/"&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtClick following link&lt/p&gt
+&lta href="/html/index.htm" target=
+"_blank"&gtLEARN HTML&lt/a&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example </h4>
+
+
+<img src="file:///android_asset/baselink.jpg" alt="Basic Html" ></p>
+
+
+
+
+<hr />
+<br />
+
+
+
+<h2> TARGET ATTRIBUTE : </h2>
+
+<p>This attribute is used to specify the location where linked document is opened </p>
+
+
+<table style="width:55%">
+    <tr>
+        <th>Attributes</th>
+        <th>Description</th>
+
+    </tr>
+
+    <tr>
+        <td> _blank</td>
+        <td>Opens the linked document in a new window or tab.</td>
+
+    </tr>
+
+
+    <tr>
+        <td>_self</td>
+        <td>Opens the linked document in the same frame.</td>
+
+
+    <tr>
+        <td>_parent</td>
+        <td>Opens the linked document in the parent frame.</td>
+
+
+
+    <tr>
+        <td>_top</td>
+        <td>Opens the linked document in the full body of the window.</td>
+
+
+    <tr>
+        <td>targetframe</td>
+        <td>Opens the linked document in a named frame.</td>
+
+
+
+    </tr>
+</table>
+
+
+<h4> Example for Attributes : </h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtAttributes Example&lt/title&gt
+
+&ltbase href=
+"http://www.HTML12app.com/"&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtClick the following links&lt/p&gt
+
+&lta href="/html/index.htm" target=
+"_blank"&gtOpens in New tab&lt/a&gt 
+
+&lta href="/html/index.htm" target=
+"_self"&gtOpens in Self frame&lt/a&gt 
+
+&lta href="/html/index.htm" target=
+"_parent"&gtOpens in Parent frame&lt/a&gt 
+
+&lta href="/html/index.htm" target=
+"_top"&gtOpens in full Body&lt/a&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<h4> Result for the above Example :</h4>
+
+<img src="file:///android_asset/attributes.jpg" alt="Basic Html"></p>
+
+
+
+<hr />
+<br />
+
+
+
+<h2> HTML IMAGE LINK : </h2>
+<p> In HTML to use an image as hyperlink the image should be used inside hyperlink .</p>
+
+
+
+<h4> Example for Image link : </h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&lthead&gt
+
+&lttitle&gtImage link Example&lt/title&gt
+
+&lt/head&gt
+
+&ltbody&gt
+
+&ltp&gtClick following link&lt/p&gt
+
+&lta href="http://www.html12app.com"
+target="_self"&gt 
+&ltimg src="/images/logo.png" 
+alt="LEARN HTML" border="0"/&gt 
+&lt/a&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<h4>Result for the above Example : </h4>
+
+
+<img src="file:///android_asset/imagelink.jpg" alt="Basic Html" ></p>
+
+
+<hr />
+<br />
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result.</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+</body>
+</html>
+

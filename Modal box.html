@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 20px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+<h2> MODAL BOX </h2>
+
+
+<p>A modal is a dialog box/popup window that is displayed on top of the page and it is used to show some information when it is clicked. </p>
+
+<h3> Simple Modal </h3>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2); 
+}
+
+<i style="color:red;">/* Modal Content */</i>
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+<i style="color:red;">/* The Close Button */ </i>
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtModal Example&lt/h2&gt
+
+<i style="color:red;">&lt!-- Trigger/Open The Modal --&gt </i>
+
+&ltbutton id="myBtn"&gtOpen Modal&lt/button&gt
+
+<i style="color:red;">&lt!-- The Modal --&gt</i>
+
+&ltdiv id="myModal" class="modal"&gt
+
+  <i style="color:red;">&lt!-- Modal content --&gt</i>
+
+  &ltdiv class="modal-content"&gt
+    &ltspan class="close"&gt×&lt/span&gt
+    &ltp&gtThis is a example of a simple Modal&lt/p&gt
+  &lt/div&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+<i style="color:red;">// Get the modal</i>
+
+var modal = document.getElementById('myModal');
+
+<i style="color:red;">// Get the button that opens the modal</i>
+
+var btn = document.getElementById("myBtn");
+
+<i style="color:red;">// Get the &ltspan&gt element that closes the modal</i>
+
+var span = document.getElementsByClassName("close")[0];
+
+<i style="color:red;">// opens the modal when user clicks button</i>
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+<i style="color:red;">// When the user clicks on &ltspan&gt(x),closes the modal</i>
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+<i style="color:red;">// closes the model when clicked anywhere</i>
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+&lt/script&gt
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2); 
+}
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>This is a example of a simple Modal</p>
+  </div>
+
+</div>
+
+<script>
+
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3> Modal with Header & Footer </h3>
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2);
+}
+
+
+&lti style="color:red;"&gt/* Modal Content */ &lt/i&gt
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+&lti style="color:red;"&gt/* Add Animation */ &lt/i&gt
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+&lti style="color:red;"&gt/* The Close Button */ &lt/i&gt
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtAnimated Modal with Header and Footer&lt/h2&gt
+
+
+&lti style="color:red;"&gt&lt!-- Trigger/Open The Modal --&gt &lt/i&gt
+
+&ltbutton id="myBtn"&gtOpen Modal&lt/button&gt
+
+&lti style="color:red;"&gt&lt!-- The Modal --&gt &lt/i&gt
+
+&ltdiv id="myModal" class="modal"&gt
+
+ &lti style="color:red;"&gt &lt!-- Modal content --&gt &lt/i&gt
+
+  &ltdiv class="modal-content"&gt
+    &ltdiv class="modal-header"&gt
+      &ltspan class="close"&gt×&lt/span&gt
+      &lth2&gtModal Header&lt/h2&gt
+    &lt/div&gt
+    &ltdiv class="modal-body"&gt
+      &ltp&gtThis is the example of Modal with Header & Footer&lt/p&gt
+      &ltp&gt..........&lt/p&gt
+    &lt/div&gt
+    &ltdiv class="modal-footer"&gt
+      &lth3&gtModal Footer&lt/h3&gt
+    &lt/div&gt
+  &lt/div&gt
+
+&lt/div&gt
+
+&ltscript&gt
+
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+<h3> Result For Above Example </h3>
+
+<div id="div1">
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2);
+}
+
+
+<i style="color:red;">/* Modal Content */ </i>
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+<i style="color:red;">/* Add Animation */ </i>
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+<i style="color:red;">/* The Close Button */ </i>
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Modal with Header and Footer</h2>
+
+
+<i style="color:red;"><!-- Trigger/Open The Modal --> </i>
+
+<button id="myBtn1">Open Modal</button>
+
+<i style="color:red;"><!-- The Modal --> </i>
+
+<div id="myModal1" class="modal">
+
+ <i style="color:red;"> <!-- Modal content --> </i>
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close1">×</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <p>This is the example of Modal with Header & Footer</p>
+      <p>..........</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+<script>
+
+
+var modal = document.getElementById('myModal1');
+
+
+var btn = document.getElementById("myBtn1");
+
+
+var span = document.getElementsByClassName("close1")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<h3> Bottom Modal </h3>
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2);
+    -webkit-animation-name: fadeIn; 
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth2&gtBottom Modal&lt/h2&gt
+
+
+
+&ltbutton id="myBtn"&gtOpen Modal&lt/button&gt
+
+
+
+&ltdiv id="myModal" class="modal"&gt
+
+ 
+
+  &ltdiv class="modal-content"&gt
+    &ltdiv class="modal-header"&gt
+      &ltspan class="close"&gt&times&lt/span&gt
+      &lth2&gt Bottom Modal Header&lt/h2&gt
+    &lt/div&gt
+
+    &ltdiv class="modal-body"&gt
+      &ltp&gtThis is the example for Bottom Modal&lt/p&gt
+      &ltp&gt..........&lt/p&gt
+    &lt/div&gt
+
+    &ltdiv class="modal-footer"&gt
+      &lth3&gt Bottom Modal Footer&lt/h3&gt
+    &lt/div&gt
+  &lt/div&gt
+
+&lt/div&gt
+
+
+&ltscript&gt
+
+var modal = document.getElementById('myModal');
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+
+
+</pre>
+</div>
+
+<br>
+
+
+<h3>Result For Above Example </h3>
+
+ 
+<div id="div1">
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(1,50,2,0.2);
+    -webkit-animation-name: fadeIn; 
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+</style>
+</head>
+<body>
+
+<h2>Bottom Modal</h2>
+
+
+
+<button id="myBtn2">Open Modal</button>
+
+
+
+<div id="myModal2" class="modal">
+
+ 
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close2">&times</span>
+      <h2> Bottom Modal Header</h2>
+    </div>
+
+    <div class="modal-body">
+      <p>This is the example for Bottom Modal</p>
+      <p>..........</p>
+    </div>
+
+    <div class="modal-footer">
+      <h3> Bottom Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+
+var modal = document.getElementById('myModal2');
+
+var btn = document.getElementById("myBtn2");
+
+
+var span = document.getElementsByClassName("close2")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h3> TRY YOURSELF : </h3>
+    <p>Type the code or copy/paste below and press show result to see the result</p>
+
+    <textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+    <input onclick="update();" type="button" value="show result"></p>
+
+
+
+    <iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=
+    device-width, initial-scale=1.0">
+
+  <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:95%;
+        height: auto;
+        padding: 8px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 95%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:95%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+  <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+
+<h2>LIGHTBOX IMAGE GALLERY </h2>
+<p> Lightbox is a JavaScript library that displays images and videos by filling the screen, and dimming out the rest of the web page </p>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltmeta name="viewport" content="width=
+device-width, initial-scale=1"&gt
+&ltstyle&gt
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row &gt .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+
+}
+
+
+<i style='color:red'>/* This is for modal background */ </i>
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #b0d7c5;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+<i style='color:red'>/* This is for close button */ </i>
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+
+<i style='color:red'>/* This is for next & prev buttons */ </i>
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+background-color:rgba(0, 0, 0, 0.8);
+
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #00b867;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+ box-shadow: 0 4px 8px 0 rgba
+ (0, 0, 0, 0.2),0 6px 20px 0 rgba
+ (0, 0, 0, 0.19)
+}
+
+&lt/style&gt
+
+&ltbody&gt
+
+&lth2 style="text-align:center"&gt
+Lightbox Example&lt/h2&gt
+
+&ltdiv class="row"&gt
+  &ltdiv class="column"&gt
+&ltimg src="tiger1.jpg"style="width:100%"
+onclick="openModal();currentSlide(1)"
+class="hover-shadow cursor"&gt
+&lt/div&gt
+
+&ltdiv class="column"&gt
+&ltimg src="tiger2.jpg"style="width:100%"
+onclick="openModal();currentSlide(2)"
+class="hover-shadow cursor"&gt
+&lt/div&gt
+
+&ltdiv class="column"&gt
+&ltimg src="tiger3.jpg"style="width:100%"
+onclick="openModal();currentSlide(3)"
+class="hover-shadow cursor"&gt
+&lt/div&gt
+&lt/div&gt
+
+<i style='color:red'>/* Unicode character for Sign
+"&times" is '&amptimes' */ </i>
+
+&ltdiv id="myModal" class="modal"&gt
+&ltspan class="close cursor"
+onclick="closeModal()"&gt&amptimes;&lt/span&gt
+&ltdiv class="modal-content"&gt
+
+
+&ltdiv class="mySlides"&gt
+&ltdiv class="numbertext"&gt1 / 3&lt/div&gt
+&ltimg src="tiger1.jpg"style="width:100%"&gt
+&lt/div&gt
+
+
+&ltdiv class="mySlides"&gt
+&ltdiv class="numbertext"&gt2 / 3&lt/div&gt
+&ltimg src="tiger2.jpg"style="width:100%"&gt
+&lt/div&gt
+
+
+&ltdiv class="mySlides"&gt
+&ltdiv class="numbertext"&gt3 / 3&lt/div&gt
+&ltimg src="tiger3.jpg"style="width:100%"&gt
+&lt/div&gt
+
+
+<i style='color:red'>/* Unicode character for "prev" sign
+"&#10094" is '&amp#10094' */ </i>
+
+&lta class="prev" onclick="plusSlides
+(-1)"&gt&amp#10094;&lt/a&gt
+
+<i style='color:red'>/* Unicode character for "next" sign
+"&#10095" is '&amp#10095' */ </i>
+
+&lta class="next" onclick="plusSlides
+(1)"&gt&amp#10095;&lt/a&gt
+
+
+&ltdiv class="caption-container"&gt
+  &ltp id="caption"&gt&lt/p&gt
+&lt/div&gt
+
+
+&ltdiv class="column"&gt
+&ltimg class="demo cursor"
+src="tiger1.jpg" style="width:100%"
+onclick="currentSlide(1)" alt="Tiger1"&gt
+&lt/div&gt
+
+&ltdiv class="column"&gt
+&ltimg class="demo cursor"
+src="tiger2.jpg" style="width:100%"
+onclick="currentSlide(2)" alt="Tiger2"&gt
+&lt/div&gt
+
+&ltdiv class="column"&gt
+&ltimg class="demo cursor"
+src="tiger3.jpg" style="width:100%"
+onclick="currentSlide(3)" alt="Tiger3"&gt
+&lt/div&gt
+
+  &lt/div&gt
+&lt/div&gt
+
+
+&ltscript&gt
+
+function openModal() {
+  document.getElementById('myModal')
+  .style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal')
+  .style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
+function showSlides(n) {
+
+var i;
+var slides = document
+.getElementsByClassName("mySlides");
+var dots = document
+
+.getElementsByClassName("demo");
+var captionText = document
+.getElementById("caption");
+
+if (n &gt slides.length)
+{slideIndex = 1}
+
+if (n &lt 1) {slideIndex =
+slides.length}
+
+for (i = 0; i &lt slides.length; i++) {
+   slides[i].style.display = "none";
+
+  }
+
+for (i = 0; i &lt dots.length; i++) {
+dots[i].className = dots[i].className
+.replace(" active","");
+  }
+
+slides[slideIndex-1].style.display =
+"block";
+
+dots[slideIndex-1].className +=
+" active";
+
+captionText.innerHTML =
+dots[slideIndex-1].alt;
+
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<p> Click the image below to see the Lighbox Image Gallery </p>
+
+
+<div id="div1">
+
+  <!DOCTYPE html>
+  <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #b0d7c5;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #00b867;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+</style>
+
+  <body>
+
+  <h2 style="text-align:center">Lightbox Example</h2>
+
+  <div class="row">
+    <div class="column">
+      <img src= "file:///android_asset/tiger1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src= "file:///android_asset/tiger2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+      <img src= "file:///android_asset/tiger3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 3</div>
+        <img src= "file:///android_asset/tiger1.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 3</div>
+        <img src= "file:///android_asset/tiger2.jpg" style="width:100%">
+      </div>
+
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 3</div>
+        <img src= "file:///android_asset/tiger3.jpg" style="width:100%">
+      </div>
+
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+      <div class="column">
+        <img class="demo cursor" src= "file:///android_asset/tiger1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tiger no 1">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src= "file:///android_asset/tiger2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Tiger no 2">
+      </div>
+
+      <div class="column">
+        <img class="demo cursor" src= "file:///android_asset/tiger3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tiger no 3">
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className
+      .replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+  </body>
+  </html>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

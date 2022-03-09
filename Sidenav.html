@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 6px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> SIDE NAVIGATION </h2>
+
+
+<p>In the Side navigation, when the menu is clicked the navigation menu will slide out from left or right side of the page. </p>
+
+
+<p> In the example below "&amptimes" is used to display the close "x" symbol and "&amp#9776;" is used to display the menu bar icon "&#9776;"    </p>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+&lt/style&gt
+&ltbody&gt
+
+&ltdiv id="mySidenav" class="sidenav"&gt
+  &lta href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()"&gt&amptimes;&lt/a&gt
+
+  &lta href="#"&gtAbout&lt/a&gt
+  &lta href="#"&gtServices&lt/a&gt
+  &lta href="#"&gtCareer&lt/a&gt
+  &lta href="#"&gtContact&lt/a&gt
+
+&lt/div&gt
+
+&lth2&gtSidenav Example&lt/h2&gt
+&ltp&gtClick on the element below to open
+the side navigation menu.&lt/p&gt
+
+&ltspan style="font-size:30px;cursor:
+pointer"onclick="openNav()"&gt&#9776; open
+&lt/span&gt
+
+&ltscript&gt
+
+<small style='color:red'>/* Set the width of the side navigation to
+250px */ </small>
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="250px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+}
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    <body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Career</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <h2>Sidenav Example</h2>
+    <p>Click on the element below to open the side navigation menu.</p>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+    <script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+    </body>
+    </html>
+
+    <br>
+    <br>
+    <br>
+
+
+</div>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<h3> Side Navigation with Push Content </h3>
+
+<p> The example below slides in the side navigation, and pushes the page content to the right (the value used to set the width of the sidenav is also used to set the left margin of the "page content"). </p>
+
+
+<div id="div1">
+
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+&lt/style&gt
+&ltbody&gt
+
+&ltdiv id="mySidenav" class="sidenav"&gt
+  &lta href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()"&gt&amptimes;&lt/a&gt
+
+  &lta href="#"&gtAbout&lt/a&gt
+  &lta href="#"&gtServices&lt/a&gt
+  &lta href="#"&gtCareers&lt/a&gt
+  &lta href="#"&gtContact&lt/a&gt
+
+&lt/div&gt
+
+
+&ltdiv id="main"&gt
+ &lth2&gtSidenav Push Example&lt/h2&gt
+ &ltp&gtClick on the element below to open
+ the side navigation menu,and push
+ this content to the right.&lt/p&gt
+
+ &ltspan style="font-size:30px;
+ cursor:pointer"
+ onclick="openNav()"&gt&amp#9776; open
+ &lt/span&gt
+
+&lt/div&gt
+
+
+&ltscript&gt
+
+<small style='color:red'>/* Set the width of the side navigation to
+250px and the left margin of the page content
+to 250px */</small>
+
+function openNav() {
+ document.getElementById("mySidenav
+ style.width="250px";
+
+ document.getElementById("main").style
+ .marginLeft="250px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width="0";
+
+ document.getElementById("main").style
+ .marginLeft="0";
+
+}
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+    <!DOCTYPE html>
+    <html>
+    <style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav1 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav1 a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav1 .closebtn1 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main1 {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    <body>
+
+    <div id="mySidenav1" class="sidenav1">
+        <a href="javascript:void(0)" class="closebtn1" onclick="closeNav1()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main1">
+        <h2>Sidenav Push Example</h2>
+        <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav1()">&#9776; open</span>
+    </div>
+
+    <script>
+function openNav1() {
+    document.getElementById("mySidenav1").style.width = "250px";
+    document.getElementById("main1").style.marginLeft = "250px";
+}
+
+function closeNav1() {
+    document.getElementById("mySidenav1").style.width = "0";
+    document.getElementById("main1").style.marginLeft= "0";
+}
+</script>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<h3> SideNav Push Content with Opacity </h3>
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+&lt/style&gt
+&ltbody&gt
+
+&ltdiv id="mySidenav" class="sidenav"&gt
+  &lta href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()"&gt&amptimes;&lt/a&gt
+
+  &lta href="#"&gtAbout&lt/a&gt
+  &lta href="#"&gtServices&lt/a&gt
+  &lta href="#"&gtCareers&lt/a&gt
+  &lta href="#"&gtContact&lt/a&gt
+
+&lt/div&gt
+
+&ltdiv id="main"&gt
+  &lth2&gtSidenav Push With Opacity&lt/h2&gt
+
+&ltp&gt Click on the element below to open
+the side navigation menu, and push
+this content to the right. Notice
+that we add a black see-through
+background-color to body when the
+sidenav is opened.&lt/p&gt
+
+  &ltspan style="font-size:30px;cursor:
+  pointer"
+
+  onclick="openNav()"&gt&amp#9776; open
+  &lt/span&gt
+
+&lt/div&gt
+
+
+&ltscript&gt
+
+<small style='color:red'>/* Set the width of the side navigation to
+250px and the left margin of the page content
+to 250px and add a black background color to
+body */ </small>
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="250px";
+
+ document.getElementById("main")
+ .style.marginLeft="250px";
+
+ document.body.style.backgroundColor=
+ "rgba(0,0,0,0.4)";
+
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+
+ document.getElementById("main")
+ .style.marginLeft= "0";
+
+ document.body.style.backgroundColor =
+ "white";
+
+}
+&lt/script&gt
+     
+&lt/body&gt
+&lt/html&gt 
+
+</pre>
+</div>
+
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+    <!DOCTYPE html>
+    <html>
+    <style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main2 {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+    <body>
+
+    <div id="mySidenav2" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div id="main2">
+        <h2>Sidenav Push with Opacity</h2>
+        <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav2()">&#9776; open</span>
+    </div>
+
+    <script>
+function openNav2() {
+    document.getElementById("mySidenav2").style.width = "250px";
+    document.getElementById("main2").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.8)";
+}
+
+function closeNav2() {
+    document.getElementById("mySidenav2").style.width = "0";
+    document.getElementById("main2").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+
+    </body>
+    </html>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

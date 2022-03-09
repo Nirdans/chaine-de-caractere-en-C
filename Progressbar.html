@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:90%;
+        height: auto;
+        padding: 7px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.8vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+  <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2>PROGRESS BAR</h2>
+
+
+<p> A progress bar is a graphical control element used to visualize the progression of an extended computer operation, such as a download, file transfer, or installation. Sometimes, the graphic is accompanied by a textual representation of the progress in a percent format.</p>
+
+<h3> Simple Progress Bar </h3>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+
+&ltstyle&gt
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background-color: #48d1cc;
+}
+
+&lt/style&gt
+
+&ltbody&gt
+
+&lth1&gtSimple Progress Bar&lt/h1&gt
+
+&ltdiv id="myProgress"&gt
+  &ltdiv id="myBar"&gt&lt/div&gt
+&lt/div&gt
+
+&ltbr&gt
+
+&ltbutton onclick="move()"&gtClick Here
+&lt/button&gt
+
+&ltscript&gt
+
+function move() {
+  var elem = document.getElementById
+  ("myBar");
+
+  var width = 1;
+
+  var id = setInterval(frame, 10);
+
+  function frame() {
+    if (width &gt= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+
+
+
+<div id="div1">
+
+  <!DOCTYPE html>
+  <html>
+
+  <style>
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background-color: #48d1cc;
+}
+
+</style>
+
+  <body>
+
+  <h1>Simple Progress Bar</h1>
+
+  <div id="myProgress">
+    <div id="myBar"></div>
+  </div>
+
+  <br>
+
+  <button onclick="move()">Click Here</button>
+
+  <script>
+
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+
+</script>
+
+  </body>
+  </html>
+
+
+
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<h3> Progress Bar with Label </h3>
+<p> In the progress bar with label, the text inside the label will dynamically update to the same value of the width of the progress bar in the percentage format. </p>
+
+
+
+<div id="div1">
+<pre>
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltstyle&gt
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #48d1cc;
+}
+
+#label {
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+&lt/style&gt
+
+&ltbody&gt
+
+&lth1&gtProgress Bar With Label&lt/h1&gt
+
+&ltdiv id="myProgress"&gt
+  &ltdiv id="myBar"&gt
+    &ltdiv id="label"&gt10%&lt/div&gt
+  &lt/div&gt
+&lt/div&gt
+
+&ltbr&gt
+
+&ltbutton onclick="move()"&gtClick Here
+&lt/button&gt
+
+&ltscript&gt
+
+function move() {
+
+  var elem = document.getElementById
+  ("myBar");
+
+  var width = 10;
+
+  var id = setInterval(frame, 10);
+  function frame() {
+
+    if (width &gt= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      document.getElementById("label")
+      .innerHTML = width * 1  + '%';
+
+    }
+  }
+}
+
+&lt/script&gt
+
+&lt/body&gt
+&lt/html&gt
+
+</pre>
+</div>
+
+<br>
+
+<h3>Result For Above Example </h3>
+
+<div id="div1">
+
+  <!DOCTYPE html>
+  <html>
+  <style>
+
+#myProgress1 {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background-color: #ddd;
+}
+
+#myBar1 {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: #48d1cc;
+}
+
+#label {
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+</style>
+
+  <body>
+
+  <h1>Progress Bar With Label</h1>
+
+  <div id="myProgress1">
+    <div id="myBar1">
+      <div id="label">10%</div>
+    </div>
+  </div>
+
+  <br>
+
+  <button onclick="move1()">Click Here</button>
+
+  <script>
+
+function move1() {
+  var elem = document.getElementById("myBar1");
+  var width = 10;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      document.getElementById("label").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+</script>
+
+  </body>
+  </html>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

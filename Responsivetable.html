@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #div1{
+        background-color: #F9FFFF;
+        position:relative;
+        width:95%;
+        height: auto;
+        padding: 6px;
+        border: 5px solid steelblue;
+        margin: 1px;
+        }
+
+        hr{
+
+        width:100%;
+        border: 2px solid MediumTurquoise ;
+        float:left;
+
+
+        }
+
+
+        textarea {
+
+        width: 90%;
+        min-height: 400px;
+
+
+        }
+
+
+        iframe {
+
+        width:90%;
+        min-height:400px;
+        }
+
+
+
+        img {
+        width: 90%;
+        height: auto;
+        }
+
+        pre {
+        overflow: auto;
+
+        font-size: 3.7vw;
+
+        }
+
+        p1 {
+        border: 5px solid steelblue;
+        padding: 2px;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+    <script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+
+
+
+<h2> RESPONSIVE PRICING TABLE </h2>
+
+
+<p> Responsive pricing table is used to show the pricing and other similar things in a table, since it is responsive the table adapts according to the screen size. </p>
+
+
+
+<div id="div1">
+<pre>
+
+
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltmeta name="viewport" content="width=
+device-width, initial-scale=1.0"&gt
+&ltstyle&gt
+* {
+    box-sizing: border-box;
+}
+
+
+<i style='color:red'>/* Creates three columns of equal
+width */ </i>
+
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+<i style='color:red'>/* Add shadows on hover */ </i>
+
+.price:hover {
+    box-shadow: 0 8px 12px 0
+    rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #48d1cc;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+<small style='color:red'>/* Changes the width of the three
+columns to 100% (to stack horizontally
+on small screens) */ </small>
+
+@media only screen and
+(max-width: 600px) {
+
+    .columns {
+        width: 100%;
+    }
+}
+
+&lt/style&gt
+&lt/head&gt
+
+&ltbody&gt
+
+&lth2&gtResponsive Pricing Tables&lt/h2&gt
+
+
+&ltdiv class="columns"&gt
+  &ltul class="price"&gt
+   &ltli class="header"&gtBasic&lt/li&gt
+   &ltli class="grey"&gt₹ 600 / year&lt/li&gt
+   &ltli&gt12GB Storage&lt/li&gt
+   &ltli&gt12 Emails&lt/li&gt
+   &ltli&gt12 Domains&lt/li&gt
+   &ltli&gt12GB Bandwidth&lt/li&gt
+   &ltli class="grey"&gt&lta href="#"
+   class="button"&gt
+
+   Sign Up&lt/a&gt&lt/li&gt
+  &lt/ul&gt
+&lt/div&gt
+
+&ltdiv class="columns"&gt
+ &ltul class="price"&gt
+  &ltli class="header"
+  style="background-color:
+
+  #48d1cc"&gtPro&lt/li&gt
+
+   &ltli class="grey"&gt₹ 1800 / year
+   &lt/li&gt
+
+   &ltli&gt25GB Storage&lt/li&gt
+   &ltli&gt25 Emails&lt/li&gt
+   &ltli&gt25 Domains&lt/li&gt
+   &ltli&gt24GB Bandwidth&lt/li&gt
+   &ltli class="grey"&gt&lta href="#"
+   class="button"&gt
+
+   Sign Up&lt/a&gt&lt/li&gt
+  &lt/ul&gt
+&lt/div&gt
+
+&ltdiv class="columns"&gt
+  &ltul class="price"&gt
+   &ltli class="header" &gtPremium&lt/li&gt
+   &ltli class="grey"&gt₹ 4000 / year
+   &lt/li&gt
+
+   &ltli&gt80GB Storage&lt/li&gt
+   &ltli&gt80 Emails&lt/li&gt
+   &ltli&gt80 Domains&lt/li&gt
+   &ltli&gt40GB Bandwidth&lt/li&gt
+   &ltli class="grey"&gt&lta href="#"
+   class="button"&gt
+
+   Sign Up&lt/a&gt&lt/li&gt
+  &lt/ul&gt
+&lt/div&gt
+
+&lt/body&gt
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+
+<br>
+
+
+<h3> Result For Above Example </h3>
+
+<p>
+Since you are viewing on a mobile device the tables are stacked horizontally</p>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #48d1cc;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h2>Responsive Pricing Tables</h2>
+
+
+<div class="columns">
+    <ul class="price">
+        <li class="header">Basic</li>
+        <li class="grey">₹ 600 / year</li>
+        <li>12GB Storage</li>
+        <li>12 Emails</li>
+        <li>12 Domains</li>
+        <li>12GB Bandwidth</li>
+        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    </ul>
+</div>
+
+<div class="columns">
+    <ul class="price">
+        <li class="header" style="background-color:#48d1cc">Pro</li>
+        <li class="grey">₹ 1800 / year</li>
+        <li>25GB Storage</li>
+        <li>25 Emails</li>
+        <li>25 Domains</li>
+        <li>24GB Bandwidth</li>
+        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    </ul>
+</div>
+
+<div class="columns">
+    <ul class="price">
+        <li class="header" >Premium</li>
+        <li class="grey">₹ 4000 / year</li>
+        <li>80GB Storage</li>
+        <li>80 Emails</li>
+        <li>80 Domains</li>
+        <li>40GB Bandwidth</li>
+        <li class="grey"><a href="#" class="button">Sign Up</a></li>
+    </ul>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3> TRY YOURSELF : </h3>
+<p>Type the code or copy/paste below and press show result to see the result</p>
+
+<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+<input onclick="update();" type="button" value="show result"></p>
+
+
+
+<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

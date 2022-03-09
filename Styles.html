@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+
+
+		p1 {
+		border: 5px solid Mediumturquoise;
+		padding: 2px;
+
+		}
+        
+        
+       
+
+
+		div {
+		background-color: #F9FFFF;
+		position:relative;
+		width: 90%;
+		height: auto;
+		padding: 10px;
+		border: 5px solid steelblue;
+		margin: 1px;
+		}
+
+		hr{
+
+		width:100%;
+		border: 2px solid MediumTurquoise ;
+		float:left;
+
+
+		}
+
+
+		textarea {
+
+		width: 90%;
+		min-height: 400px;
+
+
+		}
+
+
+		iframe {
+
+		width:90%;
+		min-height:400px;
+		}
+
+
+
+		img {
+		width: 90%;
+		height: auto;
+		}
+
+		pre {
+		overflow: auto;
+
+		font-size: 4vw;
+
+		}
+        
+        
+
+
+
+	</style>
+
+
+	<script type="text/javascript">
+ function update()
+ {
+  var content = document.getElementById('mycode').value;
+  var iframe = document.getElementById('display');
+  iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+  iframe.document.open();
+  iframe.document.write(content);
+  iframe.document.close();
+  return false;
+ }
+ runCode();
+</script>
+
+</head>
+
+
+<body>
+
+<h2> HTML STYLES :</h2>
+<p> In HTML every element has a default style which is (background color is white, text color is black, text-size is 12px ....) Changing the default style of an HTML element, can be done with the style attribute .</p>
+The HTML style attribute has the following syntax :</p>
+<p1> style = "property:value"</p1>
+
+<br />
+<br />
+<hr />
+<br />
+
+
+
+<h2> BACKGROUND COLOR : </h2>
+<p>Background color property changes the background color .</p>
+
+<h4> Example for Background color : </h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody style="background-color:
+
+lightgrey"&gt
+
+&lth1&gtBackground color&lt/h1&gt
+
+&ltp&gtBackground color changed.&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example : </h4>
+
+
+
+
+
+<img src="file:///android_asset/background.jpg" alt="Html Styles" ></p>
+
+
+
+
+<hr />
+<br />
+
+
+
+
+<h2> TEXT COLOR : </h2>
+<p>Text color property changes the text color for an HTML element .</p>
+
+<h4> Example for Text color : </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+&lth1 style="color:RoyalBlue"&gt
+
+This is a heading&lt/h1&gt
+
+&ltp style="color:SteelBlue"&gt
+
+This is a paragraph.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example :</h4>
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<h1 style="color:RoyalBlue">
+
+This is a heading</h1>
+
+<p style="color:SteelBlue">
+
+This is a paragraph.</p>
+</body>
+
+</html>
+
+
+</div>
+
+
+
+
+
+
+
+<br>
+<hr />
+<br />
+
+
+
+
+<h2> TEXT FONTS :</h2>
+
+<P>The font-family property defines the font to be used for an HTML element .</p>
+
+
+<h4> Example for Text fonts : </h4>
+
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&lth1 style="font-family:courier"&gt
+
+Heading in courier font&lt/h1&gt
+
+&ltp style="font-family:PT Serif"&gt
+
+paragraph in PT Serif font.&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example : </h4>
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1 style="font-family:courier">
+
+Heading in courier font</h1>
+
+<p style="font-family:PT Serif">
+
+paragraph in PT Serif font.</p>
+
+</body>
+
+</html>
+
+</div>
+
+
+
+
+
+
+<br>
+<hr />
+<br />
+
+
+
+
+
+<h2> TEXT SIZE : </h2>
+
+<p>The font-size property defines the text size to be used for an HTML element .</p>
+
+<H4> Example for Text size : </h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+
+&ltp style="font-size:180%"&gt
+
+font size is 180%&lt/p&gt
+
+
+&ltp style="font-size:120%"&gt
+
+font size is 120%&lt/p&gt
+
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4> Result for the above Example : </h4>
+
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<p style="font-size:180%"> font size is 180%
+
+</p>
+
+<p style="font-size:120%">
+
+font size is 120%.</p>
+</body>
+
+</html>
+
+</div>
+
+
+
+
+<br>
+<hr />
+<br />
+
+
+
+
+<h2> TEXT ALIGNMENT : </h2>
+
+<p>The text-align property defines the horizontal text alignment for an HTML element</p>
+
+<h4> Example for Text alignment :</h4>
+
+<div>
+
+<pre>
+
+&lt!DOCTYPE html&gt
+
+&lthtml&gt
+
+&ltbody&gt
+&lth1 style="text-align:center"&gt
+
+Heading is Centered&lt/h1&gt
+
+&ltp&gtThis is a paragraph.&lt/p&gt
+&lt/body&gt
+
+&lt/html&gt
+
+
+</pre>
+</div>
+
+<h4>Result for above Example :</h4>
+
+<div>
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<h1 style="text-align:center">
+
+Heading is Centered</h1>
+
+<p>This is a paragraph.</p>
+</body>
+
+</html>
+
+
+</div>
+
+
+
+    <br>
+	<hr />
+	<br />
+
+
+	<h3> TRY YOURSELF : </h3>
+	<p>Type the code below and press show result to see the result</p>
+
+	<textarea id="mycode"  style="border:solid 5px steelblue" >  </textarea></p>
+
+
+
+	<input onclick="update();" type="button" value="show result"></p>
+
+
+
+	<iframe id="display"  style="border:5px solid steelblue" ></iframe></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
